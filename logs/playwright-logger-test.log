@@ -1,0 +1,880 @@
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-12T09:08:57.827Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-09-12T09:09:11.956Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-12T09:09:15.501Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-12T09:09:15.727Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-12T09:09:16.114Z"}
+{"level":"info","message":"Sex selected successfully","timestamp":"2025-09-12T09:09:16.426Z"}
+{"level":"info","message":"Born Date selected successfully","timestamp":"2025-09-12T09:09:16.755Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-12T09:09:30.656Z"}
+{"level":"info","message":"Clicked on Add Patient button successfully","timestamp":"2025-09-12T09:09:31.811Z"}
+{"level":"info","message":"Clicked on Duplicate Check button successfully","timestamp":"2025-09-12T09:09:33.850Z"}
+{"level":"info","message":"Selected Unique Identification successfully","timestamp":"2025-09-12T09:09:34.273Z"}
+{"level":"info","message":"Selected Photo Identification successfully","timestamp":"2025-09-12T09:09:34.562Z"}
+{"level":"info","message":"Photo Identification entered successfully","timestamp":"2025-09-12T09:09:35.025Z"}
+{"level":"info","message":"Issuing Country selected successfully","timestamp":"2025-09-12T09:09:35.312Z"}
+{"level":"info","message":"Title selected successfully","timestamp":"2025-09-12T09:09:36.042Z"}
+{"level":"info","message":"Middle Name entered successfully","timestamp":"2025-09-12T09:09:36.521Z"}
+{"level":"info","message":"Maiden Name entered successfully","timestamp":"2025-09-12T09:09:36.839Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-12T09:28:23.045Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-09-12T09:28:32.298Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-12T09:28:36.134Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-12T09:28:36.364Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-12T09:28:36.807Z"}
+{"level":"info","message":"Sex selected successfully","timestamp":"2025-09-12T09:28:37.120Z"}
+{"level":"info","message":"Born Date selected successfully","timestamp":"2025-09-12T09:28:37.349Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-12T09:28:39.416Z"}
+{"level":"info","message":"Clicked on Add Patient button successfully","timestamp":"2025-09-12T09:28:40.726Z"}
+{"level":"info","message":"Clicked on Duplicate Check button successfully","timestamp":"2025-09-12T09:28:42.691Z"}
+{"level":"info","message":"Selected Unique Identification successfully","timestamp":"2025-09-12T09:28:43.056Z"}
+{"level":"info","message":"Selected Photo Identification successfully","timestamp":"2025-09-12T09:28:43.363Z"}
+{"level":"info","message":"Photo Identification entered successfully","timestamp":"2025-09-12T09:28:43.785Z"}
+{"level":"info","message":"Issuing Country selected successfully","timestamp":"2025-09-12T09:28:44.078Z"}
+{"level":"info","message":"Title selected successfully","timestamp":"2025-09-12T09:28:44.750Z"}
+{"level":"info","message":"Middle Name entered successfully","timestamp":"2025-09-12T09:28:45.178Z"}
+{"level":"info","message":"Maiden Name entered successfully","timestamp":"2025-09-12T09:28:45.539Z"}
+{"level":"info","message":"Mobile Number entered successfully","timestamp":"2025-09-12T09:28:46.121Z"}
+{"level":"info","message":"Email ID entered successfully","timestamp":"2025-09-12T09:28:47.131Z"}
+{"level":"info","message":"Clicked on Duplicate Check button successfully","timestamp":"2025-09-12T09:28:47.363Z"}
+{"level":"info","message":"Clicked on Create Patient button successfully","timestamp":"2025-09-12T09:28:48.444Z"}
+{"level":"info","message":"Marital Status selected successfully","timestamp":"2025-09-12T09:28:50.938Z"}
+{"level":"info","message":"Sexual Orientation selected successfully","timestamp":"2025-09-12T09:28:51.831Z"}
+{"level":"info","message":"Ethnicity selected successfully","timestamp":"2025-09-12T09:28:52.639Z"}
+{"level":"info","message":"Occupation selected successfully","timestamp":"2025-09-12T09:28:53.298Z"}
+{"level":"info","message":"Religion selected successfully","timestamp":"2025-09-12T09:28:53.949Z"}
+{"level":"info","message":"Town of Birth entered successfully","timestamp":"2025-09-12T09:28:54.570Z"}
+{"level":"info","message":"County of Birth entered successfully","timestamp":"2025-09-12T09:28:55.820Z"}
+{"level":"info","message":"Country of Birth selected successfully","timestamp":"2025-09-12T09:28:56.507Z"}
+{"level":"info","message":"Nationality selected successfully","timestamp":"2025-09-12T09:28:57.271Z"}
+{"level":"info","message":"Registered Disabled selected successfully","timestamp":"2025-09-12T09:28:58.090Z"}
+{"level":"info","message":"Disability Notes entered successfully","timestamp":"2025-09-12T09:28:59.426Z"}
+{"level":"info","message":"Language selected successfully","timestamp":"2025-09-12T09:28:59.922Z"}
+{"level":"info","message":"Patient type selected successfully","timestamp":"2025-09-12T09:29:00.770Z"}
+{"level":"info","message":"Prisoner option selected successfully","timestamp":"2025-09-12T09:29:01.560Z"}
+{"level":"info","message":"Blood type selected successfully","timestamp":"2025-09-12T09:29:02.308Z"}
+{"level":"info","message":"Restricted registration selected successfully","timestamp":"2025-09-12T09:29:03.095Z"}
+{"level":"info","message":"Patient web registration selected successfully","timestamp":"2025-09-12T09:29:03.715Z"}
+{"level":"info","message":"Notes entered successfully","timestamp":"2025-09-12T09:29:06.577Z"}
+{"level":"info","message":"Next button clicked successfully","timestamp":"2025-09-12T09:29:06.841Z"}
+{"level":"info","message":"Save button clicked successfully","timestamp":"2025-09-12T09:29:09.835Z"}
+{"level":"info","message":"Number and Road entered successfully","timestamp":"2025-09-12T09:29:10.316Z"}
+{"level":"info","message":"Town entered successfully","timestamp":"2025-09-12T09:29:10.664Z"}
+{"level":"info","message":"District entered successfully","timestamp":"2025-09-12T09:29:10.969Z"}
+{"level":"info","message":"County entered successfully","timestamp":"2025-09-12T09:29:11.274Z"}
+{"level":"info","message":"Post code entered successfully","timestamp":"2025-09-12T09:29:11.572Z"}
+{"level":"info","message":"Save button on popup clicked successfully","timestamp":"2025-09-12T09:29:13.349Z"}
+{"level":"info","message":"Permanent ISO country code entered successfully","timestamp":"2025-09-12T09:29:13.524Z"}
+{"level":"info","message":"Permanent ICAO country code entered successfully","timestamp":"2025-09-12T09:29:13.821Z"}
+{"level":"info","message":"Permanent phone number entered successfully","timestamp":"2025-09-12T09:29:15.273Z"}
+{"level":"info","message":"Permanent email entered successfully","timestamp":"2025-09-12T09:29:15.701Z"}
+{"level":"info","message":"Permanent mobile number entered successfully","timestamp":"2025-09-12T09:29:16.140Z"}
+{"level":"info","message":"Permanent work phone entered successfully","timestamp":"2025-09-12T09:29:16.434Z"}
+{"level":"info","message":"Permanent fax entered successfully","timestamp":"2025-09-12T09:29:16.716Z"}
+{"level":"info","message":"Permanent health region selected successfully","timestamp":"2025-09-12T09:29:17.402Z"}
+{"level":"info","message":"Permanent location zone selected successfully","timestamp":"2025-09-12T09:29:18.203Z"}
+{"level":"info","message":"Temporary number and road entered successfully","timestamp":"2025-09-12T09:29:20.392Z"}
+{"level":"info","message":"Temporary town entered successfully","timestamp":"2025-09-12T09:29:20.709Z"}
+{"level":"info","message":"Temporary district entered successfully","timestamp":"2025-09-12T09:29:21.032Z"}
+{"level":"info","message":"Temporary county entered successfully","timestamp":"2025-09-12T09:29:21.356Z"}
+{"level":"info","message":"Temporary postcode entered successfully","timestamp":"2025-09-12T09:29:21.647Z"}
+{"level":"info","message":"Save button on popup clicked successfully","timestamp":"2025-09-12T09:29:22.120Z"}
+{"level":"info","message":"Temporary ISO country code entered successfully","timestamp":"2025-09-12T09:29:22.291Z"}
+{"level":"info","message":"Temporary ICAO country code entered successfully","timestamp":"2025-09-12T09:29:22.633Z"}
+{"level":"info","message":"Temporary phone entered successfully","timestamp":"2025-09-12T09:29:22.948Z"}
+{"level":"info","message":"Temporary email entered successfully","timestamp":"2025-09-12T09:29:23.250Z"}
+{"level":"info","message":"Temporary mobile number entered successfully","timestamp":"2025-09-12T09:29:23.555Z"}
+{"level":"info","message":"Temporary work phone entered successfully","timestamp":"2025-09-12T09:29:24.199Z"}
+{"level":"info","message":"Temporary fax entered successfully","timestamp":"2025-09-12T09:29:24.539Z"}
+{"level":"info","message":"Temporary health region selected successfully","timestamp":"2025-09-12T09:29:25.235Z"}
+{"level":"info","message":"Temporary location zone selected successfully","timestamp":"2025-09-12T09:29:25.939Z"}
+{"level":"info","message":"Temporary address Add/View button clicked successfully","timestamp":"2025-09-12T09:29:26.357Z"}
+{"level":"info","message":"Temporary address notes entered successfully","timestamp":"2025-09-12T09:29:30.457Z"}
+{"level":"info","message":"Temporary address Add/View button clicked successfully (second time)","timestamp":"2025-09-12T09:29:30.625Z"}
+{"level":"info","message":"Temporary address notes popup closed successfully","timestamp":"2025-09-12T09:29:30.825Z"}
+{"level":"info","message":"Billing correspondence radio button checked successfully","timestamp":"2025-09-12T09:29:31.090Z"}
+{"level":"info","message":"Start and end date selected successfully","timestamp":"2025-09-12T09:29:32.998Z"}
+{"level":"info","message":"Save address button clicked successfully","timestamp":"2025-09-12T09:29:33.628Z"}
+{"level":"info","message":"PIP family name entered successfully","timestamp":"2025-09-12T09:29:36.355Z"}
+{"level":"info","message":"PIP given name entered successfully","timestamp":"2025-09-12T09:29:36.590Z"}
+{"level":"info","message":"PIP middle name entered successfully","timestamp":"2025-09-12T09:29:36.870Z"}
+{"level":"info","message":"PIP date of birth selected successfully","timestamp":"2025-09-12T09:29:37.236Z"}
+{"level":"info","message":"PIP ethnicity selected successfully","timestamp":"2025-09-12T09:29:37.690Z"}
+{"level":"info","message":"PIP occupation selected successfully","timestamp":"2025-09-12T09:29:38.328Z"}
+{"level":"info","message":"PIP relation selected successfully","timestamp":"2025-09-12T09:29:39.072Z"}
+{"level":"info","message":"PIP next of kin selected successfully","timestamp":"2025-09-12T09:29:39.904Z"}
+{"level":"info","message":"PIP family aware of illness option selected successfully","timestamp":"2025-09-12T09:29:40.641Z"}
+{"level":"info","message":"PIP identifier type selected successfully","timestamp":"2025-09-12T09:29:41.286Z"}
+{"level":"info","message":"PIP identifier number entered successfully","timestamp":"2025-09-12T09:29:42.287Z"}
+{"level":"info","message":"PIP professional title entered successfully","timestamp":"2025-09-12T09:29:42.686Z"}
+{"level":"info","message":"PIP receive patient letter option selected successfully","timestamp":"2025-09-12T09:29:43.055Z"}
+{"level":"info","message":"PIP receive appointment letter option selected successfully","timestamp":"2025-09-12T09:29:43.806Z"}
+{"level":"info","message":"PIP send patient text/email option selected successfully","timestamp":"2025-09-12T09:29:44.196Z"}
+{"level":"info","message":"PIP referrer checkbox selected successfully","timestamp":"2025-09-12T09:29:44.335Z"}
+{"level":"info","message":"PIP notes entered successfully","timestamp":"2025-09-12T09:29:46.021Z"}
+{"level":"info","message":"PIP assisting in partner checkbox selected successfully","timestamp":"2025-09-12T09:29:46.172Z"}
+{"level":"info","message":"PIP helping patients checkbox selected successfully","timestamp":"2025-09-12T09:29:46.348Z"}
+{"level":"info","message":"PIP being photographed checkbox selected successfully","timestamp":"2025-09-12T09:29:46.502Z"}
+{"level":"info","message":"PIP general publicity checkbox selected successfully","timestamp":"2025-09-12T09:29:46.671Z"}
+{"level":"info","message":"PIP save button clicked successfully","timestamp":"2025-09-12T09:29:46.971Z"}
+{"level":"info","message":"View PIP link clicked successfully","timestamp":"2025-09-12T09:29:48.989Z"}
+{"level":"info","message":"View PIP popup closed successfully","timestamp":"2025-09-12T09:29:49.633Z"}
+{"level":"info","message":"Next button in View PIP clicked successfully","timestamp":"2025-09-12T09:29:49.753Z"}
+{"level":"info","message":"Search GP button clicked successfully","timestamp":"2025-09-12T09:29:50.256Z"}
+{"level":"info","message":"GP search entered successfully","timestamp":"2025-09-12T09:29:51.880Z"}
+{"level":"info","message":"Add GP button clicked successfully","timestamp":"2025-09-12T09:29:51.985Z"}
+{"level":"info","message":"GP title entered successfully","timestamp":"2025-09-12T09:29:52.528Z"}
+{"level":"info","message":"GP initials entered successfully","timestamp":"2025-09-12T09:29:52.716Z"}
+{"level":"info","message":"GP given name entered successfully","timestamp":"2025-09-12T09:29:53.153Z"}
+{"level":"info","message":"GP family name entered successfully","timestamp":"2025-09-12T09:29:53.565Z"}
+{"level":"info","message":"GP code entered successfully","timestamp":"2025-09-12T09:29:54.084Z"}
+{"level":"info","message":"GP practice code entered successfully","timestamp":"2025-09-12T09:29:54.760Z"}
+{"level":"info","message":"GP GMC code entered successfully","timestamp":"2025-09-12T09:29:55.423Z"}
+{"level":"info","message":"Show button clicked successfully","timestamp":"2025-09-12T09:29:55.703Z"}
+{"level":"info","message":"Unknown postcode selected successfully","timestamp":"2025-09-12T09:29:57.150Z"}
+{"level":"info","message":"Local GP postcode entered successfully","timestamp":"2025-09-12T09:29:58.731Z"}
+{"level":"info","message":"GP address number and road entered successfully","timestamp":"2025-09-12T09:29:59.989Z"}
+{"level":"info","message":"GP address district entered successfully","timestamp":"2025-09-12T09:30:00.140Z"}
+{"level":"info","message":"GP address town entered successfully","timestamp":"2025-09-12T09:30:00.296Z"}
+{"level":"info","message":"GP address county entered successfully","timestamp":"2025-09-12T09:30:00.463Z"}
+{"level":"info","message":"GP address postcode entered successfully","timestamp":"2025-09-12T09:30:00.604Z"}
+{"level":"info","message":"GP phone number entered successfully","timestamp":"2025-09-12T09:30:01.223Z"}
+{"level":"info","message":"GP fax number entered successfully","timestamp":"2025-09-12T09:30:01.838Z"}
+{"level":"info","message":"GP work phone entered successfully","timestamp":"2025-09-12T09:30:02.539Z"}
+{"level":"info","message":"GP mobile number entered successfully","timestamp":"2025-09-12T09:30:03.303Z"}
+{"level":"info","message":"GP email entered successfully","timestamp":"2025-09-12T09:30:04.201Z"}
+{"level":"info","message":"Save GP button clicked successfully","timestamp":"2025-09-12T09:30:04.410Z"}
+{"level":"info","message":"App GP search entered successfully","timestamp":"2025-09-12T09:30:05.566Z"}
+{"level":"info","message":"Person add button clicked successfully","timestamp":"2025-09-12T09:30:05.690Z"}
+{"level":"info","message":"Next button on search GP clicked successfully","timestamp":"2025-09-12T09:30:06.670Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-15T12:37:29.942Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-09-15T12:37:45.720Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-15T12:37:49.544Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-15T12:37:49.771Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-15T12:37:50.167Z"}
+{"level":"info","message":"Sex selected successfully","timestamp":"2025-09-15T12:37:50.632Z"}
+{"level":"info","message":"Born Date selected successfully","timestamp":"2025-09-15T12:37:50.922Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-15T12:48:25.072Z"}
+{"level":"info","message":"Clicked on Add Patient button successfully","timestamp":"2025-09-15T12:48:27.765Z"}
+{"level":"info","message":"Clicked on Duplicate Check button successfully","timestamp":"2025-09-15T12:48:29.549Z"}
+{"level":"info","message":"Selected Unique Identification successfully","timestamp":"2025-09-15T12:48:29.899Z"}
+{"level":"info","message":"Selected Photo Identification successfully","timestamp":"2025-09-15T12:48:30.227Z"}
+{"level":"info","message":"Photo Identification entered successfully","timestamp":"2025-09-15T12:48:30.662Z"}
+{"level":"info","message":"Issuing Country selected successfully","timestamp":"2025-09-15T12:48:31.067Z"}
+{"level":"info","message":"Title selected successfully","timestamp":"2025-09-15T12:48:31.646Z"}
+{"level":"info","message":"Middle Name entered successfully","timestamp":"2025-09-15T12:48:32.114Z"}
+{"level":"info","message":"Maiden Name entered successfully","timestamp":"2025-09-15T12:48:32.454Z"}
+{"level":"info","message":"Mobile Number entered successfully","timestamp":"2025-09-15T12:48:33.032Z"}
+{"level":"info","message":"Email ID entered successfully","timestamp":"2025-09-15T12:48:34.084Z"}
+{"level":"info","message":"Clicked on Duplicate Check button successfully","timestamp":"2025-09-15T12:48:34.347Z"}
+{"level":"info","message":"Clicked on Create Patient button successfully","timestamp":"2025-09-15T12:48:35.459Z"}
+{"level":"info","message":"Marital Status selected successfully","timestamp":"2025-09-15T12:48:37.485Z"}
+{"level":"info","message":"Sexual Orientation selected successfully","timestamp":"2025-09-15T12:48:38.295Z"}
+{"level":"info","message":"Ethnicity selected successfully","timestamp":"2025-09-15T12:48:38.979Z"}
+{"level":"info","message":"Occupation selected successfully","timestamp":"2025-09-15T12:48:39.749Z"}
+{"level":"info","message":"Religion selected successfully","timestamp":"2025-09-15T12:48:40.386Z"}
+{"level":"info","message":"Town of Birth entered successfully","timestamp":"2025-09-15T12:48:41.010Z"}
+{"level":"info","message":"County of Birth entered successfully","timestamp":"2025-09-15T12:48:42.304Z"}
+{"level":"info","message":"Country of Birth selected successfully","timestamp":"2025-09-15T12:48:42.950Z"}
+{"level":"info","message":"Nationality selected successfully","timestamp":"2025-09-15T12:48:43.714Z"}
+{"level":"info","message":"Registered Disabled selected successfully","timestamp":"2025-09-15T12:48:44.242Z"}
+{"level":"info","message":"Disability Notes entered successfully","timestamp":"2025-09-15T12:48:45.612Z"}
+{"level":"info","message":"Language selected successfully","timestamp":"2025-09-15T12:48:46.135Z"}
+{"level":"info","message":"Patient type selected successfully","timestamp":"2025-09-15T12:48:46.880Z"}
+{"level":"info","message":"Prisoner option selected successfully","timestamp":"2025-09-15T12:48:47.811Z"}
+{"level":"info","message":"Blood type selected successfully","timestamp":"2025-09-15T12:48:48.583Z"}
+{"level":"info","message":"Restricted registration selected successfully","timestamp":"2025-09-15T12:48:49.451Z"}
+{"level":"info","message":"Patient web registration selected successfully","timestamp":"2025-09-15T12:48:50.129Z"}
+{"level":"info","message":"Notes entered successfully","timestamp":"2025-09-15T12:48:53.225Z"}
+{"level":"info","message":"Next button clicked successfully","timestamp":"2025-09-15T12:48:53.511Z"}
+{"level":"info","message":"Save button clicked successfully","timestamp":"2025-09-15T12:48:56.067Z"}
+{"level":"info","message":"Number and Road entered successfully","timestamp":"2025-09-15T12:48:56.566Z"}
+{"level":"info","message":"Town entered successfully","timestamp":"2025-09-15T12:48:56.916Z"}
+{"level":"info","message":"District entered successfully","timestamp":"2025-09-15T12:48:57.218Z"}
+{"level":"info","message":"County entered successfully","timestamp":"2025-09-15T12:48:57.623Z"}
+{"level":"info","message":"Post code entered successfully","timestamp":"2025-09-15T12:48:57.914Z"}
+{"level":"info","message":"Save button on popup clicked successfully","timestamp":"2025-09-15T12:48:59.778Z"}
+{"level":"info","message":"Permanent ISO country code entered successfully","timestamp":"2025-09-15T12:48:59.960Z"}
+{"level":"info","message":"Permanent ICAO country code entered successfully","timestamp":"2025-09-15T12:49:00.261Z"}
+{"level":"info","message":"Permanent phone number entered successfully","timestamp":"2025-09-15T12:49:01.733Z"}
+{"level":"info","message":"Permanent email entered successfully","timestamp":"2025-09-15T12:49:02.172Z"}
+{"level":"info","message":"Permanent mobile number entered successfully","timestamp":"2025-09-15T12:49:02.652Z"}
+{"level":"info","message":"Permanent work phone entered successfully","timestamp":"2025-09-15T12:49:02.915Z"}
+{"level":"info","message":"Permanent fax entered successfully","timestamp":"2025-09-15T12:49:03.207Z"}
+{"level":"info","message":"Permanent health region selected successfully","timestamp":"2025-09-15T12:49:03.896Z"}
+{"level":"info","message":"Permanent location zone selected successfully","timestamp":"2025-09-15T12:49:04.778Z"}
+{"level":"info","message":"Temporary number and road entered successfully","timestamp":"2025-09-15T12:49:06.919Z"}
+{"level":"info","message":"Temporary town entered successfully","timestamp":"2025-09-15T12:49:07.249Z"}
+{"level":"info","message":"Temporary district entered successfully","timestamp":"2025-09-15T12:49:07.545Z"}
+{"level":"info","message":"Temporary county entered successfully","timestamp":"2025-09-15T12:49:07.876Z"}
+{"level":"info","message":"Temporary postcode entered successfully","timestamp":"2025-09-15T12:49:08.194Z"}
+{"level":"info","message":"Save button on popup clicked successfully","timestamp":"2025-09-15T12:49:08.679Z"}
+{"level":"info","message":"Temporary ISO country code entered successfully","timestamp":"2025-09-15T12:49:08.862Z"}
+{"level":"info","message":"Temporary ICAO country code entered successfully","timestamp":"2025-09-15T12:49:09.167Z"}
+{"level":"info","message":"Temporary phone entered successfully","timestamp":"2025-09-15T12:49:09.486Z"}
+{"level":"info","message":"Temporary email entered successfully","timestamp":"2025-09-15T12:49:09.804Z"}
+{"level":"info","message":"Temporary mobile number entered successfully","timestamp":"2025-09-15T12:49:10.248Z"}
+{"level":"info","message":"Temporary work phone entered successfully","timestamp":"2025-09-15T12:49:10.815Z"}
+{"level":"info","message":"Temporary fax entered successfully","timestamp":"2025-09-15T12:49:11.144Z"}
+{"level":"info","message":"Temporary health region selected successfully","timestamp":"2025-09-15T12:49:11.780Z"}
+{"level":"info","message":"Temporary location zone selected successfully","timestamp":"2025-09-15T12:49:12.492Z"}
+{"level":"info","message":"Temporary address Add/View button clicked successfully","timestamp":"2025-09-15T12:49:12.956Z"}
+{"level":"info","message":"Temporary address notes entered successfully","timestamp":"2025-09-15T12:49:17.657Z"}
+{"level":"info","message":"Temporary address Add/View button clicked successfully (second time)","timestamp":"2025-09-15T12:49:17.868Z"}
+{"level":"info","message":"Temporary address notes popup closed successfully","timestamp":"2025-09-15T12:49:18.032Z"}
+{"level":"info","message":"Billing correspondence radio button checked successfully","timestamp":"2025-09-15T12:49:18.258Z"}
+{"level":"info","message":"Start and end date selected successfully","timestamp":"2025-09-15T12:49:20.357Z"}
+{"level":"info","message":"Save address button clicked successfully","timestamp":"2025-09-15T12:49:21.024Z"}
+{"level":"info","message":"PIP family name entered successfully","timestamp":"2025-09-15T12:49:23.180Z"}
+{"level":"info","message":"PIP given name entered successfully","timestamp":"2025-09-15T12:49:23.372Z"}
+{"level":"info","message":"PIP middle name entered successfully","timestamp":"2025-09-15T12:49:23.608Z"}
+{"level":"info","message":"PIP date of birth selected successfully","timestamp":"2025-09-15T12:49:23.873Z"}
+{"level":"info","message":"PIP ethnicity selected successfully","timestamp":"2025-09-15T12:49:24.324Z"}
+{"level":"info","message":"PIP occupation selected successfully","timestamp":"2025-09-15T12:49:25.028Z"}
+{"level":"info","message":"PIP relation selected successfully","timestamp":"2025-09-15T12:49:25.747Z"}
+{"level":"info","message":"PIP next of kin selected successfully","timestamp":"2025-09-15T12:49:26.644Z"}
+{"level":"info","message":"PIP family aware of illness option selected successfully","timestamp":"2025-09-15T12:49:27.272Z"}
+{"level":"info","message":"PIP identifier type selected successfully","timestamp":"2025-09-15T12:49:28.027Z"}
+{"level":"info","message":"PIP identifier number entered successfully","timestamp":"2025-09-15T12:49:29.073Z"}
+{"level":"info","message":"PIP professional title entered successfully","timestamp":"2025-09-15T12:49:29.476Z"}
+{"level":"info","message":"PIP receive patient letter option selected successfully","timestamp":"2025-09-15T12:49:29.958Z"}
+{"level":"info","message":"PIP receive appointment letter option selected successfully","timestamp":"2025-09-15T12:49:30.702Z"}
+{"level":"info","message":"PIP send patient text/email option selected successfully","timestamp":"2025-09-15T12:49:31.090Z"}
+{"level":"info","message":"PIP referrer checkbox selected successfully","timestamp":"2025-09-15T12:49:31.241Z"}
+{"level":"info","message":"PIP notes entered successfully","timestamp":"2025-09-15T12:49:32.864Z"}
+{"level":"info","message":"PIP assisting in partner checkbox selected successfully","timestamp":"2025-09-15T12:49:33.019Z"}
+{"level":"info","message":"PIP helping patients checkbox selected successfully","timestamp":"2025-09-15T12:49:33.186Z"}
+{"level":"info","message":"PIP being photographed checkbox selected successfully","timestamp":"2025-09-15T12:49:33.373Z"}
+{"level":"info","message":"PIP general publicity checkbox selected successfully","timestamp":"2025-09-15T12:49:33.556Z"}
+{"level":"info","message":"PIP save button clicked successfully","timestamp":"2025-09-15T12:49:33.845Z"}
+{"level":"info","message":"View PIP link clicked successfully","timestamp":"2025-09-15T12:49:35.426Z"}
+{"level":"info","message":"View PIP popup closed successfully","timestamp":"2025-09-15T12:49:35.880Z"}
+{"level":"info","message":"Next button in View PIP clicked successfully","timestamp":"2025-09-15T12:49:35.998Z"}
+{"level":"info","message":"Search GP button clicked successfully","timestamp":"2025-09-15T12:49:36.378Z"}
+{"level":"info","message":"GP search entered successfully","timestamp":"2025-09-15T12:49:37.432Z"}
+{"level":"info","message":"Add GP button clicked successfully","timestamp":"2025-09-15T12:49:37.531Z"}
+{"level":"info","message":"GP title entered successfully","timestamp":"2025-09-15T12:49:38.094Z"}
+{"level":"info","message":"GP initials entered successfully","timestamp":"2025-09-15T12:49:38.244Z"}
+{"level":"info","message":"GP given name entered successfully","timestamp":"2025-09-15T12:49:38.671Z"}
+{"level":"info","message":"GP family name entered successfully","timestamp":"2025-09-15T12:49:39.116Z"}
+{"level":"info","message":"GP code entered successfully","timestamp":"2025-09-15T12:49:39.635Z"}
+{"level":"info","message":"GP practice code entered successfully","timestamp":"2025-09-15T12:49:40.348Z"}
+{"level":"info","message":"GP GMC code entered successfully","timestamp":"2025-09-15T12:49:41.054Z"}
+{"level":"info","message":"Show button clicked successfully","timestamp":"2025-09-15T12:49:41.356Z"}
+{"level":"info","message":"Unknown postcode selected successfully","timestamp":"2025-09-15T12:49:42.583Z"}
+{"level":"info","message":"Local GP postcode entered successfully","timestamp":"2025-09-15T12:49:44.149Z"}
+{"level":"info","message":"GP address number and road entered successfully","timestamp":"2025-09-15T12:49:45.385Z"}
+{"level":"info","message":"GP address district entered successfully","timestamp":"2025-09-15T12:49:45.540Z"}
+{"level":"info","message":"GP address town entered successfully","timestamp":"2025-09-15T12:49:45.708Z"}
+{"level":"info","message":"GP address county entered successfully","timestamp":"2025-09-15T12:49:45.844Z"}
+{"level":"info","message":"GP address postcode entered successfully","timestamp":"2025-09-15T12:49:46.008Z"}
+{"level":"info","message":"GP phone number entered successfully","timestamp":"2025-09-15T12:49:46.625Z"}
+{"level":"info","message":"GP fax number entered successfully","timestamp":"2025-09-15T12:49:47.257Z"}
+{"level":"info","message":"GP work phone entered successfully","timestamp":"2025-09-15T12:49:47.908Z"}
+{"level":"info","message":"GP mobile number entered successfully","timestamp":"2025-09-15T12:49:48.644Z"}
+{"level":"info","message":"GP email entered successfully","timestamp":"2025-09-15T12:49:49.624Z"}
+{"level":"info","message":"Save GP button clicked successfully","timestamp":"2025-09-15T12:49:49.848Z"}
+{"level":"info","message":"App GP search entered successfully","timestamp":"2025-09-15T12:49:51.204Z"}
+{"level":"info","message":"Person add button clicked successfully","timestamp":"2025-09-15T12:49:51.332Z"}
+{"level":"info","message":"Next button on search GP clicked successfully","timestamp":"2025-09-15T12:49:52.270Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-15T15:18:44.990Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-09-15T15:18:58.623Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-17T08:51:46.319Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-17T09:06:30.161Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-09-17T09:06:35.007Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-09-18T16:32:25.887Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-09-18T16:32:26.980Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-18T16:32:27.143Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-09-18T16:32:29.784Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-18T16:32:33.794Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-18T16:32:33.895Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-18T16:32:34.243Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-09-18T16:36:03.721Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-09-18T16:36:04.810Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-18T16:36:04.962Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-18T16:36:16.320Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-18T16:36:16.413Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-18T16:36:16.845Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-09-18T16:39:22.930Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-09-18T16:39:24.030Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-18T16:39:24.188Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-18T16:39:35.108Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-18T16:39:35.477Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-18T16:41:42.336Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-09-18T16:41:46.892Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-18T16:41:51.054Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-18T16:41:51.173Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-18T16:41:51.413Z"}
+{"level":"info","message":"Sex selected successfully","timestamp":"2025-09-18T16:41:51.669Z"}
+{"level":"info","message":"Born Date selected successfully","timestamp":"2025-09-18T16:41:51.820Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-18T16:41:52.082Z"}
+{"level":"info","message":"Clicked on Add Patient button successfully","timestamp":"2025-09-18T16:41:53.191Z"}
+{"level":"info","message":"Clicked on Duplicate Check button successfully","timestamp":"2025-09-18T16:41:54.470Z"}
+{"level":"info","message":"Selected Unique Identification successfully","timestamp":"2025-09-18T16:41:54.707Z"}
+{"level":"info","message":"Selected Photo Identification successfully","timestamp":"2025-09-18T16:41:54.928Z"}
+{"level":"info","message":"Photo Identification entered successfully","timestamp":"2025-09-18T16:41:55.202Z"}
+{"level":"info","message":"Issuing Country selected successfully","timestamp":"2025-09-18T16:41:55.429Z"}
+{"level":"info","message":"Title selected successfully","timestamp":"2025-09-18T16:41:55.906Z"}
+{"level":"info","message":"Middle Name entered successfully","timestamp":"2025-09-18T16:41:56.256Z"}
+{"level":"info","message":"Maiden Name entered successfully","timestamp":"2025-09-18T16:41:56.465Z"}
+{"level":"info","message":"Mobile Number entered successfully","timestamp":"2025-09-18T16:41:56.875Z"}
+{"level":"info","message":"Email ID entered successfully","timestamp":"2025-09-18T16:41:57.623Z"}
+{"level":"info","message":"Clicked on Duplicate Check button successfully","timestamp":"2025-09-18T16:41:57.821Z"}
+{"level":"info","message":"Clicked on Create Patient button successfully","timestamp":"2025-09-18T16:41:58.816Z"}
+{"level":"info","message":"Marital Status selected successfully","timestamp":"2025-09-18T16:42:00.816Z"}
+{"level":"info","message":"Sexual Orientation selected successfully","timestamp":"2025-09-18T16:42:01.578Z"}
+{"level":"info","message":"Ethnicity selected successfully","timestamp":"2025-09-18T16:42:02.261Z"}
+{"level":"info","message":"Occupation selected successfully","timestamp":"2025-09-18T16:42:02.990Z"}
+{"level":"info","message":"Religion selected successfully","timestamp":"2025-09-18T16:42:03.724Z"}
+{"level":"info","message":"Town of Birth entered successfully","timestamp":"2025-09-18T16:42:04.124Z"}
+{"level":"info","message":"County of Birth entered successfully","timestamp":"2025-09-18T16:42:05.032Z"}
+{"level":"info","message":"Country of Birth selected successfully","timestamp":"2025-09-18T16:42:05.598Z"}
+{"level":"info","message":"Nationality selected successfully","timestamp":"2025-09-18T16:42:06.340Z"}
+{"level":"info","message":"Registered Disabled selected successfully","timestamp":"2025-09-18T16:42:07.021Z"}
+{"level":"info","message":"Disability Notes entered successfully","timestamp":"2025-09-18T16:42:07.892Z"}
+{"level":"info","message":"Language selected successfully","timestamp":"2025-09-18T16:42:08.338Z"}
+{"level":"info","message":"Patient type selected successfully","timestamp":"2025-09-18T16:42:09.108Z"}
+{"level":"info","message":"Prisoner option selected successfully","timestamp":"2025-09-18T16:42:09.874Z"}
+{"level":"info","message":"Blood type selected successfully","timestamp":"2025-09-18T16:42:10.626Z"}
+{"level":"info","message":"Restricted registration selected successfully","timestamp":"2025-09-18T16:42:11.375Z"}
+{"level":"info","message":"Patient web registration selected successfully","timestamp":"2025-09-18T16:42:12.042Z"}
+{"level":"info","message":"Notes entered successfully","timestamp":"2025-09-18T16:42:14.248Z"}
+{"level":"info","message":"Next button clicked successfully","timestamp":"2025-09-18T16:42:14.483Z"}
+{"level":"info","message":"Save button clicked successfully","timestamp":"2025-09-18T16:42:17.205Z"}
+{"level":"info","message":"Number and Road entered successfully","timestamp":"2025-09-18T16:42:17.473Z"}
+{"level":"info","message":"Town entered successfully","timestamp":"2025-09-18T16:42:17.704Z"}
+{"level":"info","message":"District entered successfully","timestamp":"2025-09-18T16:42:17.999Z"}
+{"level":"info","message":"County entered successfully","timestamp":"2025-09-18T16:42:18.225Z"}
+{"level":"info","message":"Post code entered successfully","timestamp":"2025-09-18T16:42:18.450Z"}
+{"level":"info","message":"Save button on popup clicked successfully","timestamp":"2025-09-18T16:42:19.878Z"}
+{"level":"info","message":"Permanent ISO country code entered successfully","timestamp":"2025-09-18T16:42:19.994Z"}
+{"level":"info","message":"Permanent ICAO country code entered successfully","timestamp":"2025-09-18T16:42:20.176Z"}
+{"level":"info","message":"Permanent phone number entered successfully","timestamp":"2025-09-18T16:42:21.059Z"}
+{"level":"info","message":"Permanent email entered successfully","timestamp":"2025-09-18T16:42:21.356Z"}
+{"level":"info","message":"Permanent mobile number entered successfully","timestamp":"2025-09-18T16:42:21.680Z"}
+{"level":"info","message":"Permanent work phone entered successfully","timestamp":"2025-09-18T16:42:21.869Z"}
+{"level":"info","message":"Permanent fax entered successfully","timestamp":"2025-09-18T16:42:22.056Z"}
+{"level":"info","message":"Permanent health region selected successfully","timestamp":"2025-09-18T16:42:22.590Z"}
+{"level":"info","message":"Permanent location zone selected successfully","timestamp":"2025-09-18T16:42:23.356Z"}
+{"level":"info","message":"Temporary number and road entered successfully","timestamp":"2025-09-18T16:42:25.303Z"}
+{"level":"info","message":"Temporary town entered successfully","timestamp":"2025-09-18T16:42:25.506Z"}
+{"level":"info","message":"Temporary district entered successfully","timestamp":"2025-09-18T16:42:25.702Z"}
+{"level":"info","message":"Temporary county entered successfully","timestamp":"2025-09-18T16:42:25.902Z"}
+{"level":"info","message":"Temporary postcode entered successfully","timestamp":"2025-09-18T16:42:26.088Z"}
+{"level":"info","message":"Save button on popup clicked successfully","timestamp":"2025-09-18T16:42:26.435Z"}
+{"level":"info","message":"Temporary ISO country code entered successfully","timestamp":"2025-09-18T16:42:26.552Z"}
+{"level":"info","message":"Temporary ICAO country code entered successfully","timestamp":"2025-09-18T16:42:26.748Z"}
+{"level":"info","message":"Temporary phone entered successfully","timestamp":"2025-09-18T16:42:26.956Z"}
+{"level":"info","message":"Temporary email entered successfully","timestamp":"2025-09-18T16:42:27.175Z"}
+{"level":"info","message":"Temporary mobile number entered successfully","timestamp":"2025-09-18T16:42:27.660Z"}
+{"level":"info","message":"Temporary work phone entered successfully","timestamp":"2025-09-18T16:42:27.869Z"}
+{"level":"info","message":"Temporary fax entered successfully","timestamp":"2025-09-18T16:42:28.087Z"}
+{"level":"info","message":"Temporary health region selected successfully","timestamp":"2025-09-18T16:42:28.626Z"}
+{"level":"info","message":"Temporary location zone selected successfully","timestamp":"2025-09-18T16:42:29.406Z"}
+{"level":"info","message":"Temporary address Add/View button clicked successfully","timestamp":"2025-09-18T16:42:29.739Z"}
+{"level":"info","message":"Temporary address notes entered successfully","timestamp":"2025-09-18T16:42:32.530Z"}
+{"level":"info","message":"Temporary address Add/View button clicked successfully (second time)","timestamp":"2025-09-18T16:42:32.668Z"}
+{"level":"info","message":"Temporary address notes popup closed successfully","timestamp":"2025-09-18T16:42:32.812Z"}
+{"level":"info","message":"Billing correspondence radio button checked successfully","timestamp":"2025-09-18T16:42:32.975Z"}
+{"level":"info","message":"Start and end date selected successfully","timestamp":"2025-09-18T16:42:34.152Z"}
+{"level":"info","message":"Save address button clicked successfully","timestamp":"2025-09-18T16:42:34.691Z"}
+{"level":"info","message":"PIP family name entered successfully","timestamp":"2025-09-18T16:42:38.226Z"}
+{"level":"info","message":"PIP given name entered successfully","timestamp":"2025-09-18T16:42:38.475Z"}
+{"level":"info","message":"PIP middle name entered successfully","timestamp":"2025-09-18T16:42:38.948Z"}
+{"level":"info","message":"PIP date of birth selected successfully","timestamp":"2025-09-18T16:42:39.368Z"}
+{"level":"info","message":"PIP ethnicity selected successfully","timestamp":"2025-09-18T16:42:39.882Z"}
+{"level":"info","message":"PIP occupation selected successfully","timestamp":"2025-09-18T16:42:40.580Z"}
+{"level":"info","message":"PIP relation selected successfully","timestamp":"2025-09-18T16:42:41.249Z"}
+{"level":"info","message":"PIP next of kin selected successfully","timestamp":"2025-09-18T16:42:42.018Z"}
+{"level":"info","message":"PIP family aware of illness option selected successfully","timestamp":"2025-09-18T16:42:42.720Z"}
+{"level":"info","message":"PIP identifier type selected successfully","timestamp":"2025-09-18T16:42:43.415Z"}
+{"level":"info","message":"PIP identifier number entered successfully","timestamp":"2025-09-18T16:42:44.088Z"}
+{"level":"info","message":"PIP professional title entered successfully","timestamp":"2025-09-18T16:42:44.333Z"}
+{"level":"info","message":"PIP receive patient letter option selected successfully","timestamp":"2025-09-18T16:42:44.753Z"}
+{"level":"info","message":"PIP receive appointment letter option selected successfully","timestamp":"2025-09-18T16:42:45.432Z"}
+{"level":"info","message":"PIP send patient text/email option selected successfully","timestamp":"2025-09-18T16:42:45.816Z"}
+{"level":"info","message":"PIP referrer checkbox selected successfully","timestamp":"2025-09-18T16:42:45.950Z"}
+{"level":"info","message":"PIP notes entered successfully","timestamp":"2025-09-18T16:42:46.927Z"}
+{"level":"info","message":"PIP assisting in partner checkbox selected successfully","timestamp":"2025-09-18T16:42:47.047Z"}
+{"level":"info","message":"PIP helping patients checkbox selected successfully","timestamp":"2025-09-18T16:42:47.174Z"}
+{"level":"info","message":"PIP being photographed checkbox selected successfully","timestamp":"2025-09-18T16:42:47.314Z"}
+{"level":"info","message":"PIP general publicity checkbox selected successfully","timestamp":"2025-09-18T16:42:47.458Z"}
+{"level":"info","message":"PIP save button clicked successfully","timestamp":"2025-09-18T16:42:47.780Z"}
+{"level":"info","message":"View PIP link clicked successfully","timestamp":"2025-09-18T16:42:49.634Z"}
+{"level":"info","message":"View PIP popup closed successfully","timestamp":"2025-09-18T16:42:50.186Z"}
+{"level":"info","message":"Next button in View PIP clicked successfully","timestamp":"2025-09-18T16:42:50.380Z"}
+{"level":"info","message":"Search GP button clicked successfully","timestamp":"2025-09-18T16:42:50.713Z"}
+{"level":"info","message":"GP search entered successfully","timestamp":"2025-09-18T16:42:51.788Z"}
+{"level":"info","message":"Add GP button clicked successfully","timestamp":"2025-09-18T16:42:51.875Z"}
+{"level":"info","message":"GP title entered successfully","timestamp":"2025-09-18T16:42:52.382Z"}
+{"level":"info","message":"GP initials entered successfully","timestamp":"2025-09-18T16:42:52.509Z"}
+{"level":"info","message":"GP given name entered successfully","timestamp":"2025-09-18T16:42:52.808Z"}
+{"level":"info","message":"GP family name entered successfully","timestamp":"2025-09-18T16:42:53.097Z"}
+{"level":"info","message":"GP code entered successfully","timestamp":"2025-09-18T16:42:53.437Z"}
+{"level":"info","message":"GP practice code entered successfully","timestamp":"2025-09-18T16:42:53.908Z"}
+{"level":"info","message":"GP GMC code entered successfully","timestamp":"2025-09-18T16:42:54.371Z"}
+{"level":"info","message":"Show button clicked successfully","timestamp":"2025-09-18T16:42:54.643Z"}
+{"level":"info","message":"Unknown postcode selected successfully","timestamp":"2025-09-18T16:42:55.754Z"}
+{"level":"info","message":"Local GP postcode entered successfully","timestamp":"2025-09-18T16:42:57.300Z"}
+{"level":"info","message":"GP address number and road entered successfully","timestamp":"2025-09-18T16:42:58.499Z"}
+{"level":"info","message":"GP address district entered successfully","timestamp":"2025-09-18T16:42:58.628Z"}
+{"level":"info","message":"GP address town entered successfully","timestamp":"2025-09-18T16:42:58.794Z"}
+{"level":"info","message":"GP address county entered successfully","timestamp":"2025-09-18T16:42:58.913Z"}
+{"level":"info","message":"GP address postcode entered successfully","timestamp":"2025-09-18T16:42:59.033Z"}
+{"level":"info","message":"GP phone number entered successfully","timestamp":"2025-09-18T16:42:59.465Z"}
+{"level":"info","message":"GP fax number entered successfully","timestamp":"2025-09-18T16:43:00.126Z"}
+{"level":"info","message":"GP work phone entered successfully","timestamp":"2025-09-18T16:43:00.566Z"}
+{"level":"info","message":"GP mobile number entered successfully","timestamp":"2025-09-18T16:43:01.086Z"}
+{"level":"info","message":"GP email entered successfully","timestamp":"2025-09-18T16:43:01.727Z"}
+{"level":"info","message":"Save GP button clicked successfully","timestamp":"2025-09-18T16:43:01.876Z"}
+{"level":"info","message":"App GP search entered successfully","timestamp":"2025-09-18T16:43:02.858Z"}
+{"level":"info","message":"Person add button clicked successfully","timestamp":"2025-09-18T16:43:02.969Z"}
+{"level":"info","message":"Next button on search GP clicked successfully","timestamp":"2025-09-18T16:43:04.009Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-23T08:47:50.478Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-09-23T08:47:54.914Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-23T08:47:58.681Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-23T08:47:58.991Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-23T08:47:59.351Z"}
+{"level":"info","message":"Sex selected successfully","timestamp":"2025-09-23T08:47:59.671Z"}
+{"level":"info","message":"Born Date selected successfully","timestamp":"2025-09-23T08:47:59.948Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-23T08:48:00.434Z"}
+{"level":"info","message":"Clicked on Add Patient button successfully","timestamp":"2025-09-23T08:48:02.098Z"}
+{"level":"info","message":"Clicked on Duplicate Check button successfully","timestamp":"2025-09-23T08:48:03.879Z"}
+{"level":"info","message":"Selected Unique Identification successfully","timestamp":"2025-09-23T08:48:04.473Z"}
+{"level":"info","message":"Selected Photo Identification successfully","timestamp":"2025-09-23T08:48:04.833Z"}
+{"level":"info","message":"Photo Identification entered successfully","timestamp":"2025-09-23T08:48:05.281Z"}
+{"level":"info","message":"Issuing Country selected successfully","timestamp":"2025-09-23T08:48:05.614Z"}
+{"level":"info","message":"Title selected successfully","timestamp":"2025-09-23T08:48:06.292Z"}
+{"level":"info","message":"Middle Name entered successfully","timestamp":"2025-09-23T08:48:06.799Z"}
+{"level":"info","message":"Maiden Name entered successfully","timestamp":"2025-09-23T08:48:07.116Z"}
+{"level":"info","message":"Mobile Number entered successfully","timestamp":"2025-09-23T08:48:07.668Z"}
+{"level":"info","message":"Email ID entered successfully","timestamp":"2025-09-23T08:48:08.715Z"}
+{"level":"info","message":"Clicked on Duplicate Check button successfully","timestamp":"2025-09-23T08:48:08.959Z"}
+{"level":"info","message":"Clicked on Create Patient button successfully","timestamp":"2025-09-23T08:48:10.184Z"}
+{"level":"info","message":"Marital Status selected successfully","timestamp":"2025-09-23T08:48:12.565Z"}
+{"level":"info","message":"Sexual Orientation selected successfully","timestamp":"2025-09-23T08:48:13.385Z"}
+{"level":"info","message":"Ethnicity selected successfully","timestamp":"2025-09-23T08:48:14.173Z"}
+{"level":"info","message":"Occupation selected successfully","timestamp":"2025-09-23T08:48:14.880Z"}
+{"level":"info","message":"Religion selected successfully","timestamp":"2025-09-23T08:48:15.525Z"}
+{"level":"info","message":"Town of Birth entered successfully","timestamp":"2025-09-23T08:48:16.089Z"}
+{"level":"info","message":"County of Birth entered successfully","timestamp":"2025-09-23T08:48:17.136Z"}
+{"level":"info","message":"Country of Birth selected successfully","timestamp":"2025-09-23T08:48:17.766Z"}
+{"level":"info","message":"Nationality selected successfully","timestamp":"2025-09-23T08:48:18.571Z"}
+{"level":"info","message":"Registered Disabled selected successfully","timestamp":"2025-09-23T08:48:19.286Z"}
+{"level":"info","message":"Disability Notes entered successfully","timestamp":"2025-09-23T08:48:20.344Z"}
+{"level":"info","message":"Language selected successfully","timestamp":"2025-09-23T08:48:20.771Z"}
+{"level":"info","message":"Patient type selected successfully","timestamp":"2025-09-23T08:48:21.560Z"}
+{"level":"info","message":"Prisoner option selected successfully","timestamp":"2025-09-23T08:48:22.395Z"}
+{"level":"info","message":"Blood type selected successfully","timestamp":"2025-09-23T08:48:23.199Z"}
+{"level":"info","message":"Restricted registration selected successfully","timestamp":"2025-09-23T08:48:23.960Z"}
+{"level":"info","message":"Patient web registration selected successfully","timestamp":"2025-09-23T08:48:24.649Z"}
+{"level":"info","message":"Notes entered successfully","timestamp":"2025-09-23T08:48:27.121Z"}
+{"level":"info","message":"Next button clicked successfully","timestamp":"2025-09-23T08:48:27.378Z"}
+{"level":"info","message":"Save button clicked successfully","timestamp":"2025-09-23T08:48:29.836Z"}
+{"level":"info","message":"Number and Road entered successfully","timestamp":"2025-09-23T08:48:30.475Z"}
+{"level":"info","message":"Town entered successfully","timestamp":"2025-09-23T08:48:30.789Z"}
+{"level":"info","message":"District entered successfully","timestamp":"2025-09-23T08:48:31.018Z"}
+{"level":"info","message":"County entered successfully","timestamp":"2025-09-23T08:48:31.300Z"}
+{"level":"info","message":"Post code entered successfully","timestamp":"2025-09-23T08:48:31.534Z"}
+{"level":"info","message":"Save button on popup clicked successfully","timestamp":"2025-09-23T08:48:33.018Z"}
+{"level":"info","message":"Permanent ISO country code entered successfully","timestamp":"2025-09-23T08:48:33.174Z"}
+{"level":"info","message":"Permanent ICAO country code entered successfully","timestamp":"2025-09-23T08:48:33.404Z"}
+{"level":"info","message":"Permanent phone number entered successfully","timestamp":"2025-09-23T08:48:34.504Z"}
+{"level":"info","message":"Permanent email entered successfully","timestamp":"2025-09-23T08:48:34.860Z"}
+{"level":"info","message":"Permanent mobile number entered successfully","timestamp":"2025-09-23T08:48:35.204Z"}
+{"level":"info","message":"Permanent work phone entered successfully","timestamp":"2025-09-23T08:48:35.547Z"}
+{"level":"info","message":"Permanent fax entered successfully","timestamp":"2025-09-23T08:48:35.781Z"}
+{"level":"info","message":"Permanent health region selected successfully","timestamp":"2025-09-23T08:48:36.399Z"}
+{"level":"info","message":"Permanent location zone selected successfully","timestamp":"2025-09-23T08:48:37.177Z"}
+{"level":"info","message":"Temporary number and road entered successfully","timestamp":"2025-09-23T08:48:39.482Z"}
+{"level":"info","message":"Temporary town entered successfully","timestamp":"2025-09-23T08:48:39.785Z"}
+{"level":"info","message":"Temporary district entered successfully","timestamp":"2025-09-23T08:48:40.474Z"}
+{"level":"info","message":"Temporary county entered successfully","timestamp":"2025-09-23T08:48:40.818Z"}
+{"level":"info","message":"Temporary postcode entered successfully","timestamp":"2025-09-23T08:48:41.174Z"}
+{"level":"info","message":"Save button on popup clicked successfully","timestamp":"2025-09-23T08:48:41.589Z"}
+{"level":"info","message":"Temporary ISO country code entered successfully","timestamp":"2025-09-23T08:48:41.737Z"}
+{"level":"info","message":"Temporary ICAO country code entered successfully","timestamp":"2025-09-23T08:48:41.960Z"}
+{"level":"info","message":"Temporary phone entered successfully","timestamp":"2025-09-23T08:48:42.223Z"}
+{"level":"info","message":"Temporary email entered successfully","timestamp":"2025-09-23T08:48:42.539Z"}
+{"level":"info","message":"Temporary mobile number entered successfully","timestamp":"2025-09-23T08:48:42.765Z"}
+{"level":"info","message":"Temporary work phone entered successfully","timestamp":"2025-09-23T08:48:42.993Z"}
+{"level":"info","message":"Temporary fax entered successfully","timestamp":"2025-09-23T08:48:43.272Z"}
+{"level":"info","message":"Temporary health region selected successfully","timestamp":"2025-09-23T08:48:43.975Z"}
+{"level":"info","message":"Temporary location zone selected successfully","timestamp":"2025-09-23T08:48:44.632Z"}
+{"level":"info","message":"Temporary address Add/View button clicked successfully","timestamp":"2025-09-23T08:48:44.957Z"}
+{"level":"info","message":"Temporary address notes entered successfully","timestamp":"2025-09-23T08:48:48.171Z"}
+{"level":"info","message":"Temporary address Add/View button clicked successfully (second time)","timestamp":"2025-09-23T08:48:48.309Z"}
+{"level":"info","message":"Temporary address notes popup closed successfully","timestamp":"2025-09-23T08:48:48.502Z"}
+{"level":"info","message":"Billing correspondence radio button checked successfully","timestamp":"2025-09-23T08:48:48.732Z"}
+{"level":"info","message":"Start and end date selected successfully","timestamp":"2025-09-23T08:48:50.207Z"}
+{"level":"info","message":"Save address button clicked successfully","timestamp":"2025-09-23T08:48:50.836Z"}
+{"level":"info","message":"PIP family name entered successfully","timestamp":"2025-09-23T08:48:55.488Z"}
+{"level":"info","message":"PIP given name entered successfully","timestamp":"2025-09-23T08:48:55.698Z"}
+{"level":"info","message":"PIP middle name entered successfully","timestamp":"2025-09-23T08:48:55.909Z"}
+{"level":"info","message":"PIP date of birth selected successfully","timestamp":"2025-09-23T08:48:56.218Z"}
+{"level":"info","message":"PIP ethnicity selected successfully","timestamp":"2025-09-23T08:48:56.724Z"}
+{"level":"info","message":"PIP occupation selected successfully","timestamp":"2025-09-23T08:48:57.429Z"}
+{"level":"info","message":"PIP relation selected successfully","timestamp":"2025-09-23T08:48:58.033Z"}
+{"level":"info","message":"PIP next of kin selected successfully","timestamp":"2025-09-23T08:48:58.808Z"}
+{"level":"info","message":"PIP family aware of illness option selected successfully","timestamp":"2025-09-23T08:48:59.533Z"}
+{"level":"info","message":"PIP identifier type selected successfully","timestamp":"2025-09-23T08:49:00.219Z"}
+{"level":"info","message":"PIP identifier number entered successfully","timestamp":"2025-09-23T08:49:01.482Z"}
+{"level":"info","message":"PIP professional title entered successfully","timestamp":"2025-09-23T08:49:01.998Z"}
+{"level":"info","message":"PIP receive patient letter option selected successfully","timestamp":"2025-09-23T08:49:02.431Z"}
+{"level":"info","message":"PIP receive appointment letter option selected successfully","timestamp":"2025-09-23T08:49:02.974Z"}
+{"level":"info","message":"PIP send patient text/email option selected successfully","timestamp":"2025-09-23T08:49:03.298Z"}
+{"level":"info","message":"PIP referrer checkbox selected successfully","timestamp":"2025-09-23T08:49:03.574Z"}
+{"level":"info","message":"PIP notes entered successfully","timestamp":"2025-09-23T08:49:05.803Z"}
+{"level":"info","message":"PIP assisting in partner checkbox selected successfully","timestamp":"2025-09-23T08:49:06.008Z"}
+{"level":"info","message":"PIP helping patients checkbox selected successfully","timestamp":"2025-09-23T08:49:06.247Z"}
+{"level":"info","message":"PIP being photographed checkbox selected successfully","timestamp":"2025-09-23T08:49:06.479Z"}
+{"level":"info","message":"PIP general publicity checkbox selected successfully","timestamp":"2025-09-23T08:49:06.696Z"}
+{"level":"info","message":"PIP save button clicked successfully","timestamp":"2025-09-23T08:49:07.283Z"}
+{"level":"info","message":"View PIP link clicked successfully","timestamp":"2025-09-23T08:49:09.907Z"}
+{"level":"info","message":"View PIP popup closed successfully","timestamp":"2025-09-23T08:49:10.502Z"}
+{"level":"info","message":"Next button in View PIP clicked successfully","timestamp":"2025-09-23T08:49:10.689Z"}
+{"level":"info","message":"Search GP button clicked successfully","timestamp":"2025-09-23T08:49:11.056Z"}
+{"level":"info","message":"GP search entered successfully","timestamp":"2025-09-23T08:49:12.341Z"}
+{"level":"info","message":"Add GP button clicked successfully","timestamp":"2025-09-23T08:49:12.481Z"}
+{"level":"info","message":"GP title entered successfully","timestamp":"2025-09-23T08:49:12.971Z"}
+{"level":"info","message":"GP initials entered successfully","timestamp":"2025-09-23T08:49:13.196Z"}
+{"level":"info","message":"GP given name entered successfully","timestamp":"2025-09-23T08:49:13.535Z"}
+{"level":"info","message":"GP family name entered successfully","timestamp":"2025-09-23T08:49:13.876Z"}
+{"level":"info","message":"GP code entered successfully","timestamp":"2025-09-23T08:49:14.285Z"}
+{"level":"info","message":"GP practice code entered successfully","timestamp":"2025-09-23T08:49:14.851Z"}
+{"level":"info","message":"GP GMC code entered successfully","timestamp":"2025-09-23T08:49:15.630Z"}
+{"level":"info","message":"Show button clicked successfully","timestamp":"2025-09-23T08:49:15.944Z"}
+{"level":"info","message":"Unknown postcode selected successfully","timestamp":"2025-09-23T08:49:17.114Z"}
+{"level":"info","message":"Local GP postcode entered successfully","timestamp":"2025-09-23T08:49:18.743Z"}
+{"level":"info","message":"GP address number and road entered successfully","timestamp":"2025-09-23T08:49:19.990Z"}
+{"level":"info","message":"GP address district entered successfully","timestamp":"2025-09-23T08:49:20.186Z"}
+{"level":"info","message":"GP address town entered successfully","timestamp":"2025-09-23T08:49:20.364Z"}
+{"level":"info","message":"GP address county entered successfully","timestamp":"2025-09-23T08:49:20.503Z"}
+{"level":"info","message":"GP address postcode entered successfully","timestamp":"2025-09-23T08:49:20.623Z"}
+{"level":"info","message":"GP phone number entered successfully","timestamp":"2025-09-23T08:49:21.109Z"}
+{"level":"info","message":"GP fax number entered successfully","timestamp":"2025-09-23T08:49:21.549Z"}
+{"level":"info","message":"GP work phone entered successfully","timestamp":"2025-09-23T08:49:22.039Z"}
+{"level":"info","message":"GP mobile number entered successfully","timestamp":"2025-09-23T08:49:22.565Z"}
+{"level":"info","message":"GP email entered successfully","timestamp":"2025-09-23T08:49:23.309Z"}
+{"level":"info","message":"Save GP button clicked successfully","timestamp":"2025-09-23T08:49:23.473Z"}
+{"level":"info","message":"App GP search entered successfully","timestamp":"2025-09-23T08:49:24.711Z"}
+{"level":"info","message":"Person add button clicked successfully","timestamp":"2025-09-23T08:49:24.840Z"}
+{"level":"info","message":"Next button on search GP clicked successfully","timestamp":"2025-09-23T08:49:25.874Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-09-23T15:20:12.967Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-09-23T15:20:14.070Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-23T15:20:14.299Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-09-23T15:20:19.470Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-23T15:20:24.721Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-23T15:20:24.887Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-23T15:20:25.523Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-09-23T15:21:43.792Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-09-23T15:21:44.976Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-23T15:21:45.196Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-09-23T15:21:49.563Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-23T15:21:57.945Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-23T15:21:58.124Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-23T15:21:58.767Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-09-23T15:29:27.199Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-09-23T15:29:28.342Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-23T15:29:28.592Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-23T15:29:40.647Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-23T15:29:40.794Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-23T15:29:41.251Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-09-23T15:32:07.244Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-09-23T15:32:08.405Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-23T15:32:08.695Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-23T15:32:24.415Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-23T15:32:24.909Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-23T15:58:19.497Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-09-23T15:58:24.607Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-23T15:58:36.282Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-23T15:58:36.439Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-23T15:58:36.876Z"}
+{"level":"info","message":"Sex selected successfully","timestamp":"2025-09-23T15:58:37.199Z"}
+{"level":"info","message":"Born Date selected successfully","timestamp":"2025-09-23T15:58:37.604Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-23T15:58:38.019Z"}
+{"level":"info","message":"Clicked on Add Patient button successfully","timestamp":"2025-09-23T15:58:40.009Z"}
+{"level":"info","message":"Clicked on Duplicate Check button successfully","timestamp":"2025-09-23T15:58:41.938Z"}
+{"level":"info","message":"Selected Unique Identification successfully","timestamp":"2025-09-23T15:58:42.269Z"}
+{"level":"info","message":"Selected Photo Identification successfully","timestamp":"2025-09-23T15:58:42.539Z"}
+{"level":"info","message":"Photo Identification entered successfully","timestamp":"2025-09-23T15:58:42.989Z"}
+{"level":"info","message":"Issuing Country selected successfully","timestamp":"2025-09-23T15:58:43.238Z"}
+{"level":"info","message":"Title selected successfully","timestamp":"2025-09-23T15:58:43.851Z"}
+{"level":"info","message":"Middle Name entered successfully","timestamp":"2025-09-23T15:58:44.459Z"}
+{"level":"info","message":"Maiden Name entered successfully","timestamp":"2025-09-23T15:58:44.709Z"}
+{"level":"info","message":"Mobile Number entered successfully","timestamp":"2025-09-23T15:58:45.362Z"}
+{"level":"info","message":"Email ID entered successfully","timestamp":"2025-09-23T15:58:46.465Z"}
+{"level":"info","message":"Clicked on Duplicate Check button successfully","timestamp":"2025-09-23T15:58:46.688Z"}
+{"level":"info","message":"Clicked on Create Patient button successfully","timestamp":"2025-09-23T15:58:47.839Z"}
+{"level":"info","message":"Marital Status selected successfully","timestamp":"2025-09-23T15:58:50.412Z"}
+{"level":"info","message":"Sexual Orientation selected successfully","timestamp":"2025-09-23T15:58:51.247Z"}
+{"level":"info","message":"Ethnicity selected successfully","timestamp":"2025-09-23T15:58:52.044Z"}
+{"level":"info","message":"Occupation selected successfully","timestamp":"2025-09-23T15:58:52.663Z"}
+{"level":"info","message":"Religion selected successfully","timestamp":"2025-09-23T15:58:53.254Z"}
+{"level":"info","message":"Town of Birth entered successfully","timestamp":"2025-09-23T15:58:53.791Z"}
+{"level":"info","message":"County of Birth entered successfully","timestamp":"2025-09-23T15:58:55.030Z"}
+{"level":"info","message":"Country of Birth selected successfully","timestamp":"2025-09-23T15:58:55.703Z"}
+{"level":"info","message":"Nationality selected successfully","timestamp":"2025-09-23T15:58:56.381Z"}
+{"level":"info","message":"Registered Disabled selected successfully","timestamp":"2025-09-23T15:58:57.151Z"}
+{"level":"info","message":"Disability Notes entered successfully","timestamp":"2025-09-23T15:58:58.397Z"}
+{"level":"info","message":"Language selected successfully","timestamp":"2025-09-23T15:58:58.869Z"}
+{"level":"info","message":"Patient type selected successfully","timestamp":"2025-09-23T15:58:59.672Z"}
+{"level":"info","message":"Prisoner option selected successfully","timestamp":"2025-09-23T15:59:00.598Z"}
+{"level":"info","message":"Blood type selected successfully","timestamp":"2025-09-23T15:59:01.369Z"}
+{"level":"info","message":"Restricted registration selected successfully","timestamp":"2025-09-23T15:59:02.160Z"}
+{"level":"info","message":"Patient web registration selected successfully","timestamp":"2025-09-23T15:59:02.963Z"}
+{"level":"info","message":"Notes entered successfully","timestamp":"2025-09-23T15:59:05.727Z"}
+{"level":"info","message":"Next button clicked successfully","timestamp":"2025-09-23T15:59:06.131Z"}
+{"level":"info","message":"Save button clicked successfully","timestamp":"2025-09-23T15:59:09.177Z"}
+{"level":"info","message":"Number and Road entered successfully","timestamp":"2025-09-23T15:59:09.948Z"}
+{"level":"info","message":"Town entered successfully","timestamp":"2025-09-23T15:59:10.242Z"}
+{"level":"info","message":"District entered successfully","timestamp":"2025-09-23T15:59:10.517Z"}
+{"level":"info","message":"County entered successfully","timestamp":"2025-09-23T15:59:10.803Z"}
+{"level":"info","message":"Post code entered successfully","timestamp":"2025-09-23T15:59:11.133Z"}
+{"level":"info","message":"Save button on popup clicked successfully","timestamp":"2025-09-23T15:59:12.788Z"}
+{"level":"info","message":"Permanent ISO country code entered successfully","timestamp":"2025-09-23T15:59:12.964Z"}
+{"level":"info","message":"Permanent ICAO country code entered successfully","timestamp":"2025-09-23T15:59:13.266Z"}
+{"level":"info","message":"Permanent phone number entered successfully","timestamp":"2025-09-23T15:59:14.501Z"}
+{"level":"info","message":"Permanent email entered successfully","timestamp":"2025-09-23T15:59:14.921Z"}
+{"level":"info","message":"Permanent mobile number entered successfully","timestamp":"2025-09-23T15:59:15.314Z"}
+{"level":"info","message":"Permanent work phone entered successfully","timestamp":"2025-09-23T15:59:15.575Z"}
+{"level":"info","message":"Permanent fax entered successfully","timestamp":"2025-09-23T15:59:15.903Z"}
+{"level":"info","message":"Permanent health region selected successfully","timestamp":"2025-09-23T15:59:16.441Z"}
+{"level":"info","message":"Permanent location zone selected successfully","timestamp":"2025-09-23T15:59:17.231Z"}
+{"level":"info","message":"Temporary number and road entered successfully","timestamp":"2025-09-23T15:59:19.728Z"}
+{"level":"info","message":"Temporary town entered successfully","timestamp":"2025-09-23T15:59:20.183Z"}
+{"level":"info","message":"Temporary district entered successfully","timestamp":"2025-09-23T15:59:20.568Z"}
+{"level":"info","message":"Temporary county entered successfully","timestamp":"2025-09-23T15:59:20.973Z"}
+{"level":"info","message":"Temporary postcode entered successfully","timestamp":"2025-09-23T15:59:21.335Z"}
+{"level":"info","message":"Save button on popup clicked successfully","timestamp":"2025-09-23T15:59:21.854Z"}
+{"level":"info","message":"Temporary ISO country code entered successfully","timestamp":"2025-09-23T15:59:22.064Z"}
+{"level":"info","message":"Temporary ICAO country code entered successfully","timestamp":"2025-09-23T15:59:22.398Z"}
+{"level":"info","message":"Temporary phone entered successfully","timestamp":"2025-09-23T15:59:22.688Z"}
+{"level":"info","message":"Temporary email entered successfully","timestamp":"2025-09-23T15:59:22.968Z"}
+{"level":"info","message":"Temporary mobile number entered successfully","timestamp":"2025-09-23T15:59:23.251Z"}
+{"level":"info","message":"Temporary work phone entered successfully","timestamp":"2025-09-23T15:59:23.524Z"}
+{"level":"info","message":"Temporary fax entered successfully","timestamp":"2025-09-23T15:59:23.823Z"}
+{"level":"info","message":"Temporary health region selected successfully","timestamp":"2025-09-23T15:59:24.417Z"}
+{"level":"info","message":"Temporary location zone selected successfully","timestamp":"2025-09-23T15:59:25.177Z"}
+{"level":"info","message":"Temporary address Add/View button clicked successfully","timestamp":"2025-09-23T15:59:25.531Z"}
+{"level":"info","message":"Temporary address notes entered successfully","timestamp":"2025-09-23T15:59:29.263Z"}
+{"level":"info","message":"Temporary address Add/View button clicked successfully (second time)","timestamp":"2025-09-23T15:59:29.425Z"}
+{"level":"info","message":"Temporary address notes popup closed successfully","timestamp":"2025-09-23T15:59:29.643Z"}
+{"level":"info","message":"Billing correspondence radio button checked successfully","timestamp":"2025-09-23T15:59:29.876Z"}
+{"level":"info","message":"Start and end date selected successfully","timestamp":"2025-09-23T15:59:31.538Z"}
+{"level":"info","message":"Save address button clicked successfully","timestamp":"2025-09-23T15:59:32.238Z"}
+{"level":"info","message":"PIP family name entered successfully","timestamp":"2025-09-23T15:59:37.781Z"}
+{"level":"info","message":"PIP given name entered successfully","timestamp":"2025-09-23T15:59:38.040Z"}
+{"level":"info","message":"PIP middle name entered successfully","timestamp":"2025-09-23T15:59:39.128Z"}
+{"level":"info","message":"PIP date of birth selected successfully","timestamp":"2025-09-23T15:59:39.398Z"}
+{"level":"info","message":"PIP ethnicity selected successfully","timestamp":"2025-09-23T15:59:39.922Z"}
+{"level":"info","message":"PIP occupation selected successfully","timestamp":"2025-09-23T15:59:40.488Z"}
+{"level":"info","message":"PIP relation selected successfully","timestamp":"2025-09-23T15:59:41.131Z"}
+{"level":"info","message":"PIP next of kin selected successfully","timestamp":"2025-09-23T15:59:42.013Z"}
+{"level":"info","message":"PIP family aware of illness option selected successfully","timestamp":"2025-09-23T15:59:42.663Z"}
+{"level":"info","message":"PIP identifier type selected successfully","timestamp":"2025-09-23T15:59:43.313Z"}
+{"level":"info","message":"PIP identifier number entered successfully","timestamp":"2025-09-23T15:59:44.520Z"}
+{"level":"info","message":"PIP professional title entered successfully","timestamp":"2025-09-23T15:59:44.946Z"}
+{"level":"info","message":"PIP receive patient letter option selected successfully","timestamp":"2025-09-23T15:59:45.491Z"}
+{"level":"info","message":"PIP receive appointment letter option selected successfully","timestamp":"2025-09-23T15:59:46.337Z"}
+{"level":"info","message":"PIP send patient text/email option selected successfully","timestamp":"2025-09-23T15:59:46.694Z"}
+{"level":"info","message":"PIP referrer checkbox selected successfully","timestamp":"2025-09-23T15:59:46.893Z"}
+{"level":"info","message":"PIP notes entered successfully","timestamp":"2025-09-23T15:59:48.582Z"}
+{"level":"info","message":"PIP assisting in partner checkbox selected successfully","timestamp":"2025-09-23T15:59:48.782Z"}
+{"level":"info","message":"PIP helping patients checkbox selected successfully","timestamp":"2025-09-23T15:59:49.006Z"}
+{"level":"info","message":"PIP being photographed checkbox selected successfully","timestamp":"2025-09-23T15:59:49.213Z"}
+{"level":"info","message":"PIP general publicity checkbox selected successfully","timestamp":"2025-09-23T15:59:49.427Z"}
+{"level":"info","message":"PIP save button clicked successfully","timestamp":"2025-09-23T15:59:50.016Z"}
+{"level":"info","message":"View PIP link clicked successfully","timestamp":"2025-09-23T15:59:53.935Z"}
+{"level":"info","message":"View PIP popup closed successfully","timestamp":"2025-09-23T15:59:54.534Z"}
+{"level":"info","message":"Next button in View PIP clicked successfully","timestamp":"2025-09-23T15:59:54.907Z"}
+{"level":"info","message":"Search GP button clicked successfully","timestamp":"2025-09-23T15:59:55.478Z"}
+{"level":"info","message":"GP search entered successfully","timestamp":"2025-09-23T15:59:57.291Z"}
+{"level":"info","message":"Add GP button clicked successfully","timestamp":"2025-09-23T15:59:57.398Z"}
+{"level":"info","message":"GP title entered successfully","timestamp":"2025-09-23T15:59:58.099Z"}
+{"level":"info","message":"GP initials entered successfully","timestamp":"2025-09-23T15:59:58.346Z"}
+{"level":"info","message":"GP given name entered successfully","timestamp":"2025-09-23T15:59:58.932Z"}
+{"level":"info","message":"GP family name entered successfully","timestamp":"2025-09-23T15:59:59.483Z"}
+{"level":"info","message":"GP code entered successfully","timestamp":"2025-09-23T16:00:00.127Z"}
+{"level":"info","message":"GP practice code entered successfully","timestamp":"2025-09-23T16:00:01.029Z"}
+{"level":"info","message":"GP GMC code entered successfully","timestamp":"2025-09-23T16:00:01.827Z"}
+{"level":"info","message":"Show button clicked successfully","timestamp":"2025-09-23T16:00:02.256Z"}
+{"level":"info","message":"Unknown postcode selected successfully","timestamp":"2025-09-23T16:00:03.601Z"}
+{"level":"info","message":"Local GP postcode entered successfully","timestamp":"2025-09-23T16:00:06.893Z"}
+{"level":"info","message":"GP address number and road entered successfully","timestamp":"2025-09-23T16:00:08.407Z"}
+{"level":"info","message":"GP address district entered successfully","timestamp":"2025-09-23T16:00:08.622Z"}
+{"level":"info","message":"GP address town entered successfully","timestamp":"2025-09-23T16:00:08.840Z"}
+{"level":"info","message":"GP address county entered successfully","timestamp":"2025-09-23T16:00:09.068Z"}
+{"level":"info","message":"GP address postcode entered successfully","timestamp":"2025-09-23T16:00:09.279Z"}
+{"level":"info","message":"GP phone number entered successfully","timestamp":"2025-09-23T16:00:10.080Z"}
+{"level":"info","message":"GP fax number entered successfully","timestamp":"2025-09-23T16:00:10.762Z"}
+{"level":"info","message":"GP work phone entered successfully","timestamp":"2025-09-23T16:00:11.453Z"}
+{"level":"info","message":"GP mobile number entered successfully","timestamp":"2025-09-23T16:00:12.442Z"}
+{"level":"info","message":"GP email entered successfully","timestamp":"2025-09-23T16:00:13.758Z"}
+{"level":"info","message":"Save GP button clicked successfully","timestamp":"2025-09-23T16:00:14.026Z"}
+{"level":"info","message":"App GP search entered successfully","timestamp":"2025-09-23T16:00:15.636Z"}
+{"level":"info","message":"Person add button clicked successfully","timestamp":"2025-09-23T16:00:15.812Z"}
+{"level":"info","message":"Next button on search GP clicked successfully","timestamp":"2025-09-23T16:00:17.042Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-09-25T05:35:02.093Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-09-25T05:35:03.210Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-25T05:35:03.393Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-25T05:35:15.194Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-25T05:35:15.626Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-09-25T05:37:16.420Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-09-25T05:37:17.525Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-25T05:37:17.688Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-09-26T02:36:37.453Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-09-26T02:36:38.568Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-26T02:36:38.734Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-26T02:36:50.191Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-26T02:36:50.645Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-09-26T02:37:54.968Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-09-26T02:37:56.077Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-26T02:37:56.235Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-26T02:38:05.272Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-26T02:38:05.372Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-26T02:38:05.719Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-09-26T02:41:48.777Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-09-26T02:41:49.873Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-26T02:41:50.036Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-26T02:41:59.894Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-26T02:41:59.997Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-26T02:42:00.382Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-09-26T02:45:49.342Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-09-26T02:45:50.432Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-26T02:45:50.573Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-26T02:46:02.278Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-26T02:46:02.890Z"}
+{"level":"info","message":"Username enter successfully","timestamp":"2025-09-26T02:47:25.772Z"}
+{"level":"info","message":"Password enter successfully","timestamp":"2025-09-26T02:47:26.863Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-26T02:47:27.026Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-26T10:35:42.928Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-09-26T10:35:46.533Z"}
+{"level":"info","message":"Clicked on Login button successfully","timestamp":"2025-09-26T11:01:50.357Z"}
+{"level":"info","message":"Clicked on Patient Icon successfully","timestamp":"2025-09-26T11:01:55.723Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-26T11:02:00.332Z"}
+{"level":"info","message":"Given Name entered successfully","timestamp":"2025-09-26T11:02:00.594Z"}
+{"level":"info","message":"Family Name entered successfully","timestamp":"2025-09-26T11:02:01.238Z"}
+{"level":"info","message":"Sex selected successfully","timestamp":"2025-09-26T11:02:01.718Z"}
+{"level":"info","message":"Born Date selected successfully","timestamp":"2025-09-26T11:02:02.072Z"}
+{"level":"info","message":"Clicked on Search button successfully","timestamp":"2025-09-26T11:02:02.367Z"}
+{"level":"info","message":"Clicked on Add Patient button successfully","timestamp":"2025-09-26T11:02:03.869Z"}
+{"level":"info","message":"Clicked on Duplicate Check button successfully","timestamp":"2025-09-26T11:02:06.626Z"}
+{"level":"info","message":"Selected Unique Identification successfully","timestamp":"2025-09-26T11:02:07.032Z"}
+{"level":"info","message":"Selected Photo Identification successfully","timestamp":"2025-09-26T11:02:07.369Z"}
+{"level":"info","message":"Photo Identification entered successfully","timestamp":"2025-09-26T11:02:08.145Z"}
+{"level":"info","message":"Issuing Country selected successfully","timestamp":"2025-09-26T11:02:08.629Z"}
+{"level":"info","message":"Title selected successfully","timestamp":"2025-09-26T11:02:09.335Z"}
+{"level":"info","message":"Middle Name entered successfully","timestamp":"2025-09-26T11:02:10.076Z"}
+{"level":"info","message":"Maiden Name entered successfully","timestamp":"2025-09-26T11:02:10.604Z"}
+{"level":"info","message":"Mobile Number entered successfully","timestamp":"2025-09-26T11:02:11.760Z"}
+{"level":"info","message":"Email ID entered successfully","timestamp":"2025-09-26T11:02:13.236Z"}
+{"level":"info","message":"Clicked on Duplicate Check button successfully","timestamp":"2025-09-26T11:02:13.451Z"}
+{"level":"info","message":"Clicked on Create Patient button successfully","timestamp":"2025-09-26T11:02:14.483Z"}
+{"level":"info","message":"Marital Status selected successfully","timestamp":"2025-09-26T11:02:22.451Z"}
+{"level":"info","message":"Sexual Orientation selected successfully","timestamp":"2025-09-26T11:02:24.352Z"}
+{"level":"info","message":"Ethnicity selected successfully","timestamp":"2025-09-26T11:02:26.297Z"}
+{"level":"info","message":"Occupation selected successfully","timestamp":"2025-09-26T11:03:22.921Z"}
+{"level":"info","message":"Religion selected successfully","timestamp":"2025-09-26T11:03:30.660Z"}
+{"level":"info","message":"Town of Birth entered successfully","timestamp":"2025-09-26T11:03:31.296Z"}
+{"level":"info","message":"County of Birth entered successfully","timestamp":"2025-09-26T11:03:32.518Z"}
+{"level":"info","message":"Country of Birth selected successfully","timestamp":"2025-09-26T11:03:33.307Z"}
+{"level":"info","message":"Nationality selected successfully","timestamp":"2025-09-26T11:03:34.439Z"}
+{"level":"info","message":"Registered Disabled selected successfully","timestamp":"2025-09-26T11:03:38.822Z"}
+{"level":"info","message":"Disability Notes entered successfully","timestamp":"2025-09-26T11:03:39.873Z"}
+{"level":"info","message":"Language selected successfully","timestamp":"2025-09-26T11:03:41.147Z"}
+{"level":"info","message":"Patient type selected successfully","timestamp":"2025-09-26T11:03:42.263Z"}
+{"level":"info","message":"Prisoner option selected successfully","timestamp":"2025-09-26T11:03:43.271Z"}
+{"level":"info","message":"Blood type selected successfully","timestamp":"2025-09-26T11:03:44.219Z"}
+{"level":"info","message":"Restricted registration selected successfully","timestamp":"2025-09-26T11:03:45.041Z"}
+{"level":"info","message":"Patient web registration selected successfully","timestamp":"2025-09-26T11:03:46.087Z"}
+{"level":"info","message":"Notes entered successfully","timestamp":"2025-09-26T11:03:48.411Z"}
+{"level":"info","message":"Next button clicked successfully","timestamp":"2025-09-26T11:03:48.787Z"}
+{"level":"info","message":"Save button clicked successfully","timestamp":"2025-09-26T11:03:53.055Z"}
+{"level":"info","message":"Number and Road entered successfully","timestamp":"2025-09-26T11:03:53.482Z"}
+{"level":"info","message":"Town entered successfully","timestamp":"2025-09-26T11:03:53.906Z"}
+{"level":"info","message":"District entered successfully","timestamp":"2025-09-26T11:04:01.639Z"}
+{"level":"info","message":"County entered successfully","timestamp":"2025-09-26T11:04:02.754Z"}
+{"level":"info","message":"Post code entered successfully","timestamp":"2025-09-26T11:04:03.680Z"}
+{"level":"info","message":"Save button on popup clicked successfully","timestamp":"2025-09-26T11:04:08.177Z"}
+{"level":"info","message":"Permanent ISO country code entered successfully","timestamp":"2025-09-26T11:04:08.519Z"}
+{"level":"info","message":"Permanent ICAO country code entered successfully","timestamp":"2025-09-26T11:04:08.799Z"}
+{"level":"info","message":"Permanent phone number entered successfully","timestamp":"2025-09-26T11:04:09.769Z"}
+{"level":"info","message":"Permanent email entered successfully","timestamp":"2025-09-26T11:04:10.304Z"}
+{"level":"info","message":"Permanent mobile number entered successfully","timestamp":"2025-09-26T11:04:10.800Z"}
+{"level":"info","message":"Permanent work phone entered successfully","timestamp":"2025-09-26T11:04:11.074Z"}
+{"level":"info","message":"Permanent fax entered successfully","timestamp":"2025-09-26T11:04:11.406Z"}
+{"level":"info","message":"Permanent health region selected successfully","timestamp":"2025-09-26T11:04:12.271Z"}
+{"level":"info","message":"Permanent location zone selected successfully","timestamp":"2025-09-26T11:04:31.092Z"}
+{"level":"info","message":"Temporary number and road entered successfully","timestamp":"2025-09-26T11:04:33.290Z"}
+{"level":"info","message":"Temporary town entered successfully","timestamp":"2025-09-26T11:04:33.559Z"}
+{"level":"info","message":"Temporary district entered successfully","timestamp":"2025-09-26T11:04:33.842Z"}
+{"level":"info","message":"Temporary county entered successfully","timestamp":"2025-09-26T11:04:34.091Z"}
+{"level":"info","message":"Temporary postcode entered successfully","timestamp":"2025-09-26T11:04:34.316Z"}
+{"level":"info","message":"Save button on popup clicked successfully","timestamp":"2025-09-26T11:04:34.754Z"}
+{"level":"info","message":"Temporary ISO country code entered successfully","timestamp":"2025-09-26T11:04:34.898Z"}
+{"level":"info","message":"Temporary ICAO country code entered successfully","timestamp":"2025-09-26T11:04:35.127Z"}
+{"level":"info","message":"Temporary phone entered successfully","timestamp":"2025-09-26T11:04:35.390Z"}
+{"level":"info","message":"Temporary email entered successfully","timestamp":"2025-09-26T11:04:35.623Z"}
+{"level":"info","message":"Temporary mobile number entered successfully","timestamp":"2025-09-26T11:04:35.842Z"}
+{"level":"info","message":"Temporary work phone entered successfully","timestamp":"2025-09-26T11:04:36.100Z"}
+{"level":"info","message":"Temporary fax entered successfully","timestamp":"2025-09-26T11:04:36.330Z"}
+{"level":"info","message":"Temporary health region selected successfully","timestamp":"2025-09-26T11:04:36.945Z"}
+{"level":"info","message":"Temporary location zone selected successfully","timestamp":"2025-09-26T11:04:37.643Z"}
+{"level":"info","message":"Temporary address Add/View button clicked successfully","timestamp":"2025-09-26T11:04:38.091Z"}
+{"level":"info","message":"Temporary address notes entered successfully","timestamp":"2025-09-26T11:04:41.422Z"}
+{"level":"info","message":"Temporary address Add/View button clicked successfully (second time)","timestamp":"2025-09-26T11:04:41.575Z"}
+{"level":"info","message":"Temporary address notes popup closed successfully","timestamp":"2025-09-26T11:04:41.740Z"}
+{"level":"info","message":"Billing correspondence radio button checked successfully","timestamp":"2025-09-26T11:04:41.940Z"}
+{"level":"info","message":"Start and end date selected successfully","timestamp":"2025-09-26T11:04:43.616Z"}
+{"level":"info","message":"Save address button clicked successfully","timestamp":"2025-09-26T11:04:44.238Z"}
+{"level":"info","message":"PIP family name entered successfully","timestamp":"2025-09-26T11:04:48.086Z"}
+{"level":"info","message":"PIP given name entered successfully","timestamp":"2025-09-26T11:04:48.334Z"}
+{"level":"info","message":"PIP middle name entered successfully","timestamp":"2025-09-26T11:04:49.563Z"}
+{"level":"info","message":"PIP date of birth selected successfully","timestamp":"2025-09-26T11:04:49.864Z"}
+{"level":"info","message":"PIP ethnicity selected successfully","timestamp":"2025-09-26T11:04:50.345Z"}
+{"level":"info","message":"PIP occupation selected successfully","timestamp":"2025-09-26T11:04:50.876Z"}
+{"level":"info","message":"PIP relation selected successfully","timestamp":"2025-09-26T11:04:51.577Z"}
+{"level":"info","message":"PIP next of kin selected successfully","timestamp":"2025-09-26T11:04:52.415Z"}
+{"level":"info","message":"PIP family aware of illness option selected successfully","timestamp":"2025-09-26T11:04:53.057Z"}
+{"level":"info","message":"PIP identifier type selected successfully","timestamp":"2025-09-26T11:04:53.740Z"}
+{"level":"info","message":"PIP identifier number entered successfully","timestamp":"2025-09-26T11:04:54.870Z"}
+{"level":"info","message":"PIP professional title entered successfully","timestamp":"2025-09-26T11:04:55.261Z"}
+{"level":"info","message":"PIP receive patient letter option selected successfully","timestamp":"2025-09-26T11:04:55.758Z"}
+{"level":"info","message":"PIP receive appointment letter option selected successfully","timestamp":"2025-09-26T11:04:56.282Z"}
+{"level":"info","message":"PIP send patient text/email option selected successfully","timestamp":"2025-09-26T11:04:56.638Z"}
+{"level":"info","message":"PIP referrer checkbox selected successfully","timestamp":"2025-09-26T11:04:56.828Z"}
+{"level":"info","message":"PIP notes entered successfully","timestamp":"2025-09-26T11:04:58.347Z"}
+{"level":"info","message":"PIP assisting in partner checkbox selected successfully","timestamp":"2025-09-26T11:04:58.548Z"}
+{"level":"info","message":"PIP helping patients checkbox selected successfully","timestamp":"2025-09-26T11:04:58.757Z"}
+{"level":"info","message":"PIP being photographed checkbox selected successfully","timestamp":"2025-09-26T11:04:58.970Z"}
+{"level":"info","message":"PIP general publicity checkbox selected successfully","timestamp":"2025-09-26T11:04:59.170Z"}
+{"level":"info","message":"PIP save button clicked successfully","timestamp":"2025-09-26T11:04:59.668Z"}
+{"level":"info","message":"View PIP link clicked successfully","timestamp":"2025-09-26T11:05:02.159Z"}
+{"level":"info","message":"View PIP popup closed successfully","timestamp":"2025-09-26T11:05:02.762Z"}
+{"level":"info","message":"Next button in View PIP clicked successfully","timestamp":"2025-09-26T11:05:03.089Z"}
+{"level":"info","message":"Search GP button clicked successfully","timestamp":"2025-09-26T11:05:03.568Z"}
+{"level":"info","message":"GP search entered successfully","timestamp":"2025-09-26T11:05:05.036Z"}
+{"level":"info","message":"Add GP button clicked successfully","timestamp":"2025-09-26T11:05:05.174Z"}
+{"level":"info","message":"GP title entered successfully","timestamp":"2025-09-26T11:05:05.752Z"}
+{"level":"info","message":"GP initials entered successfully","timestamp":"2025-09-26T11:05:05.955Z"}
+{"level":"info","message":"GP given name entered successfully","timestamp":"2025-09-26T11:05:06.489Z"}
+{"level":"info","message":"GP family name entered successfully","timestamp":"2025-09-26T11:05:06.968Z"}
+{"level":"info","message":"GP code entered successfully","timestamp":"2025-09-26T11:05:07.636Z"}
+{"level":"info","message":"GP practice code entered successfully","timestamp":"2025-09-26T11:05:08.373Z"}
+{"level":"info","message":"GP GMC code entered successfully","timestamp":"2025-09-26T11:05:09.125Z"}
+{"level":"info","message":"Show button clicked successfully","timestamp":"2025-09-26T11:05:09.500Z"}
+{"level":"info","message":"Unknown postcode selected successfully","timestamp":"2025-09-26T11:05:10.932Z"}
+{"level":"info","message":"Local GP postcode entered successfully","timestamp":"2025-09-26T11:05:12.781Z"}
+{"level":"info","message":"GP address number and road entered successfully","timestamp":"2025-09-26T11:05:14.119Z"}
+{"level":"info","message":"GP address district entered successfully","timestamp":"2025-09-26T11:05:14.309Z"}
+{"level":"info","message":"GP address town entered successfully","timestamp":"2025-09-26T11:05:14.499Z"}
+{"level":"info","message":"GP address county entered successfully","timestamp":"2025-09-26T11:05:14.685Z"}
+{"level":"info","message":"GP address postcode entered successfully","timestamp":"2025-09-26T11:05:14.882Z"}
+{"level":"info","message":"GP phone number entered successfully","timestamp":"2025-09-26T11:05:15.560Z"}
+{"level":"info","message":"GP fax number entered successfully","timestamp":"2025-09-26T11:05:16.147Z"}
+{"level":"info","message":"GP work phone entered successfully","timestamp":"2025-09-26T11:05:16.573Z"}
+{"level":"info","message":"GP mobile number entered successfully","timestamp":"2025-09-26T11:05:17.095Z"}
+{"level":"info","message":"GP email entered successfully","timestamp":"2025-09-26T11:05:17.724Z"}
+{"level":"info","message":"Save GP button clicked successfully","timestamp":"2025-09-26T11:05:17.910Z"}
+{"level":"info","message":"App GP search entered successfully","timestamp":"2025-09-26T11:05:18.951Z"}
+{"level":"info","message":"Person add button clicked successfully","timestamp":"2025-09-26T11:05:19.074Z"}
+{"level":"info","message":"Next button on search GP clicked successfully","timestamp":"2025-09-26T11:05:20.104Z"}

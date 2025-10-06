@@ -1,0 +1,16 @@
+[
+  {
+    "receivedReferralDate": "01/10/2025",
+    "approvedReferralDate": "01/10/2025",
+    "dateOfReferral": "30/09/2025",
+    "timeOfReferral": "12:00",
+    "referralType": "Clinical",
+    "referralReason": "In Patient",
+    "referringProfessional": "BA Manoj",
+    "clinicLocation": "Cath Lab Location",
+    "patientCare": "Out Patient",
+    "methodOfArrival": "Ambulance",
+    "timeOfArrival": "11:00",
+    "refInvite": "acceptReferral"
+  }
+]

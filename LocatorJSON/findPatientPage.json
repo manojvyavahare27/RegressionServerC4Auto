@@ -1,0 +1,22 @@
+[
+  {
+    "mpiNumber": "",
+    "barcode": "",
+    "card": "",
+    "givenName": "RefACE",
+    "familyName": "Riomedtest",
+    "sex": "",
+    "born": "",
+    "postcode": "",
+    "mrnNumber": "",
+    "identificationId": "",
+    "nhsNumber": "",
+    "hospitalRef": "refPat051",
+    "mobile": "",
+    "patientNameInOtherLanguage": "",
+    "patientSeenInLastDays": "",
+    "includeDeceasedPatients": "false",
+    "includeDeceasedService": "false",
+    "soundex": "false"
+  }
+]
