@@ -511,19 +511,35 @@ async function createPageLocatorJSON (locator, filePath, fileName) {
 
     for(let i=0; i<locator.length; i++) {
       try{
-        locatorIdArray[i]= await locator[i].getAttribute('name');
-        valueArray[i] = await locator[i].inputValue();
+        let str = locator[i].toString();
+        if (str.indexOf("locator('//div") === 0) {
+          let key = await locator[i].getAttribute('id');
+          if (key === null) {
+            console.log(`${locator[i]} cannot be properly converted as identifier is missing.`)
+            continue;
+          }
+          locatorIdArray[i]= key;
+          valueArray[i] = await locator[i].innerText();
+          // console.log(locatorIdArray[i] +" " + i)
+          // console.log(valueArray[i] +" " + i)
+        } else {
+          locatorIdArray[i]= await locator[i].getAttribute('name');
+          valueArray[i] = await locator[i].inputValue();
+          // console.log(locatorIdArray[i] +" " + i)
+          // console.log(valueArray[i] +" " + i)
+        }
+
       }
       catch (error){
         //
-        console.log(`${locator[i]} is not a valid input locator.`)
+        console.log(`${locator[i]} is not a valid locator.`)
 
       }
     }
     //console.log("\n");
 
     for (let i = 0; i < locatorIdArray.length; i++) {
-        let key = locatorIdArray[i];
+        let key = locatorIdArray[i]
         let value = valueArray[i];
         objectArray[key] = value; // Dynamically assign key-value pairs
     }
@@ -546,6 +562,7 @@ async function createPageLocatorJSON (locator, filePath, fileName) {
 }
 
 async function numberValidator(locator, expect) {
+  await locator.clear();
   const validationString = "~!@#$%^&*()_+|`-=\ []{};:'\"<>?,./1234567890abcDEF";
   try {
     await locator.type(validationString);
@@ -561,6 +578,7 @@ async function numberValidator(locator, expect) {
 }
 
 async function mobileValidator(locator, expect) {
+  await locator.clear();
   const validationString = "~!@#$%^&*()_+|`-=\ []{};:'\"<>?,./1234567890abcDEF";
   try {
     await locator.type(validationString);
@@ -575,6 +593,7 @@ async function mobileValidator(locator, expect) {
 }
 
 async function nameValidator(locator, expect) {
+  await locator.clear();
   const validationString = "~!@#$%^&*()_+|`-=\ []{};:'\"<>?,./1234567890abcDEF";
   try {
     await locator.type(validationString);
@@ -589,6 +608,7 @@ async function nameValidator(locator, expect) {
 }
 
 async function alphaNumericValidator(locator, expect) {
+  await locator.clear();
   const validationString = "~!@#$%^&*()_+|`-=\ []{};:'\"<>?,./1234567890abcDEF";
   try {
     await locator.type(validationString);
@@ -603,6 +623,7 @@ async function alphaNumericValidator(locator, expect) {
 }
 
 async function emailValidator(locator, expect) {
+  await locator.clear();
   const validationString = "~!@#$%^&*()_+|`-=\ []{};:'\"<>?,./1234567890abcDEF"; 
   try {
     await locator.type(validationString);
@@ -616,10 +637,37 @@ async function emailValidator(locator, expect) {
   await locator.clear();
 }
 
+async function dateValidator(locator, expect) {
+  await locator.clear();
+  const validationString = "~!@#$%^&*()_+|`-=\ []{};:'\"<>?,./1234567890abcDEF"; 
+  try {
+    await locator.type(validationString);
+    const currValue = await locator.inputValue();
+    expect(currValue).toMatch(/^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/) //matches date format DD/MM/YYYY
+    //^(?:(?:31/(?:01|03|05|07|08|10|12))|(?:29|30)/(?:01|03|04|05|06|07|08|09|10|11|12)|(?:0[1-9]|1\d|2[0-8])/(?:0[1-9]|1[0-2]))/\d{4}$|^29/02/(?:(?:\d\d(?:0[48]|[2468][048]|[13579][26]))|(?:[02468][048]00|[13579][26]00))$
+    //strict validation
+    console.log(`Input ${locator} only accepts strings of email format`)    
+  } catch (error) {
+    // If the locator does not match, log failure
+    console.log(`Error: Validation failed for locator ${locator}.\nError: ${error.message}\n`);
+  }
+  await locator.clear();
+}
 
-
-
-  
+async function timeValidator(locator, expect) {
+  await locator.clear();
+  const validationString = "~!@#$%^&*()_+|`-=\ []{};:'\"<>?,./1234567890abcDEF"; 
+  try {
+    await locator.type(validationString);
+    const currValue = await locator.inputValue();
+    expect(currValue).toMatch(/^(?:[01]\d|2[0-3]):[0-5]\d$/) //matches time
+    console.log(`Input ${locator} only accepts strings of email format`)    
+  } catch (error) {
+      // If the locator does not match, log failure
+      console.log(`Error: Validation failed for locator ${locator}.\nError: ${error.message}\n`);
+  }
+  await locator.clear();
+}
   
   module.exports = { 
     locateField, 
@@ -645,5 +693,7 @@ async function emailValidator(locator, expect) {
     mobileValidator,
     nameValidator,
     alphaNumericValidator,
-    emailValidator
+    emailValidator,
+    dateValidator,
+    timeValidator
 };

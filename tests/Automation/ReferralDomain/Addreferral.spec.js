@@ -4,7 +4,7 @@ const convertExcelToJson = require("../../../config/global-setupOptimized");
 const { executeQuery } = require("../../../databaseWriteFile");
 import compareJsons from "../../../compareFileOrJson";
 
-import { checkAllLocatorVisibility, createPageLocatorJSON, numberValidator, mobileValidator, nameValidator, alphaNumericValidator } from "../../../UtilFiles/DynamicUtility";
+import { checkAllLocatorVisibility, createPageLocatorJSON, numberValidator, mobileValidator, nameValidator, alphaNumericValidator, emailValidator, dateValidator, timeValidator } from "../../../UtilFiles/DynamicUtility";
 
 import LoginPage from "../../../Pages/BaseClasses/LoginPage";
 import Homepage from "../../../Pages/BaseClasses/Homepage";
@@ -109,7 +109,6 @@ test.describe("Database Comparison Add New Referral", () => {
       patientsearch.checkbox_Soundex
     ];
     await checkAllLocatorVisibility(locators, expect);
-//    await page.pause();
 
     await numberValidator(patientsearch.txtbox_Barcode, expect);
     await alphaNumericValidator(patientsearch.txtbox_Card, expect); //What validator to use here?
@@ -123,8 +122,6 @@ test.describe("Database Comparison Add New Referral", () => {
     await alphaNumericValidator(patientsearch.txtbox_IdentificationId, expect);//?
     await nameValidator(patientsearch.txtbox_PatNameInOtherLang, expect)
 
-
-    await page.pause()
 
     await patientsearch.enterGivenName(
       jsonData.addPatient[index].pat_firstname.toString()
@@ -141,7 +138,7 @@ test.describe("Database Comparison Add New Referral", () => {
     let fileName = "LocatorJSON/findPatientPage.json";
     await createPageLocatorJSON(locators, filePath, fileName);
 
-    const matched = await compareJsons(
+    let matched = await compareJsons(
       fileName,
       null,
       jsonData.findPatientPage[index]
@@ -155,11 +152,9 @@ test.describe("Database Comparison Add New Referral", () => {
         "\n Front end data does not match!\n"
       );
     }
-    await page.pause()
 
     await patientsearch.clickOnSearchPatientLink();
     //await patientsearch.ClickOnYesConfirmLegitimateRelationship()
-   // await page.pause()
     // await menu.clickOnMenubtn()
     // await menu.clickOnAddReferrallink()
     await page.waitForTimeout(1500);
@@ -196,7 +191,14 @@ test.describe("Database Comparison Add New Referral", () => {
       addreferral.radiobuttonAwaitReferralAcceptance
     ];
 
-    checkAllLocatorVisibility(locators, expect);
+    await page.waitForTimeout(5000);
+    await checkAllLocatorVisibility(locators, expect);
+
+    await dateValidator(addreferral.dropdownReceiveReferralDate, expect);
+    await dateValidator(addreferral.dropdownApproveReferralDate, expect);
+    await dateValidator(addreferral.dropdowndateofreferral, expect);
+    await timeValidator(addreferral.dropdowntimeofreferral, expect);
+    await timeValidator(addreferral.dropdowntimeofarrival, expect);
 
     fileName = "LocatorJSON/addReferralPage.json";
     
@@ -221,23 +223,34 @@ test.describe("Database Comparison Add New Referral", () => {
     await addreferral.enterTimeOfArrival(jsonData.AddReferral[index].ref_time_of_arrival.toString());
     await addreferral.clickOnAwaitReferralAcceptance();
 
-    console.log(locators);
     await createPageLocatorJSON(locators, filePath, fileName);
+    matched = await compareJsons(
+      fileName,
+      null,
+      jsonData.addReferralPage[index]
+    );
+    if (matched) {
+      console.log(
+        "\n Front end data matches data from excel sheet\n"
+      );
+    } else {
+      console.log(
+        "\n Front end data does not match!\n"
+      );
+    }
 
-
-    await page.pause()
     await addreferral.clickOnSaveButton();
     await page.waitForTimeout(1000);
     //await expect(
     //  page.getByText("Awaiting referral added successfully")
     //).toHaveText("Awaiting referral added successfully");
-    // await page.pause()
     //Again select same patient.
     //await menu.clickOnMenubtn()
     //await menu.clickOnFindPatientlink()
     await homepage.clickOnHomePageIcon();
     await homepage.clickOnPatientIcon();
     //await patientsearch.clickOnSearchButton()
+
     await patientsearch.enterGivenName(
       jsonData.addPatient[index].pat_firstname.toString()
     );
@@ -249,6 +262,34 @@ test.describe("Database Comparison Add New Referral", () => {
     );
     await patientsearch.clickOnSearchButton();
     await patientsearch.clickOnSearchPatientLink();
+
+    locators = [
+      confirmexisting.txtbox_alsoknownas,
+      confirmexisting.txtbox_emailId,
+      confirmexisting.txtbox_mobileNo,
+      confirmexisting.txtbox_phoneNo,
+      confirmexisting.dropdown_NextofKinTitle,
+      confirmexisting.txtbox_givenName,
+      confirmexisting.txtbox_familyName,
+      confirmexisting.dropdown_Relcationship,
+      confirmexisting.txtbox_kinEmailId,
+      confirmexisting.txtbox_numberRoad,
+      confirmexisting.txtbox_postcode  
+    ];
+
+    await checkAllLocatorVisibility(locators, expect);
+
+
+    await nameValidator(confirmexisting.txtbox_alsoknownas, expect);
+    await emailValidator(confirmexisting.txtbox_emailId, expect);
+    await mobileValidator(confirmexisting.txtbox_mobileNo, expect);
+    await mobileValidator(confirmexisting.txtbox_phoneNo, expect);
+    await nameValidator(confirmexisting.txtbox_givenName, expect);
+    await nameValidator(confirmexisting.txtbox_familyName, expect);
+    await emailValidator(confirmexisting.txtbox_kinEmailId, expect);
+    await alphaNumericValidator(confirmexisting.txtbox_numberRoad, expect);
+    await alphaNumericValidator(confirmexisting.txtbox_postcode,  expect);
+
     //await patientsearch.ClickOnYesConfirmLegitimateRelationship()
     await confirmexisting.entertxtboxAlsoKnow(
       jsonData.ConfirmExistingDetails[index].pat_name_other_lang.toString()
@@ -290,7 +331,27 @@ test.describe("Database Comparison Add New Referral", () => {
     );
     //await confirmexisting.enterTempContactDetails();
     //await confirmexisting.enterTempAddressDetails();
-    //await page.pause()
+
+    fileName = "LocatorJSON/confirmExistingDetailsPage.json";
+
+    await createPageLocatorJSON(locators, filePath, fileName);
+    matched = await compareJsons(
+      fileName,
+      null,
+      jsonData.confirmExistingDetailsPage[index]
+    );
+    if (matched) {
+      console.log(
+        "\n Front end data matches data from excel sheet\n"
+      );
+    } else {
+      console.log(
+        "\n Front end data does not match!\n"
+      );
+    }
+
+    await page.pause()
+
     await confirmexisting.clickOnSaveChangeDetails();
     await expect(
       page.getByText("Patient details changed successfully")

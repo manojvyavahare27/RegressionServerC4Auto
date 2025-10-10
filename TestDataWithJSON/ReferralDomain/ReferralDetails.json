@@ -15,9 +15,9 @@
   ],
   "addPatient": [
     {
-      "pat_hospital_ref": "refPat051",
+      "pat_hospital_ref": "regRefPat1",
       "pat_title": "B/O",
-      "pat_firstname": "RefACE",
+      "pat_firstname": "RegRefA",
       "pat_surname": "Riomedtest",
       "pat_sex": "M",
       "pat_dob": "28/09/2023",
@@ -48,18 +48,18 @@
   ],
   "findPatientPage": [
     {
-      "Given Name": "RefACE",
-      "Family Name": "Riomedtest",
-      "sex": "M",
-      "Born": "28/09/2023",
-      "Hospital Ref": "refPat051"
+      "givenName": "RegRefA",
+      "familyName": "Riomedtest",
+      "sex": "Male",
+      "born": "28/09/2023",
+      "hospitalRef": "regRefPat1"
     }
   ],
   "editPatient": [
     {
       "pat_hospital_ref": "AutoHosp109",
       "pat_title": "B/O",
-      "pat_firstname": "RefACE",
+      "pat_firstname": "RegRefA",
       "pat_surname": "Riomedtest",
       "pat_sex": "M",
       "pat_dob": "28/09/2023",
@@ -90,7 +90,7 @@
   ],
   "patientIdentifier": [
     {
-      "pat_firstname": "RefACE",
+      "pat_firstname": "RegRefA",
       "pat_lastname": "Riomedtest",
       "pat_sex": "M",
       "pat_dob": "28/09/2023",
@@ -99,7 +99,7 @@
       "pat_country": "India",
       "pat_title": "B/O",
       "pat_middlename": "Martin",
-      "add_email": "RefACE.Riomedtest@Gmail.com"
+      "add_email": "RegRefA.Riomedtest@Gmail.com"
     }
   ],
   "tempAddress": [
@@ -227,9 +227,9 @@
   ],
   "AddReferral": [
     {
-      "rtt_referral_received_date": "01/10/2025",
-      "rtt_referral_approved_date": "01/10/2025",
-      "ref_referral_date": "30/09/2025",
+      "rtt_referral_received_date": "10/10/2025",
+      "rtt_referral_approved_date": "10/10/2025",
+      "ref_referral_date": "09/10/2025",
       "ref_time_set": "12:00:00",
       "SourceOFReferral": "Self",
       "ref_referral_type_eli_text": "Clinical",
@@ -245,6 +245,29 @@
       "ref_time_of_arrival": "11:00:00"
     }
   ],
+  "addReferralPage": [
+    {
+      "receivedReferralDate": "10/10/2025",
+      "approvedReferralDate": "10/10/2025",
+      "dateOfReferral": "09/10/2025",
+      "timeOfReferral": "12:00",
+      "referralType": "Clinical",
+      "referralReason": "In Patient",
+      "clinicLocation": "Cath Lab Location",
+      "methodOfArrival": "Ambulance",
+      "timeOfArrival": "11:00",
+      "mui-component-select-modeOfReferral": "Email",
+      "mui-component-select-service": "General Medicine Automation",
+      "mui-component-select-clinicType": "Cardiology Clinic",
+      "team": "HP Region1",
+      "mui-component-select-preferredSexForAssessment": "Male",
+      "sourceOfReferral": "Self",
+      "referringProfessional": "BA Manoj",
+      "patientCare": "Out Patient",
+      "mui-component-select-consultantReferTo": "Mr Prerelease AutoEst",
+      "refInvite": "acceptReferral"
+    }
+  ],
   "ConfirmExistingDetails": [
     {
       "pat_name_other_lang": "Cellma",
@@ -258,24 +281,39 @@
       "pip_relationship": "Brother"
     }
   ],
+  "confirmExistingDetailsPage": [
+    {
+      "patNameOtherLang": "Cellma",
+      "addEmail": "Pune.India@gmail.com",
+      "addMobile": 9800652518,
+      "addPhone": 9854148754,
+      "mui-component-select-kinTitle": "Mr",
+      "kinFirstname": "Wednesday",
+      "kinSurname": "Tester",
+      "relationshipNextOfKin": "Brother",
+      "kinEmail": "Example@gmail.com",
+      "addAddress1": "Flat no 1101",
+      "postcode": "4110 11"
+    }
+  ],
   "serviceReferral": [
     {
-      "ref_start_date": "30/09/2025",
-      "ref_end_date": "01/10/2025"
+      "ref_start_date": "09/10/2025",
+      "ref_end_date": "10/10/2025"
     }
   ],
   "acceptedReferral": [
     {
       "ref_referral_outcome": "invited to clinic",
-      "ref_acceptance_date": "01/10/2025"
+      "ref_acceptance_date": "10/10/2025"
     }
   ],
   "rejectedReferral": [
     {
       "ref_referral_outcome": "acceptedthenrejected",
-      "ref_discharge_date": "01/10/2025",
+      "ref_discharge_date": "10/10/2025",
       "ref_discharge_reason": "The Referral was accepted then rejected for the following reason Rejected For testing",
-      "ref_stopped_date": "01/10/2025",
+      "ref_stopped_date": "10/10/2025",
       "ref_stopped_reason": "Rejected For testing"
     }
   ]
