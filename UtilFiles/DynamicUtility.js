@@ -646,7 +646,7 @@ async function dateValidator(locator, expect) {
     expect(currValue).toMatch(/^(0[1-9]|[12][0-9]|3[01])\/(0[1-9]|1[0-2])\/\d{4}$/) //matches date format DD/MM/YYYY
     //^(?:(?:31/(?:01|03|05|07|08|10|12))|(?:29|30)/(?:01|03|04|05|06|07|08|09|10|11|12)|(?:0[1-9]|1\d|2[0-8])/(?:0[1-9]|1[0-2]))/\d{4}$|^29/02/(?:(?:\d\d(?:0[48]|[2468][048]|[13579][26]))|(?:[02468][048]00|[13579][26]00))$
     //strict validation
-    console.log(`Input ${locator} only accepts strings of email format`)    
+    console.log(`Input ${locator} only accepts strings of date format`)    
   } catch (error) {
     // If the locator does not match, log failure
     console.log(`Error: Validation failed for locator ${locator}.\nError: ${error.message}\n`);
@@ -661,7 +661,7 @@ async function timeValidator(locator, expect) {
     await locator.type(validationString);
     const currValue = await locator.inputValue();
     expect(currValue).toMatch(/^(?:[01]\d|2[0-3]):[0-5]\d$/) //matches time
-    console.log(`Input ${locator} only accepts strings of email format`)    
+    console.log(`Input ${locator} only accepts strings of time format`)    
   } catch (error) {
       // If the locator does not match, log failure
       console.log(`Error: Validation failed for locator ${locator}.\nError: ${error.message}\n`);

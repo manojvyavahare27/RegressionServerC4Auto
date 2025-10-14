@@ -132,6 +132,9 @@ test.describe("Database Comparison Add New Referral", () => {
     await addpatient.enterHospitalRef(
       jsonData.addPatient[index].pat_hospital_ref
     );
+    await patientsearch.selectBornDate(jsonData.addPatient[index].pat_dob);
+    await patientsearch.selectSex(jsonData.addPatient[index].pat_sex);
+    
     await patientsearch.clickOnSearchButton();
 
     const filePath = "LocatorJSON";
@@ -240,7 +243,7 @@ test.describe("Database Comparison Add New Referral", () => {
     }
 
     await addreferral.clickOnSaveButton();
-    await page.waitForTimeout(1000);
+    await page.waitForTimeout(5000);
     //await expect(
     //  page.getByText("Awaiting referral added successfully")
     //).toHaveText("Awaiting referral added successfully");

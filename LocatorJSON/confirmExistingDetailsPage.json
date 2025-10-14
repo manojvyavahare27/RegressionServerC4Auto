@@ -4,10 +4,10 @@
     "addEmail": "Pune.India@gmail.com",
     "addMobile": "9800652518",
     "addPhone": "9854148754",
-    "mui-component-select-kinTitle": "Mr",
+    "kinTitle": "Mr",
     "kinFirstname": "Wednesday",
     "kinSurname": "Tester",
-    "relationshipNextOfKin": "Brother",
+    "kinRelationship": "Brother",
     "kinEmail": "Example@gmail.com",
     "addAddress1": "Flat no 1101",
     "postcode": "4110 11"
