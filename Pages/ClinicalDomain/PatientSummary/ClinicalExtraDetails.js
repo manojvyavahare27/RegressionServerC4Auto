@@ -90,7 +90,7 @@ class ClinicalExtraDetails {
     this.confirmDelete = page.locator("xpath=//button[@data-testid='Ok']");
     this.deleteReason = page.locator("xpath=//textarea[@aria-label='Reason']");
     //this.saveDeleteReason = page.locator("xpath=//div[@class='MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-12 css-6td7do']//button[@data-testid='Save']");
-    this.saveDeleteReason = page.locator("xpath=//button[@aria-label='saveDeleteReason']");
+    this.saveDeleteReason = page.locator("xpath=//div[@class='MuiGrid2-root MuiGrid2-container MuiGrid2-direction-xs-row MuiGrid2-grid-xs-12 mui-139jkte']//button[@data-testid='Save']");
 
     //Medication Certificate
     this.confirm = page.locator("xpath=//button[@aria-label='confirmMedicalCertificate']");

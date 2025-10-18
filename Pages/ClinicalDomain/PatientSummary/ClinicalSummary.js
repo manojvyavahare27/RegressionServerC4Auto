@@ -68,9 +68,25 @@ class ClinicalSummary {
         //Diagnosis Customizable question
        // this.customizableQuestion="xpath=//div[@class='MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-grid-xs-3 css-1jjp2xs']//label[text()='placeholder1']/parent::div/..//preceding-sibling::div/preceding-sibling::div//button";
         
-
-
-
+        // Documents
+        this.btnIconEdit = page.locator("xpath=//button[@aria-label='edit']")
+        this.btnAddDocuments = page.locator("xpath=//button[@data-testid='Add Documents']")
+        this.dropdownDocumentCategory = page.locator("xpath=//input[@id='documentCategoryFurtherDetails']")
+        this.dropdownDocumentSubCategory = page.locator("xpath=//input[@id='documentSubcategoryFurtherDetails']")
+        this.dropdownSpecialty = page.locator("xpath=//input[@id='specialtyFurtherDetails']")
+        this.txtboxFrom = page.locator("xpath=//input[@id='fromFurtherDetails']")
+        this.txtboxTo = page.locator("xpath=//input[@id='toFurtherDetails']")
+        this.txtboxSentDate = page.locator("xpath=//input[@id='sentDateFurtherDetails']")
+        this.txtboxReceivedDate = page.locator("xpath=//input[@id='receivedDateFurtherDetails']")
+        this.txtboxDateOfUpload = page.locator("xpath=//input[@id='dateOfUploadFurtherDetails']")
+        this.checkboxPrivate = page.locator("xpath=//span[@data-testid='Private']")
+        this.checkboxShareOnPortal = page.locator("xpath=//span[@data-testid='Share on Portal']")
+        this.checkboxShareWithPIP = page.locator("xpath=//span[@data-testid=' Share with Patient Interested Parties']")
+        this.txtboxDescription = page.locator("xpath=//textarea[@id='descriptionFurtherDetails']")
+        this.txtboxDisplayName = page.locator("xpath=//input[@id='displayNameFurtherDetails']")
+        this.btnChoose = page.locator("xpath=//button[@aria-label='chooseFilesButton']")
+        this.btnUpload = page.locator("xpath=//button[@data-testid='Upload']")
+        this.btnSave = page.locator("xpath=//button[@data-testid='Save']")
      }
 
     ///////////////////////////////BUTTON CLICKS///////////////////////////////////////////////
@@ -543,7 +559,61 @@ class ClinicalSummary {
         }
     }
 
-    
+    //Documents
+    async clickOnEditIcon() {
+        await clickElement(this.page, this.btnIconEdit)
+    }
 
+    async  clickOnAddDocumentBtn() {
+        await clickElement(this.page, this.btnAddDocuments)
+    }
+
+    async selectDocumentCategory(category) {
+        await selectFromDropdown(this.page, this.dropdownDocumentCategory, category)
+    }
+
+    async selectDocumentSubCategory(category) {
+        await selectFromDropdown(this.page, this.dropdownDocumentSubCategory, category)
+    }
+
+    async selectSpecialty(specialty) {
+        await selectFromDropdown(this.page, this.dropdownSpecialty, specialty)
+    }
+
+    async enterFrom(text) {
+        await typeText(this.page, this.txtboxFrom, text)
+    }
+
+    async enterTo(text) {
+        await typeText(this.page, this.txtboxTo, text)
+    }
+
+    async enterSentDate(text) {
+        await typeText(this.page, this.txtboxSentDate, text)
+    }
+
+    async enterReceivedDate(text) {
+        await typeText(this.page, this.txtboxReceivedDate, text)
+    }
+
+    async enterDateOfUpload(text) {
+        await typeText(this.page, this.txtboxDateOfUpload, text)
+    }
+
+    async enterDescription(text) {
+        await typeText(this.page, this.txtboxDescription, text)
+    }
+
+    async clickOnChooseBtn() {
+        await clickElement(this.page, this.btnChoose)
+    }
+
+    async clickOnUploadBtn() {
+        await clickElement(this.page, this.btnUpload)
+    }
+
+    async clickOnSaveBtn() {
+        await clickElement(this.page, this.btnSave)
+    }
 }
 module.exports = ClinicalSummary;

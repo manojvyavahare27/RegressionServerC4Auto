@@ -62,10 +62,24 @@ class ServiceReferrals
         this.sidebarlinkServiceDashboard = page.getByRole('button', { name: 'Service Dashboard' })
         this.sidebarServiceDefaultQuestion = page.getByRole('button', { name: 'Service Default Questions' })
         this.txtboxStartDate = page.getByTestId('Start Date')
-        
         this.txtboxEndDate = page.getByTestId('End Date')
+        this.txtboxIdentifier = page.locator("xpath=//input[@id='Identifier']")
+        this.dropdownTeam = page.locator("xpath=//input[@id='teamService']")
+        this.droopdownClinicLocation = page.locator("xpath=//input[@id='clinicLocationInput']")
+        this.dropdownClinicType = page.locator("xpath=//input[@id='clinicTypeInput']")
+        this.dropdownStatus = page.locator("xpath=//input[@id='status']")
+        this.dropdownClinicalPriority = page.locator("xpath=//input[@id='clinicalPriorityInput']")
+        this.dropdownReferralReason = page.locator("xpath=//input[@id='referralReason']")
+        this.txtboxPatientFamilyName = page.locator("xpath=//input[@id='Patient Family Name']")
+        this.txtboxBarcode = page.locator("xpath=//input[@id='Barcode']")
+        this.txtboxStartTime = page.locator("xpath=//input[@name='startTime']")
+        this.txtboxEndTime = page.locator("xpath=//input[@name='endTime']")
+        this.dropdownHp = page.locator("xpath=//input[@id='hp']")
+        this.checkboxSaveAsDefault = page.locator("xpath=//input[@type='checkbox']")
+        this.dropdownDisplayExternalRecords = page.locator("xpath=//input[@id='displayExternalReferrals']")
         this.dropdownStatusType = page.getByTestId('status').getByLabel('Open')
         this.btnSearch = page.getByTestId('Search')
+        this.btnBack = page.locator("xpath=//button[@aria-label='Back Button']")
 
         this.linkPatientName = page.locator("xpath=//button[contains(text(),'B/O')]")
         //this.linkAccept=page.locator('.MuiDataGrid-row > div:nth-child(12)').first().getByTestId('Accept')
@@ -180,7 +194,7 @@ class ServiceReferrals
     }
     async selectStatusTypeAcceptedRequiresAppointment() {
         await this.dropdownStatusType.click()
-        await this.page.getByRole('option', { name: 'Accepted Appointment Set' }).click()
+        await this.page.getByRole('option', { name: 'Accepted Requires Appointment' }).click()
     }
     async clickOnSearchButton() {
         await this.btnSearch.click()
@@ -323,6 +337,10 @@ class ServiceReferrals
     }
     async clickonSidebarlinkAddAppointments() {
         await this.sidebarlinkAddAppointments.click()
+    }
+
+    async clickOnBackButton() {
+        await this.btnBack.click()
     }
 }
 module.exports = ServiceReferrals

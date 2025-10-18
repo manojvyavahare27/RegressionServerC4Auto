@@ -666,7 +666,9 @@ async function timeValidator(locator, expect) {
       // If the locator does not match, log failure
       console.log(`Error: Validation failed for locator ${locator}.\nError: ${error.message}\n`);
   }
-  await locator.clear();
+  await locator.click();
+  await locator.press('Control+A');
+  await locator.press('Backspace');
 }
   
   module.exports = { 

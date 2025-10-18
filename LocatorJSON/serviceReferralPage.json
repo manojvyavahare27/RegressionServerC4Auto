@@ -1,0 +1,20 @@
+[
+  {
+    "startDate": "17/10/2025",
+    "endDate": "18/10/2025",
+    "payrollNo": "",
+    "team": "",
+    "clinicLocation": "",
+    "clinicType": "",
+    "status": "Accepted Requires Appointment",
+    "clinicalPriority": "",
+    "referralReason": "",
+    "patientFamilyName": "",
+    "barcode": "",
+    "startTime": "",
+    "endTime": "",
+    "hp": "",
+    "null": "false",
+    "displayExternalReferrals": ""
+  }
+]

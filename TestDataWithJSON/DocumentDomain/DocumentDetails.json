@@ -1,0 +1,83 @@
+{
+  "loginDetails": [
+    {
+      "username": "sd.c4",
+      "password": "Saurabh@2025"
+    }
+  ],
+  "findPatientPage": [
+    {
+      "barcode": "788331"
+    }
+  ],
+  "addDocument": [
+    {
+      "doc_pat_id": 787331,
+      "doc_created_by": "sd.c4",
+      "doc_record_status": "approved",
+      "doc_type": "pdf",
+      "doc_category": "Investigations",
+      "doc_sent": "10/10/2025",
+      "doc_received": "10/10/2025",
+      "doc_description": "Test description",
+      "doc_from": "Test",
+      "doc_to": "Cellma",
+      "doc_display_name": "dummy",
+      "doc_uploaded_date": "15/10/2025",
+      "doc_subcategory_eli_text": "Blood Report",
+      "doc_relative_path": "\\documentmanagement\\4\\pat787331",
+      "specialty": "Cardiology"
+    }
+  ],
+  "addDocumentPage": [
+    {
+      "documentCategory": "Investigations",
+      "documentSubcategory": "Blood Report",
+      "specialty": "Cardiology",
+      "from": "Test",
+      "to": "Cellma",
+      "sentDate": "10/10/2025",
+      "receivedDate": "10/10/2025",
+      "dateOfUpload": "15/10/2025"
+    }
+  ],
+  "editDocument": [
+    {
+      "doc_pat_id": 787331,
+      "doc_created_by": "sd.c4",
+      "doc_record_status": "approved",
+      "doc_type": "pdf",
+      "doc_category": "Investigations",
+      "doc_sent": "10/10/2025",
+      "doc_received": "10/10/2025",
+      "doc_description": "Test description updated",
+      "doc_from": "Test",
+      "doc_to": "Cellma",
+      "doc_display_name": "dummy",
+      "doc_uploaded_date": "15/10/2025",
+      "doc_subcategory_eli_text": "Blood Report",
+      "doc_relative_path": "\\documentmanagement\\4\\pat787331",
+      "specialty": "Cardiology"
+    }
+  ],
+  "deleteDocument": [
+    {
+      "doc_pat_id": 787331,
+      "doc_created_by": "sd.c4",
+      "doc_record_status": "wrong",
+      "doc_type": "pdf",
+      "doc_category": "Investigations",
+      "doc_sent": "10/10/2025",
+      "doc_received": "10/10/2025",
+      "doc_description": "Test description updated",
+      "doc_from": "Test",
+      "doc_to": "Cellma",
+      "doc_display_name": "dummy",
+      "doc_uploaded_date": "15/10/2025",
+      "doc_subcategory_eli_text": "Blood Report",
+      "doc_relative_path": "\\documentmanagement\\4\\pat787331",
+      "doc_delete_reason": "Deleted for testing purposes.",
+      "specialty": "Cardiology"
+    }
+  ]
+}

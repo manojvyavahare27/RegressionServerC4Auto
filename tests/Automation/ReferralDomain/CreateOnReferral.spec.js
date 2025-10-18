@@ -4,6 +4,8 @@ const convertExcelToJson = require("../../../config/global-setupOptimized");
 const { executeQuery } = require("../../../databaseWriteFile");
 import compareJsons from "../../../compareFileOrJson";
 
+import { checkAllLocatorVisibility, createPageLocatorJSON, numberValidator, mobileValidator, nameValidator, alphaNumericValidator, emailValidator, dateValidator, timeValidator } from "../../../UtilFiles/DynamicUtility";
+
 import LoginPage from '../../../Pages/BaseClasses/LoginPage';
 import Homepage from '../../../Pages/BaseClasses/Homepage';
 import PatientSearch from '../../../Pages/PatientDomain/PatientSearch';
@@ -144,7 +146,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
         await page.waitForSelector('//button[@aria-label="profileIcon"]');
         await page.hover('//button[@aria-label="profileIcon"]');
 
-        await menu.clickOnLogout();
+        await menu.clickOnLogout(page);
         //Listen for console events
         page.on("console", async (msg) => {
           const args = await Promise.all(

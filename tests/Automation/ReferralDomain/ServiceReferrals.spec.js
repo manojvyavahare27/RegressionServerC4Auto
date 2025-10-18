@@ -4,6 +4,18 @@ const convertExcelToJson = require("../../../config/global-setupOptimized");
 const { executeQuery } = require("../../../databaseWriteFile");
 import compareJsons from "../../../compareFileOrJson";
 
+import {
+  checkAllLocatorVisibility,
+  createPageLocatorJSON,
+  numberValidator,
+  mobileValidator,
+  nameValidator,
+  alphaNumericValidator,
+  emailValidator,
+  dateValidator,
+  timeValidator,
+} from "../../../UtilFiles/DynamicUtility";
+
 import LoginPage from "../../../Pages/BaseClasses/LoginPage";
 import Homepage from "../../../Pages/BaseClasses/Homepage";
 import Environment from "../../../Pages/BaseClasses/Environment";
@@ -11,7 +23,6 @@ import Menu from "../../../Pages/BaseClasses/Menu";
 import TopBlueBar from "../../../Pages/BaseClasses/TopBlueBar";
 import AddReferral from "../../../Pages/PatientDomain/AddReferral";
 import ServiceReferrals from "../../../Pages/ReferralDomain/ServiceReferrals";
-
 
 const logindata = JSON.parse(
   JSON.stringify(require("../../../TestData/PatientDomain/Login.json"))
@@ -50,7 +61,6 @@ test.describe("Database Comparison Service Referrals", () => {
     const topbluebar = new TopBlueBar(page);
     const addreferral = new AddReferral(page);
     const servicereferrals = new ServiceReferrals(page);
-    
 
     let index = 0;
 
@@ -62,7 +72,38 @@ test.describe("Database Comparison Service Referrals", () => {
     await page.waitForTimeout(1500);
     await loginpage.clickOnLogin();
     await homepage.clickonSidebarHomeIcon();
-    await page.pause()
+    await homepage.clickOnSideIconReferrals();
+    await page.waitForTimeout(3000);
+
+    let locators = [
+      servicereferrals.txtboxStartDate,
+      servicereferrals.txtboxEndDate,
+      servicereferrals.txtboxIdentifier,
+      servicereferrals.dropdownTeam,
+      servicereferrals.droopdownClinicLocation,
+      servicereferrals.dropdownClinicType,
+      servicereferrals.dropdownStatus,
+      servicereferrals.dropdownClinicalPriority,
+      servicereferrals.dropdownReferralReason,
+      servicereferrals.txtboxPatientFamilyName,
+      servicereferrals.txtboxBarcode,
+      servicereferrals.txtboxStartTime,
+      servicereferrals.txtboxEndTime,
+      servicereferrals.dropdownHp,
+      servicereferrals.checkboxSaveAsDefault,
+      servicereferrals.dropdownDisplayExternalRecords,
+    ];
+    await checkAllLocatorVisibility(locators, expect);
+
+    await dateValidator(servicereferrals.txtboxStartDate, expect);
+    await dateValidator(servicereferrals.txtboxEndDate, expect);
+    await alphaNumericValidator(servicereferrals.txtboxIdentifier, expect);
+    await nameValidator(servicereferrals.txtboxPatientFamilyName, expect);
+    await numberValidator(servicereferrals.txtboxBarcode, expect);
+    await timeValidator(servicereferrals.txtboxStartTime, expect);
+    await timeValidator(servicereferrals.txtboxEndTime, expect);
+
+    await servicereferrals.clickOnBackButton();
     await homepage.clickOnSideIconReferrals();
     //Appointment Tab
     //await servicereferrals.clickonSidebarlinkAddAppointments()
@@ -73,21 +114,20 @@ test.describe("Database Comparison Service Referrals", () => {
       jsonData.serviceReferral[index].ref_end_date
     );
     await servicereferrals.selectStatusTypeAwaitingAcceptance();
-    
+
     await servicereferrals.clickOnSearchButton();
     //await page.pause()
     //await servicereferrals.clickOnPatientNameLink()
-   
 
-    await page.waitForTimeout(2000)
+    await page.waitForTimeout(2000);
 
-    let records = await page.getByText("No Records Found").isVisible();
-    if (records) {
+    let noRecords = await page.getByText("No Records Found").isVisible();
+    if (noRecords) {
       //No action, proceed with script
     } else {
-      await servicereferrals.clickOnAddLink();
-      await servicereferrals.SelectAssessment();
-      await servicereferrals.clickOnShowButton();
+      // await servicereferrals.clickOnAddLink();
+      // await servicereferrals.SelectAssessment();
+      // await servicereferrals.clickOnShowButton();
       await servicereferrals.clickOnAcceptLink();
       await expect(page.getByText("Referral accepted successfully")).toHaveText(
         "Referral accepted successfully"
@@ -131,27 +171,42 @@ test.describe("Database Comparison Service Referrals", () => {
     await servicereferrals.selectStatusTypeAcceptedRequiresAppointment();
     await servicereferrals.clickOnSearchButton();
 
+    const filePath = "LocatorJSON";
+    let fileName = "LocatorJSON/serviceReferralPage.json";
 
-    await page.waitForTimeout(2000)
+    await createPageLocatorJSON(locators, filePath, fileName);
+    let matched = await compareJsons(
+      fileName,
+      null,
+      jsonData.serviceReferralPage[index]
+    );
+    if (matched) {
+      console.log(
+        "\n Front end data matches data from excel sheet\n"
+      );
+    } else {
+      console.log(
+        "\n Front end data does not match!\n"
+      );
+    }
+
+    await page.waitForTimeout(2000);
     // await servicereferrals.clickOnAddLink();
     // await servicereferrals.SelectAssessment();
     // await servicereferrals.clickOnShowButton();
 
     // await page.waitForTimeout(2000)
     // await servicereferrals.selectStatusTypeAcceptedRequiresAppointment();
-    // await servicereferrals.clickOnSearchButton();   
+    // await servicereferrals.clickOnSearchButton();
     // await page.waitForTimeout(2000)
-    await servicereferrals.clickOnRejectLink();
-      await servicereferrals.enterRejectReferralNotes();
-      await servicereferrals.enterRejectReason();
-      await servicereferrals.clickOnRejectButtonOnPopup();
-      await expect(page.getByText("Referral rejected successfully")).toHaveText(
-        "Referral rejected successfully");
+    // await servicereferrals.clickOnRejectLink();
+    // await servicereferrals.enterRejectReferralNotes();
+    // await servicereferrals.enterRejectReason();
+    // await servicereferrals.clickOnRejectButtonOnPopup();
+    // await expect(page.getByText("Referral rejected successfully")).toHaveText(
+    //   "Referral rejected successfully"
+    // );
 
-        await page.waitForTimeout(2000)
-        await servicereferrals.selectStatusTypeAcceptedAndRejected();    
-    await servicereferrals.clickOnSearchButton();
-    await page.waitForTimeout(2000)
     // await servicereferrals.clickOnAcceptLink();
     // await expect(page.getByText("Referral accepted successfully")).toHaveText(
     //   "Referral accepted successfully"
@@ -164,7 +219,7 @@ test.describe("Database Comparison Service Referrals", () => {
     //     "Referral rejected successfully");
 
     //records = await page.getByText('No Records Found').isVisible();
-    if (records) {
+    if (noRecords) {
       //No action, proceed with script
     } else {
       await servicereferrals.clickOnRejectLink();
@@ -174,7 +229,6 @@ test.describe("Database Comparison Service Referrals", () => {
       await expect(page.getByText("Referral rejected successfully")).toHaveText(
         "Referral rejected successfully"
       );
-
 
       ////////// Patient Service Referral comparison/////////
       var sqlQuery =
@@ -210,6 +264,23 @@ test.describe("Database Comparison Service Referrals", () => {
         );
       }
     }
+
+    await servicereferrals.selectStatusTypeAcceptedAndRejected();
+    await servicereferrals.clickOnSearchButton();
+    await page.waitForTimeout(2000);
+
+    if (noRecords) {
+      //No action, proceed with script
+    } else {
+      await servicereferrals.clickOnRejectLink();
+      await servicereferrals.enterRejectReferralNotes();
+      await servicereferrals.enterRejectReason();
+      await servicereferrals.clickOnRejectButtonOnPopup();
+      await expect(page.getByText("Referral rejected successfully")).toHaveText(
+        "Referral rejected successfully"
+      );
+    }
+    await page.waitForTimeout(5000);
 
     //await page.pause()
     // await homepage.closeCellmaVersionPopup()

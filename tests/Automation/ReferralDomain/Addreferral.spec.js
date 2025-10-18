@@ -120,7 +120,7 @@ test.describe("Database Comparison Add New Referral", () => {
     await alphaNumericValidator(patientsearch.txtbox_Postcode, expect);
     await alphaNumericValidator(patientsearch.txtbox_MRNNumber, expect);//?
     await alphaNumericValidator(patientsearch.txtbox_IdentificationId, expect);//?
-    await nameValidator(patientsearch.txtbox_PatNameInOtherLang, expect)
+    await nameValidator(patientsearch.txtbox_PatNameInOtherLang, expect);
 
 
     await patientsearch.enterGivenName(
@@ -352,8 +352,6 @@ test.describe("Database Comparison Add New Referral", () => {
         "\n Front end data does not match!\n"
       );
     }
-
-    await page.pause()
 
     await confirmexisting.clickOnSaveChangeDetails();
     await expect(
