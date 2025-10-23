@@ -374,7 +374,7 @@ class PatientSearch {
     async selectBornDate(pat_dob) {   //await this.txtbox_BornDate.fill('')
         //await this.txtbox_BornDate.fill(pat_dob)
         //await this.page.getByPlaceholder('dd/mm/yyyy').fill("22/09/2024")
-        await this.page.locator('[data-testid="Born"]').fill("22/09/2023");
+        await this.page.locator('[data-testid="Born"]').fill(pat_dob);
         await this.page.keyboard.press("Tab");
 
     }
