@@ -1,0 +1,1107 @@
+{
+  "loginDetails": [
+    {
+      "username": "manoj.automation",
+      "password": "Manoj@2025"
+    },
+    {
+      "username": "manoj.auto",
+      "password": "Manoj@2024"
+    },
+    {
+      "username": "saurabh.auto",
+      "password": "Saurabh@2025"
+    }
+  ],
+  "PatientDetails": [
+    {
+      "pat_hospital_ref": "hosp2562",
+      "pat_title": "B/O",
+      "pat_firstname": "waterA",
+      "pat_surname": "India",
+      "pat_sex": "Male",
+      "pat_dob": "22/09/2023",
+      "pat_marital_status": "Single",
+      "pat_ethnicity_text": "Indian",
+      "pat_occupation": "Trainer",
+      "pat_notes": "Added for Testing",
+      "pat_type": "Regular",
+      "pat_maiden_name": "Pune",
+      "pat_blood_group": "B+",
+      "pat_religion": "Hindu",
+      "pat_middlename": "Martin",
+      "pat_registered_disabled_yes": "No",
+      "pat_registered_disabled": 0,
+      "pat_currently_pregnant_yes": "No",
+      "pat_currently_pregnant": 0,
+      "pat_language": "English",
+      "pat_temp_address_start": "01-04-2023",
+      "pat_country_of_birth": "India",
+      "pat_gender_at_birth": "M",
+      "pat_nationality": "Indian",
+      "pat_prisoner_yes": "No",
+      "pat_county_of_birth": "Maharashtra",
+      "pat_town_of_birth": "Pune",
+      "pat_sexual_orientation_eli_text": "Heterosexuality",
+      "pat_disability_note": "For Testing"
+    }
+  ],
+  "MedicationCategory": [],
+  "AddMedication": [
+    {
+      "pacr_category": "Medication",
+      "pacr_que_name": "Paracetamol 500mg / Ibuprofen 200mg tablets",
+      "medi_dose": "2",
+      "medi_form": "tablet",
+      "medi_frequency": "12 Hours",
+      "medi_method": "Oral",
+      "medi_route": "Oral",
+      "medi_duration": "2",
+      "meded_value": "Left",
+      "medi_start_date": "06/07/2025",
+      "medi_stop_date": "08/07/2025",
+      "pacr_status": "Current",
+      "medi_prescribed_by": "GP",
+      "pcl_location_name": "Cardio Location",
+      "pacr_que_name_Diagnosis": "Asthma",
+      "medi_notes": "Added notes for testing",
+      "medi_stopped_reason_eli_text": "Dose completed",
+      "mse_text": "Drowsiness",
+      "paprd_endorsement": "Yes",
+      "paprd_cost": "10",
+      "meded_value_Price_check_quantity": "2",
+      "meded_value_Administrator": "All",
+      "meded_value_PGD": "PGD",
+      "meded_value_MaxReffills": "5",
+      "meded_value_Unit": "Tab",
+      "meded_value_Quantity": "3",
+      "meded_value_MaxReffills_1": 5,
+      "meded_value_Adherent": "Adherent",
+      "eli_text": "Antibacterial",
+      "que_display_text": "Dirty living conditions",
+      "question_name": "Notes",
+      "medadt_medication_status": "given"
+    }
+  ],
+  "EditMedication": [
+    {
+      "pacr_category": "Medication",
+      "pacr_que_name": "Paracetamol 500mg / Ibuprofen 200mg tablets",
+      "medi_dose": "3",
+      "medi_form": "tablet",
+      "medi_frequency": "24 Hours",
+      "medi_method": "Oral",
+      "medi_route": "Oral",
+      "meded_value": "Right",
+      "medi_duration": "3",
+      "medi_start_date": "12/06/2024",
+      "medi_stop_date": "14/06/2024",
+      "medi_status": "Prescribed",
+      "medi_prescribed_by": "Hospital consultant",
+      "medi_notes": "Updated notes for testing",
+      "eli_text": "Antibacterial",
+      "mse_text": "Drowsiness",
+      "meded_value_Quantity": "3",
+      "meded_value_MaxReffills": "4",
+      "meded_value_PGD": "PSD",
+      "medi_notes_1": "Edited notes for testing",
+      "pcl_location_name": "Cardio Location"
+    }
+  ],
+  "DeleteMedication": [
+    {
+      "pacr_category": "Medication",
+      "pacr_que_name": "Paracetamol 500mg / Ibuprofen 200mg tablets",
+      "pacr_delete_reason": "Delete for testing"
+    }
+  ],
+  "MedicationEDS": [],
+  "AddExamination": [
+    {
+      "pacr_category": "Examination",
+      "pacr_subcategory": "Physical Examination",
+      "pacr_que_name": "Dry eye",
+      "pacr_que_name_recommendation": "Rectoplasty",
+      "exam_outcome": "Normal",
+      "pacr_clinic_date": 45407,
+      "exam_notes": "Added for Notes",
+      "eli_text": "Exm subsection",
+      "pacrd_subcategory_eli_code": "EX1008"
+    }
+  ],
+  "EditExamination": [
+    {
+      "pacr_category": "Examination",
+      "pacr_que_name": "Dry eye",
+      "pacr_que_name_recommendation": "Rectoplasty",
+      "exam_outcome": "Abnormal",
+      "examed_value": 45407,
+      "exam_notes": "Edited for Notes"
+    }
+  ],
+  "DeleteExamination": [
+    {
+      "pacr_category": "Examination",
+      "pacr_delete_reason": "Delete for testing"
+    }
+  ],
+  "AddRecommendations": [
+    {
+      "pacr_category": "Recommendation",
+      "pacr_subcategory": "Preventive Measures",
+      "pacr_que_name": "Rectoplasty",
+      "eli_text": "Recommendations",
+      "recom_review_date": "15-05-2024",
+      "recom_notes": "Added Recommendation for testing"
+    }
+  ],
+  "EditRecommendations": [
+    {
+      "pacr_category": "Recommendation",
+      "pacr_que_name": "Rectoplasty",
+      "eli_text": "Recommendations",
+      "recom_review_date": "15-05-2024",
+      "recom_notes": "Edited Recommendation for testing"
+    }
+  ],
+  "DeleteRecommendations": [
+    {
+      "pacr_category": "Recommendation",
+      "pacr_que_name": "Rectoplasty",
+      "pacr_delete_reason": "Delete for testing"
+    }
+  ],
+  "AddOutcome": [
+    {
+      "pacr_category": "Outcome",
+      "pacr_que_name": "Sleep walking disorder",
+      "pacr_clinic_date": 45420,
+      "pacr_risk": "none",
+      "outc_date": "13-05-2024",
+      "outc_frequency": "1",
+      "outc_notes": "Added Notes for Outcome",
+      "eli_text": "Normal Outcome",
+      "pacrd_subcategory_eli_code": "OUTC12345"
+    }
+  ],
+  "EditOutcome": [
+    {
+      "pacr_category": "Outcome",
+      "pacr_que_name": "Sleep walking disorder",
+      "pacr_clinic_date": "08-05-2024",
+      "pacr_risk": "moderate",
+      "outc_date": "09-05-2024",
+      "outc_frequency": "2",
+      "outc_notes": "Updated Notes for Outcome",
+      "eli_text": "Abnormal Outcome",
+      "pacrd_subcategory_eli_code": "OUTC12346"
+    }
+  ],
+  "DeleteOutcome": [
+    {
+      "pacr_que_name": "Sleep walking disorder",
+      "pacr_delete_reason": "Delete for testing"
+    }
+  ],
+  "AddDiagnosis": [
+    {
+      "pacr_category": "Diagnosis",
+      "pacr_que_name": "Dengue haemorrhagic fever",
+      "pacr_status": "suspected",
+      "pacr_risk": "none",
+      "diag_diagnosis_status": "Primary",
+      "diag_severity": "Mild",
+      "diag_activity": "Remission",
+      "diag_date_firstseen": "28-05-2024",
+      "diag_date_onset": "28-05-2024",
+      "diag_date_diagnosed": "08-05-2024",
+      "diag_notes": "Added notes",
+      "remove_favourites": "Hypothyroidism",
+      "question_name": "Notes"
+    }
+  ],
+  "EditDiagnosis": [
+    {
+      "pacr_category": "Diagnosis",
+      "pacr_que_name": "Dengue haemorrhagic fever",
+      "pacr_status": "suspected",
+      "pacr_risk": "none",
+      "diag_diagnosis_status": "Secondary",
+      "diag_severity": "Moderate",
+      "diag_activity": "Smouldering",
+      "diag_date_firstseen": "09-05-2024",
+      "diag_date_onset": "09-05-2024",
+      "diag_date_diagnosed": "09-05-2024",
+      "diag_notes": "Updated Diagnosis Notes From Playwright"
+    }
+  ],
+  "DeleteDiagnosis": [
+    {
+      "pacr_que_name": "Dengue haemorrhagic fever",
+      "pacr_delete_reason": "Delete for testing"
+    }
+  ],
+  "AddInterpretation": [
+    {
+      "pacr_category": "Interpretation",
+      "pacr_que_name": "Antenatal screening",
+      "inte_outcome_eli_text": "Abnormal",
+      "pacr_clinic_date": 45453,
+      "inte_notes": "Added for Notes",
+      "eli_text": "Interpretation 1"
+    }
+  ],
+  "EditInterpretation": [
+    {
+      "pacr_category": "Interpretation",
+      "pacr_que_name": "Antenatal screening",
+      "inte_outcome_eli_text": "Normal",
+      "pacr_clinic_date": 45453,
+      "inte_notes": "Edited Notes for Interpretation",
+      "eli_text": "Interpretation 1"
+    }
+  ],
+  "DeleteInterpretation": [
+    {
+      "pacr_category": "Interpretation",
+      "pacr_que_name": "Antenatal screening",
+      "pacr_delete_reason": "Delete for testing"
+    }
+  ],
+  "AddAllergy": [
+    {
+      "pacr_category": "Allergies",
+      "pacr_que_name": "Coal dust",
+      "alrg_reaction_severity": "Moderate",
+      "pacr_clinic_date": "23/10/2025",
+      "alrg_notes": "Add for Notes",
+      "eli_text": "Sneezing",
+      "alrg_start_date": "08/05/2024",
+      "alrg_end_date": "20/05/2024"
+    }
+  ],
+  "EditAllergy": [
+    {
+      "pacr_category": "Allergies",
+      "pacr_que_name": "Coal dust",
+      "alrg_reaction_severity": "Moderate",
+      "pacr_clinic_date": "23/10/2025",
+      "alrg_notes": "Edit for Notes",
+      "eli_text": "Sneezing",
+      "alrg_start_date": "20/05/2024",
+      "alrg_end_date": "23/06/2024"
+    }
+  ],
+  "DeleteAllergy": [
+    {
+      "pacr_category": "Allergies",
+      "pacr_que_name": "Coal dust",
+      "pacr_delete_reason": "Delete for testing"
+    }
+  ],
+  "AddProcedure": [
+    {
+      "pacr_category": "Procedure",
+      "pacr_que_name": "Knee Arthroplasty",
+      "Date": "01/01/2025",
+      "proc_procedure_date": "01/01/2025",
+      "proc_site": "Left",
+      "proc_type": "High",
+      "proc_notes": "Add Procedure Notes",
+      "proc_procedure_level": "Primary",
+      "pacr_status": "Requested",
+      "eli_text": "Surgical Procedures",
+      "question_name": "Notes",
+      "proc_outcome": "Normal",
+      "proc_status": "Requested",
+      "question_name_1": "Notes"
+    }
+  ],
+  "EditProcedure": [
+    {
+      "pacr_category": "Procedure",
+      "pacr_que_name": "Knee Arthroplasty",
+      "proc_procedure_date": 45953,
+      "proc_site": "Left",
+      "proc_type": "High",
+      "proc_notes": "Add Procedure Notes",
+      "proc_procedure_level": "Primary",
+      "pacr_status": "Requested",
+      "eli_text": "Surgical Procedures",
+      "question_name": "Notes",
+      "proc_outcome": "Normal",
+      "proc_status": "Requested"
+    }
+  ],
+  "DeleteProcedure": [
+    {
+      "pacr_category": "Procedure",
+      "pacr_que_name": "Knee Arthroplasty",
+      "pacr_delete_reason": "Delete for testing"
+    }
+  ],
+  "AddPatientScan": [
+    {
+      "pacr_category": "Patient Scan",
+      "pacr_que_name": "Doppler ultrasound",
+      "pacr_risk": "none",
+      "pascn_notes": "Added Notes for Patient Scan",
+      "eli_text": "Scan",
+      "pascn_scan_type_eli_text": "X-rays",
+      "pacrd_subcategory_eli_code": 57749615244,
+      "pascn_t_score": "2",
+      "pascn_z_score": "1",
+      "pascn_bmd_score": "1",
+      "pascn_scan_date": "19/06/2024",
+      "pascn_site_name": "Ligament",
+      "pascn_machine_name": "Portable X-ray Machine"
+    }
+  ],
+  "EditPatientScan": [
+    {
+      "pacr_category": "Patient Scan",
+      "pacr_que_name": "Doppler ultrasound",
+      "pacr_risk": "none",
+      "pascn_notes": "Patient Scan record edited",
+      "eli_text": "Scan",
+      "pacrd_subcategory_eli_code": 57749615244,
+      "pascn_scan_type_eli_text": "X-rays",
+      "pascn_t_score": "2",
+      "pascn_z_score": "1",
+      "pascn_bmd_score": "1",
+      "pascn_scan_date": "19/06/2024",
+      "pascn_site_name": "Ligament",
+      "pascn_machine_name": "Portable X-ray Machine"
+    }
+  ],
+  "DeletePatientScan": [
+    {
+      "pacr_que_name": "Doppler ultrasound",
+      "pacr_delete_reason": "Delete for testing"
+    }
+  ],
+  "AddProblems": [
+    {
+      "pacr_category": "Presenting Problem",
+      "pacr_que_name": "Low back pain",
+      "pacr_risk": "none",
+      "prp_notes": "Added Notes for Patient problem",
+      "eli_text": "Presenting Problems",
+      "prp_date_of_onset": "01/07/2025",
+      "pacrd_subcategory_eli_code": "PR12845",
+      "prp_status": "New",
+      "prp_onset": "Sudden",
+      "prp_severity": "Mild",
+      "prp_rating": "3"
+    }
+  ],
+  "EditProblems": [
+    {
+      "pacr_category": "Presenting Problem",
+      "pacr_que_name": "Low back pain",
+      "pacr_risk": "none",
+      "prp_notes": "Patient Problems edited",
+      "eli_text": "Presenting Problems",
+      "prp_date_of_onset": "05/07/2024",
+      "pacrd_subcategory_eli_code": "PR12845",
+      "prp_status": "Worsening",
+      "prp_onset": "Gradual",
+      "prp_severity": "Moderate",
+      "prp_rating": "5"
+    }
+  ],
+  "DeleteProblems": [
+    {
+      "pacr_que_name": "Low back pain",
+      "pacr_delete_reason": "Not required"
+    }
+  ],
+  "AddOverview": [
+    {
+      "pacr_category": "Overview",
+      "pacr_que_name": "Overview",
+      "pacr_risk": "none",
+      "over_notes": "Added Notes for Overview",
+      "eli_text": "Overview Sub",
+      "pacrd_subcategory_eli_code": 5774961523
+    }
+  ],
+  "EditOverview": [
+    {
+      "pacr_category": "Overview",
+      "pacr_que_name": "Overview",
+      "over_notes": "Overview Edited",
+      "eli_text": "Overview Sub"
+    }
+  ],
+  "DeleteOverview": [
+    {
+      "pacr_que_name": "Overview",
+      "pacr_delete_reason": "Delete for testing"
+    }
+  ],
+  "Addsocial": [
+    {
+      "pacr_category": "Social Circumstance",
+      "pacr_que_name": "Diet",
+      "soci_notes": "Added Notes for Social Circumstances",
+      "eli_text": "Current Circumstance"
+    }
+  ],
+  "Editsocial": [
+    {
+      "pacr_category": "Social Circumstance",
+      "pacr_que_name": "Diet",
+      "soci_notes": "Edited Notes for Social Circumstances",
+      "eli_text": "Current Circumstance"
+    }
+  ],
+  "Deletesocial": [
+    {
+      "pacr_category": "Social Circumstance",
+      "pacr_que_name": "Diet",
+      "pacr_delete_reason": "Delete for testing"
+    }
+  ],
+  "AddRiskFactor": [
+    {
+      "pacr_category": "Risk Factor",
+      "pacr_que_name": "Child at risk",
+      "risk_notes": "Added Notes for Risk Factor",
+      "eli_text": "Risk Factor 1"
+    }
+  ],
+  "EditRiskFactor": [
+    {
+      "pacr_category": "Risk Factor",
+      "pacr_que_name": "Child at risk",
+      "risk_notes": "Edited Notes for Risk Factor",
+      "eli_text": "Risk Factor 1"
+    }
+  ],
+  "DeleteRiskFactor": [
+    {
+      "pacr_category": "Risk Factors",
+      "pacr_que_name": "Child at risk",
+      "pacr_delete_reason": "Delete Risk Factor"
+    }
+  ],
+  "AddLifestyle": [
+    {
+      "pacr_category": "Lifestyle",
+      "pacr_que_name": "Smoking Status: Current Smoker",
+      "life_notes": "Added Notes for Lifestyle",
+      "eli_text": "Current Lifestyle"
+    }
+  ],
+  "EditLifestyle": [
+    {
+      "pacr_category": "Lifestyle",
+      "pacr_que_name": "Smoking Status: Current Smoker",
+      "life_notes": "Edit Notes for Lifestyle",
+      "eli_text": "Current Lifestyle"
+    }
+  ],
+  "DeleteLifestyle": [
+    {
+      "pacr_category": "Lifestyle",
+      "pacr_que_name": "Smoking Status: Current Smoker",
+      "pacr_delete_reason": "Delete Lifestyle"
+    }
+  ],
+  "AddInvestigation": [
+    {
+      "pacr_category": "Investigation",
+      "pacr_que_name": "Renal Function Test",
+      "status": "Requested",
+      "eli_text": "Subcategory 1",
+      "reason": "Borderline",
+      "result": "Pending",
+      "outcome": "Abnormal",
+      "critical": "Yes",
+      "date": "11/09/2024",
+      "location": "Cardio Location",
+      "dateReview": "30/09/2024",
+      "dateCompleted": "12/09/2024",
+      "priority": "High",
+      "sendTo": "Default Lab",
+      "extLocation": "Riomed",
+      "notes": "Investigation Requested"
+    }
+  ],
+  "EditInvestigation": [
+    {
+      "pacr_category": "Investigation",
+      "pacr_que_name": "Renal Function Test",
+      "status": "Completed",
+      "eli_text": "Subcategory 1",
+      "reason": "Borderline",
+      "result": "Positive",
+      "outcome": "Abnormal",
+      "critical": "Yes",
+      "date": "11/09/2024",
+      "location": "Cardio Location",
+      "dateReview": "30/09/2024",
+      "dateCompleted": "12/09/2024",
+      "priority": "High",
+      "sendTo": "Default Lab",
+      "extLocation": "Riomed",
+      "notes": "Investigation completed",
+      "value1": "65",
+      "value2": "20",
+      "target1": "65",
+      "target1_1": "8"
+    }
+  ],
+  "AddCondition": [
+    {
+      "pacr_category": "Conditions",
+      "pacr_que_name": "Erythematous condition",
+      "cond_date_diagnosed": "22/06/2025",
+      "pacr_clinic_date": "22/07/2025",
+      "cond_notes": "Added for Notes for Condition",
+      "eli_text": "subcategory1"
+    }
+  ],
+  "EditCondition": [
+    {
+      "pacr_category": "Condition",
+      "pacr_que_name": "Erythematous condition",
+      "cond_date_diagnosed": "25-05-2024",
+      "pacr_clinic_date": "28-06-2024",
+      "cond_notes": "Edit for Notes for Condition",
+      "eli_text": "subcategory1"
+    }
+  ],
+  "DeleteCondition": [
+    {
+      "pacr_category": "Condition",
+      "pacr_que_name": "Erythematous condition",
+      "pacr_delete_reason": "testing"
+    }
+  ],
+  "AddPatientDetails": [
+    {
+      "pacr_category": "Patient Detail",
+      "pacr_que_name": "Lives on boat",
+      "eli_text": "Patient Details",
+      "pad_notes": "Patient lives on boat "
+    }
+  ],
+  "EditPatientDetails": [
+    {
+      "pacr_category": "Patient Detail",
+      "pacr_que_name": "Lives on boat",
+      "eli_text": "Patient Details",
+      "pad_notes": "Patient lives on boat "
+    }
+  ],
+  "DeletePatientDetails": [
+    {
+      "pacr_category": "Patient Detail",
+      "pacr_que_name": "Lives on boat",
+      "pacr_delete_reason": "not required"
+    }
+  ],
+  "AddTask": [
+    {
+      "task_name": "Regular Checkup",
+      "task_due_date": "20/08/2024",
+      "task_due_time": "09:00",
+      "task_status": "notCompleted",
+      "task_priority": "normal",
+      "specialty": "Cardiology",
+      "clinic_type": "Cardiology Clinic",
+      "appt_location": "Cardio Location",
+      "team": "HP Region1",
+      "alert_category": "Arrange Appointment",
+      "taskd_description": "Appt. task created",
+      "task_notes": "Appt. needed",
+      "age_min": "8",
+      "age_max": "70",
+      "task_username": "Mr Prerelease AutoEst"
+    }
+  ],
+  "EditTask": [
+    {
+      "due_date": "22/08/2024",
+      "due_time": "11:00",
+      "specialty": "Cardiology",
+      "clinic_type": "Cardiology Clinic",
+      "appt_location": "Cardio Location",
+      "team": "HP Region1",
+      "description": "Appt. task created",
+      "notes": "Task Updated",
+      "age_min": "8",
+      "age_max": "70",
+      "task_username": "Mr Prerelease AutoEst"
+    }
+  ],
+  "AddCarePlan": [
+    {
+      "pacr_category": "Care Plans",
+      "pacr_que_name": "Hip Replacement",
+      "carpd_type_nursingDiagnosis": "nursingDiagnosis",
+      "carpd_que_name": "Spinal Cord Injury",
+      "carpd_notes_nursingDiagnosis": "notes Spinal Cord Injury",
+      "carpd_type_goals": "goals",
+      "carpd_eli_text_goals": "Long Term Goal",
+      "carpd_notes_goals": "notes  Long Term Goal",
+      "carpd_type_interventions": "interventions",
+      "carpd_eli_text_interventions": "Assessment and Monitoring",
+      "carpd_notes_interventions": "notes Assessment and Monitoring",
+      "carpd_type_evaluations": "evaluations",
+      "carpd_eli_text_evaluations": "Evaluate wound healing",
+      "carpd_notes_evaluations": "Notes Evaluate wound healing",
+      "carpd_type_notes": "added ED notes",
+      "__EMPTY": "added ED notes"
+    }
+  ],
+  "EditCarePlan": [
+    {
+      "pacr_category": "Care Plans",
+      "pacr_que_name": "Hip Replacement",
+      "carpd_type_nursingDiagnosis": "nursingDiagnosis",
+      "carpd_que_name": "Spinal Cord Injury",
+      "carpd_notes_nursingDiagnosis": "Edit notes Spinal Cord Injury",
+      "carpd_type_goals": "goals",
+      "carpd_eli_text_goals": "Long Term Goal",
+      "carpd_notes_goals": "Edit notes  Long Term Goal",
+      "carpd_type_interventions": "interventions",
+      "carpd_eli_text_interventions": "Assessment and Monitoring",
+      "carpd_notes_interventions": "Edit notes Assessment and Monitoring",
+      "carpd_type_evaluations": "evaluations",
+      "carpd_eli_text_evaluations": "Evaluate wound healing",
+      "carpd_notes_evaluations": "Edit Notes Evaluate wound healing",
+      "carpd_type_notes": "added ED notes",
+      "__EMPTY": "added ED notes"
+    }
+  ],
+  "DeleteCarePlan": [],
+  "Alerts": [
+    {
+      "Alert_Start_Date": "01-04-2025",
+      "Alert_End_Date": "23/10/2025",
+      "Priority_Any_Priority": "Any Priority",
+      "Priority_Very_High": "Very High",
+      "Priority_High": "High",
+      "Priority_Normal": "Normal",
+      "Display_All": "All",
+      "Display_Patients": "Patients",
+      "Display_Users": "Users",
+      "Display_My_Alerts": "My Alerts",
+      "For_User": "Manoj Vyavahare, Consultant"
+    }
+  ],
+  "DeleteInvestigation": [
+    {
+      "pacr_category": "Investigation",
+      "pacr_que_name": "Renal Function Test",
+      "pacr_delete_reason": "Not required",
+      "eli_text": "Subcategory 1",
+      "reason": "Borderline",
+      "result": "Pending",
+      "outcome": "Abnormal",
+      "critical": "Yes",
+      "date": "11/09/2024",
+      "location": "Cardio Location",
+      "dateReview": "30/09/2024",
+      "dateCompleted": "12/09/2024",
+      "priority": "High",
+      "sendTo": "Default Lab",
+      "extLocation": "Riomed",
+      "notes": "Investigation Requested"
+    }
+  ],
+  "DevicePatientDetails": [
+    {
+      "pat_firstname": "AkaliA",
+      "pat_surname": "Riomedtest",
+      "pat_sex": "Male",
+      "pat_dob": "08/09/2024"
+    }
+  ],
+  "deviceDetailsPage": [
+    {
+      "procedure": "Cochlear Implantation",
+      "searchForDevice": "Cochlear Osia OSI200",
+      "manufacturer": "Cochlear",
+      "typeOfDevice": "Primary",
+      "internalExternal": "Internal",
+      "status": "Requested",
+      "laterality": "Right",
+      "expiryDate": "31/03/2025",
+      "notes": "Device edited"
+    }
+  ],
+  "AddDevice": [
+    {
+      "dev_name": "Cochlear Osia OSI200",
+      "dev_type": "Device",
+      "dev_procedure_name": "Cochlear Implantation",
+      "dev_manufacturer": "Cochlear",
+      "dev_expiry_date": "28/02/2025",
+      "ded_type": "primary",
+      "ded_type_entry": "Primary",
+      "ded_internal_external": "internal",
+      "ded_internal_external_entry": "Internal",
+      "ded_laterality": "left",
+      "ded_laterality_entry": "Left",
+      "ded_notes": "Device added",
+      "ded_status": "implanted",
+      "ded_status_entry": "Implanted",
+      "dev_serial_number": "913748362"
+    }
+  ],
+  "EditDevice": [
+    {
+      "dev_name": "Cochlear Osia OSI200",
+      "dev_type": "Tool",
+      "dev_procedure_name": "Cochlear Implantation",
+      "dev_manufacturer": "SA Company",
+      "dev_deleted_reason": "Device deleted",
+      "dev_expiry_date": "31/03/2025",
+      "ded_type": "primary",
+      "ded_type_entry": "Primary",
+      "ded_internal_external": "internal",
+      "ded_internal_external_entry": "Internal",
+      "ded_laterality": "right",
+      "ded_laterality_entry": "Right",
+      "ded_notes": "Device edited",
+      "ded_status": "requested",
+      "ded_status_entry": "Requested",
+      "dev_serial_number": "913748362",
+      "dev_ordering_status": "awaitingapproval"
+    }
+  ],
+  "AddTest": [
+    {
+      "pattes_tests_question_que_name": "Pressure Ulcer Test",
+      "pattes_answer_0": "Completely Limited",
+      "pattes_answer_1": "Constantly Moist",
+      "pattes_answer_2": "Chairfast",
+      "pattes_answer_3": "Completely Immobile",
+      "pattes_answer_4": "Probably Inadequate",
+      "pattes_answer_5": "Potential Problem",
+      "pattes_notes": "Add Pressure Ulcer Test"
+    },
+    {
+      "pattes_tests_question_que_name": "Malnutrition universal screening Test",
+      "pattes_answer_0": ">20 ",
+      "pattes_answer_1": "<5%",
+      "pattes_answer_2": "Yes",
+      "pattes_notes": "Add Malnutrition universal screening Test"
+    },
+    {
+      "pattes_tests_question_que_name": "Falls Risk Assessment Scale",
+      "pattes_answer_0": "None in the last 12 months",
+      "pattes_answer_1": "Not taking any of these",
+      "pattes_answer_2": "Does not appear to have any of these",
+      "pattes_answer_3": "AMTS 9-10 OR intact",
+      "pattes_notes": "Add Falls Risk Assessment Scale"
+    },
+    {
+      "pattes_tests_question_que_name": "PHQ-9",
+      "pattes_answer_0": "Not at all",
+      "pattes_answer_1": "Several days",
+      "pattes_answer_2": "More than half the days",
+      "pattes_answer_3": "Nearly every days",
+      "pattes_answer_4": "Not at all",
+      "pattes_answer_5": "Several days",
+      "pattes_answer_6": "More than half the days",
+      "pattes_answer_7": "Yes",
+      "pattes_answer_8": "Yes",
+      "pattes_notes": "Add PHQ-9 Test"
+    }
+  ],
+  "EditTest": [
+    {
+      "pattes_tests_question_que_name": "Pressure Ulcer Test",
+      "pattes_answer_0": "Very Limited",
+      "pattes_answer_1": "Very Moist",
+      "pattes_answer_2": "Bedfast",
+      "pattes_answer_3": "Slightly Limited",
+      "pattes_answer_4": "Very Poor",
+      "pattes_answer_5": "No Apparent Problem",
+      "pattes_notes": "Edit Pressure Ulcer Test",
+      "pattes_review_date": "04/04/2025",
+      "pattes_last_reviewed": "04/04/2025",
+      "pacr_delete_reason": "Delete Test"
+    },
+    {
+      "pattes_tests_question_que_name": "Malnutrition universal screening Test",
+      "pattes_answer_0": "<18.5",
+      "pattes_answer_1": ">10%",
+      "pattes_answer_2": "No",
+      "pattes_notes": "Edit Malnutrition universal screening Test",
+      "pattes_review_date": "04/04/2025",
+      "pattes_last_reviewed": "04/04/2025",
+      "pacr_delete_reason": "Delete Test"
+    },
+    {
+      "pattes_tests_question_que_name": "Falls Risk Assessment Scale",
+      "pattes_answer_0": "One or more between 3 and 12 months ago",
+      "pattes_answer_1": "Taking one",
+      "pattes_answer_2": "Appears mildly affected by one or more",
+      "pattes_answer_3": "AMTS 7-8 OR mildy impaired",
+      "pattes_notes": "Edit Falls Risk Assessment Scale",
+      "pattes_review_date": "04/04/2025",
+      "pattes_last_reviewed": "04/04/2025",
+      "pacr_delete_reason": "Delete Test"
+    },
+    {
+      "pattes_tests_question_que_name": "PHQ-9",
+      "pattes_answer_0": "Several days",
+      "pattes_answer_1": "More than half the days",
+      "pattes_answer_2": "Nearly every days",
+      "pattes_answer_3": "Not at all",
+      "pattes_answer_4": "Several days",
+      "pattes_answer_5": "More than half the days",
+      "pattes_answer_6": "Not at all",
+      "pattes_answer_7": "No",
+      "pattes_answer_8": "No",
+      "pattes_notes": "Edit PHQ-9 Test",
+      "pattes_review_date": "04/04/2025",
+      "pattes_last_reviewed": "04/04/2025",
+      "pacr_delete_reason": "Delete Test"
+    }
+  ],
+  "AddTool": [
+    {
+      "pacr_que_name": "Audiogram Tool",
+      "pattod_var_value_0": "VRA",
+      "pattod_var_value_1": "Pure tone",
+      "pattod_var_value_2": "Reliability Air Conduction",
+      "pattod_var_value_3": "Headphones",
+      "pattod_var_value_4": "Play Audiometry",
+      "pattod_var_value_5": "Warble",
+      "pattod_var_value_6": "Reliability Bone Conduction",
+      "pattod_var_value_7": "Behavioural Observation Audiometry",
+      "pattod_var_value_8": "Narrowband noise",
+      "pattod_var_value_9": "Reliability Unaided Soundfield",
+      "pattod_var_value_10": "Patient Response Button",
+      "pattod_var_value_11": "White noise",
+      "pattod_var_value_12": "Reliability Aided Soundfield",
+      "patto_notes_0": "Notes on Air Conduction",
+      "patto_notes_1": "Notes on Bone Conduction",
+      "patto_notes_2": "Notes on Unaided Soundfield",
+      "patto_notes_3": "Notes on Aided Soundfield",
+      "clinicItem": "Audiogram Tool"
+    },
+    {
+      "pacr_que_name": "DAS28",
+      "pattod_var_value_0": "33",
+      "pattod_var_value_1": "87",
+      "pattod_var_value_2": "65",
+      "patto_notes": "DAS Examination notes",
+      "pattom_notes": "Patient marker functionality test",
+      "clinicItem": "DAS 28 Examination Tool"
+    },
+    {
+      "pacr_que_name": "DAS78",
+      "patto_notes": "DAS 78 New tool",
+      "pattom_notes": "Patient marker for DAS 78",
+      "clinicItem": "DAS 78 Examination Tool"
+    }
+  ],
+  "EditTool": [
+    {
+      "pacr_que_name": "Audiogram Tool",
+      "pattod_var_value_0": "Play Audiometry",
+      "pattod_var_value_1": "Warble",
+      "pattod_var_value_2": "Reliability Air Conduction Edited",
+      "pattod_var_value_3": "Speaker",
+      "pattod_var_value_4": "VRA",
+      "pattod_var_value_5": "Pure tone",
+      "pattod_var_value_6": "Reliability Bone Conduction Edited",
+      "pattod_var_value_7": "Patient Response Button",
+      "pattod_var_value_8": "White noise",
+      "pattod_var_value_9": "Reliability Unaided Soundfield Edited",
+      "pattod_var_value_10": "Behavioural Observation Audiometry",
+      "pattod_var_value_11": "Narrowband noise",
+      "pattod_var_value_12": "Reliability Aided Soundfield Edited",
+      "patto_notes_0": "Edit  Air Conduction",
+      "patto_notes_1": "Edit Bone Conduction",
+      "patto_notes_2": "Edit Unaided Soundfield",
+      "patto_notes_3": "Edit Aided Soundfield",
+      "clinicItem": "Audiogram Tool",
+      "pacr_clinic_date": "09/05/2025",
+      "patto_review_date": "09/05/2025",
+      "patto_last_reviewed": "09/05/2025",
+      "pacr_delete_reason": "Delete Tool"
+    },
+    {
+      "pacr_que_name": "DAS28",
+      "pattod_var_value_0": "75",
+      "pattod_var_value_1": "67",
+      "pattod_var_value_2": "42",
+      "pattod_var_value_3": "4",
+      "pattod_var_value_4": "6",
+      "patto_notes": "Edit tool test",
+      "clinicItem": "DAS 28 Examination Tool",
+      "patto_review_date": "09/05/2025",
+      "patto_last_reviewed": "09/05/2025",
+      "pacr_delete_reason": "Delete Tool"
+    },
+    {
+      "pacr_que_name": "DAS78",
+      "pattod_var_value_0": "11",
+      "pattod_var_value_1": "18",
+      "patto_notes": "DAS 78 Edit Tool",
+      "clinicItem": "DAS 78 Examination Tool",
+      "patto_review_date": "09/05/2026",
+      "patto_last_reviewed": "09/05/2026",
+      "pacr_delete_reason": "Delete Tool"
+    }
+  ],
+  "AddPatientConsent": [
+    {
+      "pac_consent_given_by": "Wednesday Tester",
+      "pac_consent_type": "Contact by Email",
+      "pac_consent_status": "Given",
+      "pac_consent_start": "01/04/2025",
+      "pac_consent_end": "01/05/2025",
+      "pac_consent_file_path": "\\consent\\4\\788397",
+      "pac_consent_file": "pac_4771_dummy.pdf",
+      "pac_consent_file_type": "pdf",
+      "pac_notes": "Data entry test.",
+      "pac_special_requirement": "This is a special requirement",
+      "pac_medical_term": "Brief explanation of term used",
+      "pac_intended_benefits": "This is an intended benefit",
+      "pac_frequent_risks": "This is a risk that occurs often",
+      "pac_blood_transfusion": "Details for blood transfusion",
+      "pac_procedures": "Details of procedure",
+      "pac_risks": "These are risks",
+      "pac_consent_details_json": "{\"patientDetails\":{\"patSurname\":\"Riomedtest\",\"patFirstName\":\"AkaliA\",\"patDateOfBirth\":\"08/09/2024\",\"patGender\":\"M\",\"patNhsNumber\":\"\",\"patPid\":\"\",\"specialRequirements\":\"This is a special requirement\",\"proposedProcedures\":{},\"briefExplanationMedicalTerm\":\"Brief explanation of term used\"},\"statementOfHealthProfessional\":{\"explainedIntendedBenefits\":\"This is an intended benefit\",\"significantUnavoidableRisks\":\"This is a risk that occurs often\",\"extraProcedures\":{\"bloodTransfusion\":true,\"details\":\"Details for blood transfusion\",\"proceduresChecked\":true,\"otherProcedures\":[{},{\"details\":\"Details of procedure\"}]},\"providedInformation\":true,\"details\":\"These are risks\",\"involvedProcedureDetails\":{\"generalAnaesthesia\":false,\"localAnaesthesia\":false,\"sedation\":false,\"responsibleHealthProfessional\":{\"name\":\"\",\"jobTitle\":\"\",\"registrationNumber\":\"\",\"signature\":\"\"},\"healthProfessionalName\":\"\",\"jobTitle\":\"\",\"date\":\"18/06/2025\"}},\"statementOfInterpreter\":{\"signature\":\"\",\"interpreterName\":\"\",\"date\":\"18/06/2025\"},\"statementOfParent\":{\"details\":\"\",\"removelOfTissueOrBloodDuringOperation\":\"Yes\",\"forResearchInConnectionWithDisorders\":\"Yes\",\"forScientificOrMedicalInformation\":\"Yes\",\"parentDetails\":{\"patientSignature\":\"\",\"patientName\":\"AkaliA Riomedtest\",\"date\":null},\"witnessDetails\":{\"patientSignature\":\"\",\"patientName\":\"\",\"date\":null}},\"confirmationOfConsent\":{\"healthProfessional\":{\"signature\":\"\",\"name\":\"\",\"jobTitle\":\"\",\"date\":null},\"parent\":{\"signature\":\"\",\"name\":\"AkaliA Riomedtest\",\"date\":null}},\"withdrawalOfConsentDetails\":{\"patientName\":\"AkaliA Riomedtest\",\"date\":null}}"
+    }
+  ],
+  "EditPatientConsent": [
+    {
+      "pac_consent_given_by": "Wednesday Tester",
+      "pac_consent_type": "Contact by Email",
+      "pac_consent_status_input": "Withdrawn",
+      "pac_consent_status": "withdrawn",
+      "pac_consent_start": "01/04/2025",
+      "pac_consent_end": "18/06/2025",
+      "pac_withdraw_date": "18/06/2025",
+      "pac_consent_file_path": "\\consent\\4\\788397",
+      "pac_consent_file": "pac_4771_dummy.pdf",
+      "pac_consent_file_type": "pdf",
+      "pac_notes": "Record edit test",
+      "pac_special_requirement": "Edited requirement",
+      "pac_medical_term": "No term explanation needed",
+      "pac_intended_benefits": "Benefit of knowledge",
+      "pac_frequent_risks": "No risks",
+      "pac_blood_transfusion": "Blood transfusion was done",
+      "pac_procedures": "No procedure",
+      "pac_risks": "Risk of boredom",
+      "pac_consent_details_json": "{\"patientDetails\":{\"patSurname\":\"Riomedtest\",\"patFirstName\":\"AkaliA\",\"patDateOfBirth\":\"08/09/2024\",\"patGender\":\"M\",\"patNhsNumber\":\"\",\"patPid\":\"\",\"specialRequirements\":\"Edited requirement\",\"proposedProcedures\":{},\"briefExplanationMedicalTerm\":\"No term explanation needed\"},\"statementOfHealthProfessional\":{\"explainedIntendedBenefits\":\"Benefit of knowledge\",\"significantUnavoidableRisks\":\"No risks\",\"extraProcedures\":{\"bloodTransfusion\":false,\"details\":\"Blood transfusion was done\",\"proceduresChecked\":true,\"otherProcedures\":[{},{\"details\":\"No procedure\"}]},\"providedInformation\":true,\"details\":\"Risk of boredom\",\"involvedProcedureDetails\":{\"generalAnaesthesia\":false,\"localAnaesthesia\":false,\"sedation\":false,\"responsibleHealthProfessional\":{\"name\":\"\",\"jobTitle\":\"\",\"registrationNumber\":\"\",\"signature\":\"\"},\"healthProfessionalName\":\"\",\"jobTitle\":\"\",\"date\":\"18/06/2025\"}},\"statementOfInterpreter\":{\"signature\":\"\",\"interpreterName\":\"\",\"date\":\"18/06/2025\"},\"statementOfParent\":{\"details\":\"\",\"removelOfTissueOrBloodDuringOperation\":\"Yes\",\"forResearchInConnectionWithDisorders\":\"Yes\",\"forScientificOrMedicalInformation\":\"Yes\",\"parentDetails\":{\"patientSignature\":\"\",\"patientName\":\"AkaliA Riomedtest\",\"date\":null},\"witnessDetails\":{\"patientSignature\":\"\",\"patientName\":\"\",\"date\":null}},\"confirmationOfConsent\":{\"healthProfessional\":{\"signature\":\"\",\"name\":\"\",\"jobTitle\":\"\",\"date\":null},\"parent\":{\"signature\":\"\",\"name\":\"AkaliA Riomedtest\",\"date\":null}},\"withdrawalOfConsentDetails\":{\"withdrawnConsent\":true,\"patientName\":\"AkaliA Riomedtest\",\"date\":\"18/06/2025\"}}"
+    }
+  ],
+  "PhysicalSign": [
+    {
+      "Label": "Blood Pressure (35)",
+      "Value": "120"
+    },
+    {
+      "Label": "Blood Pressure Diastolic (mmHg)",
+      "Value": "75"
+    },
+    {
+      "Label": "Blood Pressure Systolic (mmHg)",
+      "Value": "125"
+    },
+    {
+      "Label": "BMI (body mass index) centile",
+      "Value": "99"
+    },
+    {
+      "Label": "Capillary refill time (seconds)",
+      "Value": "2"
+    },
+    {
+      "Label": "Foetal heart rate",
+      "Value": "72"
+    },
+    {
+      "Label": "Fundal height of uterus",
+      "Value": "68"
+    },
+    {
+      "Label": "Halo sign",
+      "Value": "52"
+    },
+    {
+      "Label": "Height",
+      "Value": "162"
+    },
+    {
+      "Label": "Height and weight",
+      "Value": "61"
+    },
+    {
+      "Label": "News Score (No unit)",
+      "Value": "100"
+    },
+    {
+      "Label": "O2 (L/Min)",
+      "Value": "18"
+    },
+    {
+      "Label": "Oxygen (12)",
+      "Value": "102"
+    },
+    {
+      "Label": "Oxygen Saturation Scale 1 (%)",
+      "Value": "98"
+    },
+    {
+      "Label": "Oxygen Saturation Scale 2 (%)",
+      "Value": "99"
+    },
+    {
+      "Label": "PEWS score",
+      "Value": "55"
+    },
+    {
+      "Label": "Physical",
+      "Value": "69"
+    },
+    {
+      "Label": "Pulse (Beats per minute)",
+      "Value": "298"
+    },
+    {
+      "Label": "Pulse-resting-rate(bpm)",
+      "Value": "78"
+    },
+    {
+      "Label": "Respiratory Rate (Breaths per minute)",
+      "Value": "48"
+    },
+    {
+      "Label": "Respiratory Rate",
+      "Value": "298"
+    },
+    {
+      "Label": "Serum neutralization test",
+      "Value": "19"
+    },
+    {
+      "Label": "SPO2",
+      "Value": "65"
+    },
+    {
+      "Label": "Structure of epiphyseal plate",
+      "Value": "89"
+    },
+    {
+      "Label": "Temperature (degree C)",
+      "Value": "36"
+    },
+    {
+      "Label": "Weight (kg) (kg)",
+      "Value": "58"
+    }
+  ]
+}

@@ -532,7 +532,7 @@ async function createPageLocatorJSON (locator, filePath, fileName) {
       }
       catch (error){
         //
-        console.log(`${locator[i]} is not a valid locator.`)
+        console.log(`${locator[i]} is not a valid input locator.`)
 
       }
     }

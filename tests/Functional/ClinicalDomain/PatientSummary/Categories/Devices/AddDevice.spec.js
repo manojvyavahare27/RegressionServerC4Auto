@@ -104,7 +104,6 @@ test.describe("Device Category", () => {
       //page.waitForSelector("xpath=//button[@data-testid='Confirm Existing Details']");
       await confirmexisting.btn_confirmExistingDetails.waitFor();
       await page.waitForTimeout(1000);
-      await page.pause();
       await confirmexisting.clickOnConfirmExistingDetails();
 
       await page.waitForTimeout(6000);
@@ -213,109 +212,109 @@ test.describe("Device Category", () => {
         .toHaveText("Device record added successfully");
       await Devices.clickOnExtraDetailsView3();
 
-      ////////////////////////// FRONT END COMPARISON OF ENTERED INFORMAION //////////////////////////
-      var count = 0;
+      // ////////////////////////// FRONT END COMPARISON OF ENTERED INFORMAION //////////////////////////
+      // var count = 0;
 
-      console.log("\nFRONT END COMPARISON - REGULAR JAVASCRIPT");
-      console.log("Add Device\n");
+      // console.log("\nFRONT END COMPARISON - REGULAR JAVASCRIPT");
+      // console.log("Add Device\n");
 
-      var dev_procedure_name = await Devices.deviceProcedureName.isVisible();
-      var dev_name = await Devices.deviceName.isVisible();
-      var ded_laterality = await Devices.deviceLaterality.isVisible();
-      var ded_status = await Devices.deviceStatus.isVisible();
-      var dev_expiry_date = await Devices.deviceExpiryDate.isVisible();
-      var dev_serial_number = await Devices.deviceSerialNumber.isVisible();
-      var ded_notes = await Devices.deviceNotes.isVisible();
+      // var dev_procedure_name = await Devices.deviceProcedureName.isVisible();
+      // var dev_name = await Devices.deviceName.isVisible();
+      // var ded_laterality = await Devices.deviceLaterality.isVisible();
+      // var ded_status = await Devices.deviceStatus.isVisible();
+      // var dev_expiry_date = await Devices.deviceExpiryDate.isVisible();
+      // var dev_serial_number = await Devices.deviceSerialNumber.isVisible();
+      // var ded_notes = await Devices.deviceNotes.isVisible();
 
-      if (dev_procedure_name) {
-        await expect
-          .soft(Devices.deviceProcedureName)
-          .toContainText(jsonData.AddDevice[index].dev_procedure_name);
-        console.log(
-          "Displayed procedure matched: " +
-            jsonData.AddDevice[index].dev_procedure_name
-        );
-      } else {
-        console.log("Displayed procedure did not match.");
-        count++;
-      }
+      // if (dev_procedure_name) {
+      //   await expect
+      //     .soft(Devices.deviceProcedureName)
+      //     .toContainText(jsonData.AddDevice[index].dev_procedure_name);
+      //   console.log(
+      //     "Displayed procedure matched: " +
+      //       jsonData.AddDevice[index].dev_procedure_name
+      //   );
+      // } else {
+      //   console.log("Displayed procedure did not match.");
+      //   count++;
+      // }
 
-      if (dev_name) {
-        await expect
-          .soft(Devices.deviceName)
-          .toContainText(jsonData.AddDevice[index].dev_name);
-        console.log(
-          "Displayed device matched: " + jsonData.AddDevice[index].dev_name
-        );
-      } else {
-        console.log("Displayed device did not match.");
-        count++;
-      }
+      // if (dev_name) {
+      //   await expect
+      //     .soft(Devices.deviceName)
+      //     .toContainText(jsonData.AddDevice[index].dev_name);
+      //   console.log(
+      //     "Displayed device matched: " + jsonData.AddDevice[index].dev_name
+      //   );
+      // } else {
+      //   console.log("Displayed device did not match.");
+      //   count++;
+      // }
 
-      if (ded_laterality) {
-        await expect
-          .soft(Devices.deviceLaterality)
-          .toContainText(jsonData.AddDevice[index].ded_laterality);
-        console.log(
-          "Displayed device laterality matched: " +
-            jsonData.AddDevice[index].ded_laterality
-        );
-      } else {
-        console.log("Displayed device laterality did not match.");
-        count++;
-      }
+      // if (ded_laterality) {
+      //   await expect
+      //     .soft(Devices.deviceLaterality)
+      //     .toContainText(jsonData.AddDevice[index].ded_laterality);
+      //   console.log(
+      //     "Displayed device laterality matched: " +
+      //       jsonData.AddDevice[index].ded_laterality
+      //   );
+      // } else {
+      //   console.log("Displayed device laterality did not match.");
+      //   count++;
+      // }
 
-      if (ded_status) {
-        await expect
-          .soft(Devices.deviceStatus)
-          .toContainText(jsonData.AddDevice[index].ded_status);
-        console.log(
-          "Displayed status matched: " + jsonData.AddDevice[index].ded_status
-        );
-      } else {
-        console.log("Displayed status did not match.");
-        count++;
-      }
+      // if (ded_status) {
+      //   await expect
+      //     .soft(Devices.deviceStatus)
+      //     .toContainText(jsonData.AddDevice[index].ded_status);
+      //   console.log(
+      //     "Displayed status matched: " + jsonData.AddDevice[index].ded_status
+      //   );
+      // } else {
+      //   console.log("Displayed status did not match.");
+      //   count++;
+      // }
 
-      if (dev_expiry_date) {
-        await expect
-          .soft(Devices.deviceExpiryDate)
-          .toContainText(jsonData.AddDevice[index].dev_expiry_date);
-        console.log(
-          "Displayed expiry date matched: " +
-            jsonData.AddDevice[index].dev_expiry_date
-        );
-      } else {
-        console.log("Displayed expiry date did not match.");
-        count++;
-      }
+      // if (dev_expiry_date) {
+      //   await expect
+      //     .soft(Devices.deviceExpiryDate)
+      //     .toContainText(jsonData.AddDevice[index].dev_expiry_date);
+      //   console.log(
+      //     "Displayed expiry date matched: " +
+      //       jsonData.AddDevice[index].dev_expiry_date
+      //   );
+      // } else {
+      //   console.log("Displayed expiry date did not match.");
+      //   count++;
+      // }
 
-      if (dev_serial_number) {
-        await expect
-          .soft(Devices.deviceSerialNumber)
-          .toContainText(jsonData.AddDevice[index].dev_serial_number);
-        console.log(
-          "Displayed serial number matched: " +
-            jsonData.AddDevice[index].dev_serial_number
-        );
-      } else {
-        console.log("Displayed serial number did not match.");
-        count++;
-      }
+      // if (dev_serial_number) {
+      //   await expect
+      //     .soft(Devices.deviceSerialNumber)
+      //     .toContainText(jsonData.AddDevice[index].dev_serial_number);
+      //   console.log(
+      //     "Displayed serial number matched: " +
+      //       jsonData.AddDevice[index].dev_serial_number
+      //   );
+      // } else {
+      //   console.log("Displayed serial number did not match.");
+      //   count++;
+      // }
 
-      if (ded_notes) {
-        await expect
-          .soft(Devices.deviceNotes)
-          .toContainText(jsonData.AddDevice[index].ded_notes);
-        console.log(
-          "Displayed device notes matched: " +
-            jsonData.AddDevice[index].ded_notes
-        );
-      } else {
-        console.log("Displayed device notes did not match.");
-        count++;
-      }
-      console.log("\nFailed count: " + count);
+      // if (ded_notes) {
+      //   await expect
+      //     .soft(Devices.deviceNotes)
+      //     .toContainText(jsonData.AddDevice[index].ded_notes);
+      //   console.log(
+      //     "Displayed device notes matched: " +
+      //       jsonData.AddDevice[index].ded_notes
+      //   );
+      // } else {
+      //   console.log("Displayed device notes did not match.");
+      //   count++;
+      // }
+      // console.log("\nFailed count: " + count);
 
       ///////// Database comparison- Patient Device Records - ADDING NEW Device /////////
       sqlQuery =

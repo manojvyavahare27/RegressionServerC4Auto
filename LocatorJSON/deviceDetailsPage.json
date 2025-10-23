@@ -1,0 +1,14 @@
+[
+  {
+    "procedure": "Cochlear Implantation",
+    "searchForDevice": "Cochlear Osia OSI200",
+    "manufacturer": "Cochlear",
+    "typeOfDevice": "Primary",
+    "internalExternal": "Internal",
+    "status": "Requested",
+    "serialNumber": "",
+    "laterality": "Right",
+    "expiryDate": "31/03/2025",
+    "notes": "Device edited"
+  }
+]

@@ -361,17 +361,17 @@ this.pregGravida= page.locator("xpath=//input[@id='gravida']")
         this.pregSave= page.locator("xpath=//div[contains(text(),'Save')]")
 
             //Temp Devices till locator issues sorted.
-    this.dropdownDeviceProcedure = page.getByTestId('procedure').getByLabel('Open');
-    this.dropdownManufacturer = page.getByTestId('manufacturer').getByLabel('Open');
-    this.dropdownDeviceSubCategory = page.getByTestId('subCategory').getByLabel('Open');
-    this.txtSearchForDevice = page.locator("xpath=//input[@name='searchForDevice']")
-    this.dropdownTypeOfDevice = page.getByTestId('typeOfDevice').getByLabel('Open');
-    this.dropdownInternalExternal = page.getByTestId('internalExternal').getByLabel('Open');
-    this.dropdownDeviceStatus = page.getByTestId('status').getByLabel('Open');
-    this.dropdownLaterality = page.getByTestId('laterality').getByLabel('Open');
-    this.txtDeviceSerialNumber = page.getByTestId('Serial Number');
-    this.txtDeviceExpiryDate = page.getByTestId('Expiry Date');
-    this.txtDeviceNotes = page.getByTestId('Notes');
+    this.dropdownDeviceProcedure = page.locator("xpath=//input[@name='procedure']");
+    this.dropdownManufacturer = page.locator("xpath=//input[@name='manufacturer']");
+    this.dropdownDeviceSubCategory = page.locator("xpath=//input[@name='subCategory']");
+    this.txtSearchForDevice = page.locator("xpath=//input[@name='searchForDevice']");
+    this.dropdownTypeOfDevice = page.locator("xpath=//input[@name='typeOfDevice']");
+    this.dropdownInternalExternal = page.locator("xpath=//input[@name='internalExternal']");
+    this.dropdownDeviceStatus = page.locator("xpath=//input[@name='status']");
+    this.dropdownLaterality = page.locator("xpath=//input[@name='laterality']");
+    this.txtDeviceSerialNumber = page.locator("xpath=//input[@name='serialNumber']");
+    this.txtDeviceExpiryDate = page.locator("xpath=//input[@name='expiryDate']");
+    this.txtDeviceNotes = page.locator("xpath=//textarea[@name='notes']");
     this.btnSaveDevice = page.locator("xpath=//button[@data-testid='extraDetailsSave']");
     this.extraDetailLevel2 = page.locator("xpath=//button[@data-testid='levelTwo']")
     this.extraDetailLevel = page.locator("xpath=//button[@data-testid='levelThree']")
