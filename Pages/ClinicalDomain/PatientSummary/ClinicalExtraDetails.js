@@ -383,6 +383,16 @@ this.pregGravida= page.locator("xpath=//input[@id='gravida']")
     this.linkRequestOrderStatus = page.locator("xpath=//a[@aria-label='Not Ordered']")
     this.btnExternalRequest = page.locator("xpath=//button[@aria-label='External Request']")
     this.displayOrderStatus = page.getByRole('heading', { name: 'Awaiting Approval' })
+    //New fields
+    this.txtMyName = page.locator("xpath=//input[@name='myName']");
+    this.txtScore = page.locator("xpath=//input[@name='score']");
+    //Checkboxes
+    this.checkboxAddToFavourite = page.getByRole('checkbox', { name: 'Add to Favourites' })
+    this.checkboxAddToOrderSet = page.locator('label').filter({ hasText: 'Add to Order Set' }).locator('div')
+    this.checkboxApprovedInMDT = page.getByRole('checkbox', { name: 'Approved in MDT' })
+    this.checkboxOptedForMLRS = page.getByRole('checkbox', { name: 'Opted for MLRS' })
+    this.checkboxDisplayInSummary = page.getByRole('checkbox', { name: 'Display in Summary' })
+    this.checkboxPrivateRecord = page.getByRole('checkbox', { name: 'Private record' })
 
     //Front End Display - Devices
     this.deviceProcedureName = page.getByRole('heading', { name: 'Cochlear Implantation' })

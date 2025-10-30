@@ -176,6 +176,14 @@ test.describe("Device Category", () => {
         Devices.dropdownLaterality,
         Devices.txtDeviceExpiryDate,
         Devices.txtDeviceNotes,
+        Devices.txtMyName,
+        Devices.txtScore,
+        Devices.checkboxAddToFavourite,
+        Devices.checkboxAddToOrderSet,
+        Devices.checkboxApprovedInMDT,
+        Devices.checkboxOptedForMLRS,
+        Devices.checkboxDisplayInSummary,
+        Devices.checkboxPrivateRecord,
       ];
 
       await checkAllLocatorVisibility(locators, expect);

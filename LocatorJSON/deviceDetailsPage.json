@@ -9,6 +9,10 @@
     "serialNumber": "",
     "laterality": "Right",
     "expiryDate": "31/03/2025",
-    "notes": "Device edited"
+    "notes": "Device edited",
+    "myName": "",
+    "score": "",
+    "null": "false",
+    "addToOrderSet": "false"
   }
 ]
