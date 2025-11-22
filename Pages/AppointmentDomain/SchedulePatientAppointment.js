@@ -16,7 +16,7 @@ class ServiceBookApp
         this.linkAssessment=page.locator("xpath=//li[@data-testid='assessmentLink']")
         this.linkReSchedule=page.locator("xpath=//li[@data-testid='scheduleLink']")
         this.buttonRescheduleApp=page.locator("xpath=//button[@data-testid='Rescheduled']")
-        this.dropdownReasonforRescheduling=page.getByLabel('Open')
+        this.dropdownReasonforRescheduling=page.getByRole('button', { name: 'Open' })
         this.buttonSaveReschedulingStatus=page.locator("xpath=//button[@data-testid='saveAppointmentStatus']")
         this.buttonCancelReschedulingConfirmation=page.getByRole('button', { name: 'Cancel', exact: true })
         this.buttonProceedReschedulingConfirmation=page.getByTestId('Proceed')
@@ -37,8 +37,8 @@ class ServiceBookApp
         //Change Appointment Type:
         this.linkAppType=page.locator("xpath=//a[text()='New']")
         this.btncloseAppTypePopup=page.getByLabel('cancelIcon')
-        this.dropdownAppType=page.getByLabel('Open')
-        this.btnChange=page.getByTestId('Change')
+        this.dropdownAppType=page.locator("xpath=//input[@id='appointmentType']")
+        this.btnChange=page.locator("xpath=//button[@data-testid='Change']")
 
         //Change Appointment Status
         this.linkAppStautsSchedule=page.locator("xpath=//a[@data-testid='Status']")

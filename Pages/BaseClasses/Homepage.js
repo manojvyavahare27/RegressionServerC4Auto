@@ -2,12 +2,15 @@ class Homepage{
     constructor(page)
     {
         this.page=page
-        this.iconPatient=page.locator("xpath=//div[@data-testid='moduleDrawerPatients']")
+        this.iconPatient=page.locator("xpath=//div[@data-testid='Patients']")
         this.sidebarPatientIcon=page.locator("xpath=//img[@alt='Patients Image Avatar']")
         this.iconHomePage=page.locator("xpath=//img[@alt='homeDashboard']")
-        this.iconAppointment=page.getByTestId('Appointments').nth(1)
-        this.pharmacyIcon=page.locator("xpath=//div[@class='MuiGrid2-root MuiGrid2-direction-xs-row MuiGrid2-grid-xs-6 MuiGrid2-grid-sm-4 MuiGrid2-grid-md-2.4 MuiGrid2-grid-lg-2 css-1wkwkft']//div[@aria-label='Pharmacy']")
+        this.iconAppointment=page.locator("xpath=//div[@data-testid='Appointments']")
+        this.pharmacyIcon=page.locator("xpath=//div[@data-testid='Pharmacy']")
 
+        
+        this.drawerHeader=page.locator("xpath=//div[@data-testid='DrawerHeader']")
+        this.addAppLink=page.locator("xpath=//h1[text()='Add Appointments']")
         
         this.iconReferral=page.getByRole('heading', { name: 'Referrals' })
         this.iconMDT=page.getByRole('heading', { name: 'MDT' })
@@ -24,8 +27,8 @@ class Homepage{
 
         //SideIcon
         this.container = page.locator("//div[@class='MuiGrid2-root MuiGrid2-direction-xs-row mui-xbeygp']");
-        this.homeDashboard=page.locator("xpath=//img[@alt='homeDashboard']")
-        this.homeicon=page.locator("xpath=//img[@alt='homeDashboard']")
+        this.homeDashboard=page.locator("xpath=//div[@data-testid='moduleDrawerHomeDashboard']")
+        this.homeicon=page.locator("xpath=//div[@data-testid='moduleDrawerHomeDashboard']")
         this.sideIconTask=page.getByTestId('tasks')
         this.sideIconAlerts=page.getByTestId('alerts')
         this.sideIconMessages=page.getByTestId('messages')
@@ -33,7 +36,7 @@ class Homepage{
         this.sideIconLetters=page.getByTestId('letters')
         this.sideIconReferrals=page.getByTestId('referrals')
         this.sideIconPatient=page.locator("xpath=//div[@data-testid='moduleDrawerPatients']")
-        this.sideIconStock=page.locator("xpath=//ul[@class='MuiList-root MuiList-padding css-1wduhak']//div[@aria-label='Stock']")
+        this.sideIconStock=page.locator("xpath=//div[@data-testid='moduleDrawerStock']")
        // this.sideIconRejectedReferral=page.getByTestId('ourRejectedReferrals')
         
         this.sideIconRejectedReferral=page.locator("xpath=//h1[normalize-space()='Our Rejected On Referrals']")
@@ -54,10 +57,6 @@ class Homepage{
     }
     //PharmacyHomepage
 
-    async redirectsToHomePage()
-    {
-        
-    }
     async clickOnContactHistoryCategory()
     {
         await this.ContacHistorycategory.click()
@@ -88,19 +87,17 @@ class Homepage{
      async clickOnSideIconStock()
      {
         await this.sideIconStock.click()
-     }
+    }
 
      // Scroll inside the div until the last icon is visible
-async  scrollDivToLastIcon(page) {    
-  await this.container.scrollIntoViewIfNeeded();
-  await this.homeDashboard.scrollIntoViewIfNeeded();   
-  console.log("Scrolled to the last icon successfully!");
-}
+     async  scrollDivToLastIcon(page) {
+        await this.container.scrollIntoViewIfNeeded();
+        await this.homeDashboard.scrollIntoViewIfNeeded();
+        console.log("Scrolled to the last icon successfully!");
+     }
 
     async clickOnHomeDashboardIcon()
     {
-       // await this.container.scrollIntoViewIfNeeded();
-    //    await this.homeDashboard.scrollIntoViewIfNeeded();
        await this.homeDashboard.click()
     }
     async clickOnSidebarAppointmentIcon()
@@ -196,6 +193,17 @@ async  scrollDivToLastIcon(page) {
         await this.iconPatient.click()
     }
     
+
+    async clickOnDrawerHeader()
+    {
+        await this.drawerHeader.click()
+    }
+    async clickOnAddappLink()
+    {
+        await this.addAppLink.click()
+    }
+
+
     async clickOnHomePageIcon()
     {
         await this.iconHomePage.click()

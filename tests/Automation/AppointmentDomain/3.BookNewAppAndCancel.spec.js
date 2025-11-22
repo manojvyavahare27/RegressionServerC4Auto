@@ -4,6 +4,18 @@ const convertExcelToJson = require("../../../config/global-setupOptimized");
 const { executeQuery } = require("../../../databaseWriteFile");
 import compareJsons from "../../../compareFileOrJson";
 
+import {
+  checkAllLocatorVisibility,
+  createPageLocatorJSON,
+  numberValidator,
+  mobileValidator,
+  nameValidator,
+  alphaNumericValidator,
+  emailValidator,
+  dateValidator,
+  timeValidator,
+} from "../../../UtilFiles/DynamicUtility";
+
 import ServiceBookApp from "../../../Pages/AppointmentDomain/ServiceBookApp";
 import LoginPage from "../../../Pages/BaseClasses/LoginPage";
 import Homepage from "../../../Pages/BaseClasses/Homepage";
@@ -83,13 +95,18 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await loginpage.enter_Password(jsonData.loginDetails[0].password);
      await page.waitForTimeout(1500);
      await loginpage.clickOnLogin();
+    
    
+    
     // await expect(page.getByText("Login success")).toHaveText("Login success");
      await page.waitForTimeout(1000);
      await homepage.clickonSidebarHomeIcon()
      await homepage.clickOnAppointmentIcon()     
      await patientsearch.clickonBackButton()
      await homepage.clickOnAppointmentIcon()   
+     await homepage.clickOnDrawerHeader()
+    await homepage.clickOnAddappLink()
+
      await patientsearch.clickOnsettingbutton()    
      await patientsearch.clickOncustomizableViewforPatientSearchOnAppointment()    
      await patientsearch.clickOnResetToDefaultViewButton()
@@ -100,8 +117,34 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      await homepage.clickonSidebarHomeIcon()
      await homepage.clickOnAppointmentIcon()    
     
-     await patientsearch.clickOnSearchPatButton()
-     await expect(page.getByText('At least one search field should be set for a search.')).toHaveText('At least one search field should be set for a search.')
+
+      await homepage.clickOnDrawerHeader()
+      await homepage.clickOnAddappLink()
+
+
+    await patientsearch.clickOnSearchPatButton()
+    let locators = [
+      patientsearch.txtbox_MPINumber,
+      patientsearch.txtbox_Barcode,
+      patientsearch.txtbox_Card,
+      patientsearch.txtbox_GivenName,
+      patientsearch.txtbox_FamilyName,
+      patientsearch.dropdown_sex,
+      patientsearch.txtbox_BornDate,
+      patientsearch.txtbox_Postcode,
+      patientsearch.txtbox_MRNNumber,
+      patientsearch.txtbox_IdentificationId,
+      patientsearch.txtbox_NHSNo,
+      patientsearch.txtbox_HospitalRef,
+      patientsearch.txtbox_MobileNumber,
+      patientsearch.txtbox_PatNameInOtherLang,
+      patientsearch.dropdown_PatientSeenInLastDays,
+      patientsearch.checkbox_IncludeDeceasedPatient,
+      patientsearch.checkbox_IncludeServicePatient,
+      patientsearch.checkbox_Soundex
+    ];
+    await checkAllLocatorVisibility(locators, expect);
+    // await expect(page.getByText('At least one search field should be set for a search.')).toHaveText('At least one search field should be set for a search.')
      await page.waitForTimeout(1000);
      await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname)
      await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname)
@@ -122,7 +165,31 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      
      if(addReferralText)
      {       
-    
+      locators = [
+      addreferral.dropdownReceiveReferralDate,
+      addreferral.dropdownApproveReferralDate,
+      addreferral.dropdowndateofreferral,
+      addreferral.dropdowntimeofreferral,
+      addreferral.dropdownsourceofreferral,
+      addreferral.dropdownreferraltype,
+      addreferral.dropdownreferralreason,
+      addreferral.txtboxreferringprofessional,
+      addreferral.dropdownmodeofreferral,
+      addreferral.dropdownservice,
+      addreferral.dropdownclinictype,
+      addreferral.dropdowncliniclocation,
+      addreferral.dropdownteam,
+      addreferral.dropdownpatientcare,
+      addreferral.dropdownpreferrersexforassessment,
+      addreferral.dropdownconsultant,
+      addreferral.dropdownmethodofarrival,
+      addreferral.dropdowntimeofarrival,
+      addreferral.radiobuttonAwaitReferralAcceptance
+    ];
+
+    await page.waitForTimeout(5000);
+    await checkAllLocatorVisibility(locators, expect);
+
      //Add New Referral to Patient.
      await page.waitForTimeout(1500);
      await addreferral.enterReceiveReferrldate(jsonData.AddReferral[index].rtt_referral_received_date.toString())
@@ -263,7 +330,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
    console.log("Patient id is:" + patId);
 
    sqlQuery ="select * from referral_appointments where rea_pat_id = '" + patId + "' and rea_time = '" +
-     jsonData.bookNewAppointments[index].rea_time + "' and rea_record_status = 'approved'";
+     jsonData.bookNewAppointments[index].rea_time + "' and rea_record_status = 'approved' order by 1 desc limit 1";
    console.log(sqlQuery);
    sqlFilePath = "SQLResults/AppointmentDomain/bookNewApp.json";
    results = await executeQuery(sqlQuery, sqlFilePath);
@@ -302,6 +369,16 @@ test.describe("Database Comparison Book New App and Cancel", () => {
      }
      else{         
       await page.waitForTimeout(2000);
+
+      locators = [
+      servicebookapp.dropdownspecility,
+      servicebookapp.dropdownClinicType,
+      servicebookapp.dropdownClinicLocation,
+      servicebookapp.dropdownTeam,
+      servicebookapp.btnSearchHP
+    ];
+    await checkAllLocatorVisibility(locators, expect);
+
           await servicebookapp.SelectDate(jsonData.bookNewAppointments[index].rea_date.toString())
           await servicebookapp.selectDropdownSpecility(jsonData.bookNewAppointments[index].rea_special)
           await servicebookapp.selectDropdownClinicType(jsonData.bookNewAppointments[index].rea_clinic_type)
@@ -317,14 +394,45 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           await servicebookapp.clickOnMorningSlots(jsonData.bookNewAppointments[index].convertedTime)
           await page.waitForTimeout(2000)
           await servicebookapp.clickOnNextButton()
+
+          locators = [
+            servicebookapp.dropdownAppDetailsAppType,
+            servicebookapp.dropdownAppReason,
+            servicebookapp.dropdownAppDetailsTextEmail,
+            servicebookapp.dropdownAppDetailsPatientType,
+            servicebookapp.dropdownAppDeailsReasonForApp,
+            servicebookapp.txtboxNotes,
+            servicebookapp.btnSaveAndBookbTodaysDate
+          ];
+          await checkAllLocatorVisibility(locators, expect);
+
           await servicebookapp.selectAppDetailsAppointmentType(jsonData.bookNewAppointments[index].reaType)    
           await servicebookapp.selectAppDetailsAppReason(jsonData.bookNewAppointments[index].rea_review_reason)
           await servicebookapp.selectSendAppTextEmail()
           await servicebookapp.selectPatientType(jsonData.bookNewAppointments[index].rea_patient_type)
           await servicebookapp.selectReasonForAppdelay(jsonData.bookNewAppointments[index].rea_reason_for_delay)
          // await servicebookapp.enterTriage(jsonData.bookNewAppointments[index].rea_triage.toString())
-          await servicebookapp.enterNotes(jsonData.bookNewAppointments[index].rea_notes)    
-          await servicebookapp.clickOnSaveAndBookbTodaysDateButton()
+          await servicebookapp.enterNotes(jsonData.bookNewAppointments[index].rea_notes)
+          
+      const filePath = "LocatorJSON";
+      let fileName = "LocatorJSON/bookAppointmentPage.json";
+      await createPageLocatorJSON(locators, filePath, fileName);
+      let matched = await compareJsons(
+        fileName,
+        null,
+        jsonData.bookAppointmentPage[index]
+      );
+      if (matched) {
+        console.log(
+        "\n Front end data matches data from excel sheet\n"
+        );
+      } else {
+        console.log(
+        "\n Front end data does not match!\n"
+        );
+      }
+          
+    await servicebookapp.clickOnSaveAndBookbTodaysDateButton()
 
           //Communication Consent
           await servicebookapp.selectCommConsentNo()
@@ -341,7 +449,7 @@ test.describe("Database Comparison Book New App and Cancel", () => {
         console.log("Patient id is:" + patId);
      
         sqlQuery ="select * from referral_appointments  where rea_pat_id = '" + patId +"' and rea_time = '" +jsonData.bookNewAppointments[index].rea_time +
-          "' and rea_record_status = 'approved'";
+          "' and rea_record_status = 'approved' order by 1 desc limit 1";
          
         console.log(sqlQuery);
         sqlFilePath = "SQLResults/AppointmentDomain/bookNewApp.json";
@@ -356,21 +464,51 @@ test.describe("Database Comparison Book New App and Cancel", () => {
           console.log( "\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n" );
         }
        
+      
      await page.waitForTimeout(1000)
      await scheduleserviceapp.ClickonAppTypeLink()
      await scheduleserviceapp.clickOnCloseAppTypePopup()
+   
      await scheduleserviceapp.ClickonAppTypeLink()
      await scheduleserviceapp.selectAppTypeDropdown()
      await scheduleserviceapp.clickOnChangeButton()
      await expect(page.getByText('Appointment type has been changed successfully')).toHaveText('Appointment type has been changed successfully')
 
-         //Click On Date Link
+    
+    //Click On Date Link
      await scheduleserviceapp.clickOnDateLink()
      await adeditpatientappointment.clickOnBackButton()   
      //Cancel Appointment
      await scheduleserviceapp.clickOnAppScheduleStatus()
+
+      locators = [
+        scheduleserviceapp.linkAppStautsSchedule,
+        scheduleserviceapp.btnCancel,
+        //scheduleserviceapp.dropdownAppCalcelReason,
+        servicebookapp.txtboxNotes,
+        scheduleserviceapp.btnSaveCancelApp
+      ];
+
+     await checkAllLocatorVisibility(locators, expect);
      await scheduleserviceapp.clickOnCancelButton()
      await scheduleserviceapp.selectAppCancellationReason(jsonData.bookNewAppointments[index].rea_cancelled_reason)
+
+      await createPageLocatorJSON(locators, filePath, fileName);
+      matched = await compareJsons(
+        fileName,
+        null,
+        jsonData.bookAppointmentPage[index]
+      );
+      if (matched) {
+        console.log(
+        "\n Front end data matches data from excel sheet\n"
+        );
+      } else {
+        console.log(
+        "\n Front end data does not match!\n"
+        );
+      }
+
      await scheduleserviceapp.clickOnSaveCancelledAppButton()
      await expect(page.getByText('Patient appointment cancelled successfully')).toHaveText('Patient appointment cancelled successfully')
 

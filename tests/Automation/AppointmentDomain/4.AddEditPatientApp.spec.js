@@ -4,6 +4,18 @@ const convertExcelToJson = require("../../../config/global-setupOptimized");
 const { executeQuery } = require("../../../databaseWriteFile");
 import compareJsons from "../../../compareFileOrJson";
 
+import {
+  checkAllLocatorVisibility,
+  createPageLocatorJSON,
+  numberValidator,
+  mobileValidator,
+  nameValidator,
+  alphaNumericValidator,
+  emailValidator,
+  dateValidator,
+  timeValidator,
+} from "../../../UtilFiles/DynamicUtility";
+
 import ServiceBookApp from "../../../Pages/AppointmentDomain/ServiceBookApp";
 import LoginPage from "../../../Pages/BaseClasses/LoginPage";
 import Homepage from "../../../Pages/BaseClasses/Homepage";
@@ -94,12 +106,41 @@ test.describe("Database Comparison Add Edit Patient", () => {
     await homepage.clickOnAppointmentIcon();
     await patientsearch.clickonBackButton();
     await homepage.clickOnAppointmentIcon();
+     await homepage.clickOnDrawerHeader()
+    await homepage.clickOnAddappLink()
     await patientsearch.clickOnsettingbutton();
     await patientsearch.clickOncustomizableViewforPatientSearchOnAppointment();
     await patientsearch.clickOnResetToDefaultViewButton();
     await page.getByRole("img", { name: "Cellma Image Avatar" }).click();
     await homepage.clickonSidebarHomeIcon();
     await homepage.clickOnAppointmentIcon();
+
+     await homepage.clickOnDrawerHeader()
+    await homepage.clickOnAddappLink()
+
+        await patientsearch.clickOnSearchPatButton()
+    let locators = [
+      patientsearch.txtbox_MPINumber,
+      patientsearch.txtbox_Barcode,
+      patientsearch.txtbox_Card,
+      patientsearch.txtbox_GivenName,
+      patientsearch.txtbox_FamilyName,
+      patientsearch.dropdown_sex,
+      patientsearch.txtbox_BornDate,
+      patientsearch.txtbox_Postcode,
+      patientsearch.txtbox_MRNNumber,
+      patientsearch.txtbox_IdentificationId,
+      patientsearch.txtbox_NHSNo,
+      patientsearch.txtbox_HospitalRef,
+      patientsearch.txtbox_MobileNumber,
+      patientsearch.txtbox_PatNameInOtherLang,
+      patientsearch.dropdown_PatientSeenInLastDays,
+      patientsearch.checkbox_IncludeDeceasedPatient,
+      patientsearch.checkbox_IncludeServicePatient,
+      patientsearch.checkbox_Soundex
+    ];
+    await checkAllLocatorVisibility(locators, expect);
+
     await patientsearch.clickOnSearchPatButton();
     await patientsearch.enterGivenName(
       jsonData.addPatient[index].pat_firstname
@@ -247,7 +288,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
         patId +
         "' and rea_time = '" +
         jsonData.addEditAppointments[index].rea_time +
-        "' and rea_record_status = 'approved'";
+        "' and rea_record_status = 'approved' order by 1 desc limit 1";
       console.log(sqlQuery);
       sqlFilePath = "SQLResults/AppointmentDomain/addEditPatientApp.json";
       results = await executeQuery(sqlQuery, sqlFilePath);
@@ -303,6 +344,16 @@ test.describe("Database Comparison Add Edit Patient", () => {
         console.log("\n Add Edit Appointment Details Comparision: Parameters from both JSON files do not match!\n");
       }
     } else {
+
+      locators = [
+        servicebookapp.dropdownspecility,
+        servicebookapp.dropdownClinicType,
+        servicebookapp.dropdownClinicLocation,
+        servicebookapp.dropdownTeam,
+        servicebookapp.btnSearchHP
+      ];
+      await checkAllLocatorVisibility(locators, expect);
+
       await servicebookapp.SelectDate(jsonData.addEditAppointments[index].rea_date.toString());
       await servicebookapp.selectDropdownSpecility(jsonData.addEditAppointments[index].rea_special);
       await servicebookapp.selectDropdownClinicType(jsonData.addEditAppointments[index].rea_clinic_type);
@@ -319,6 +370,18 @@ test.describe("Database Comparison Add Edit Patient", () => {
 
       await servicebookapp.clickOnNextButton();
       //await page.getByTestId('Next').click()
+
+      locators = [
+        servicebookapp.dropdownAppDetailsAppType,
+        servicebookapp.dropdownAppReason,
+        servicebookapp.dropdownAppDetailsTextEmail,
+        servicebookapp.dropdownAppDetailsPatientType,
+        servicebookapp.dropdownAppDeailsReasonForApp,
+        servicebookapp.txtboxTriage,
+        servicebookapp.txtboxNotes,
+        servicebookapp.btnSaveAndBookbTodaysDate
+      ];
+      await checkAllLocatorVisibility(locators, expect);
 
       await servicebookapp.selectAppDetailsAppointmentType(
         jsonData.addEditAppointments[index].reaType
@@ -342,7 +405,25 @@ test.describe("Database Comparison Add Edit Patient", () => {
       await servicebookapp.enterNotes(
         jsonData.addEditAppointments[index].rea_notes
       );
-      //await page.pause()
+
+      const filePath = "LocatorJSON";
+      let fileName = "LocatorJSON/addAppointmentPage.json";
+      await createPageLocatorJSON(locators, filePath, fileName);
+      let matched = await compareJsons(
+        fileName,
+        null,
+        jsonData.bookAppointmentPage[index]
+      );
+      if (matched) {
+        console.log(
+        "\n Front end data matches data from excel sheet\n"
+        );
+      } else {
+        console.log(
+        "\n Front end data does not match!\n"
+        );
+      }
+
       await servicebookapp.clickOnSaveAndBookbTodaysDateButton();
 
       //Communication Consent
@@ -369,7 +450,7 @@ test.describe("Database Comparison Add Edit Patient", () => {
         patId +
         "' and rea_time = '" +
         jsonData.addEditAppointments[index].rea_time +
-        "' and rea_record_status = 'approved'";
+        "' and rea_record_status = 'approved' order by 1 desc limit 1";
       console.log(sqlQuery);
       sqlFilePath = "SQLResults/AppointmentDomain/addEditPatientApp.json";
       results = await executeQuery(sqlQuery, sqlFilePath);
@@ -404,10 +485,37 @@ test.describe("Database Comparison Add Edit Patient", () => {
      
       //Cancel Appointment
       await scheduleserviceapp.clickOnAppScheduleStatus();
+
+      locators = [
+        scheduleserviceapp.linkAppStautsSchedule,
+        scheduleserviceapp.btnCancel,
+        //scheduleserviceapp.dropdownAppCalcelReason,
+        servicebookapp.txtboxNotes,
+        scheduleserviceapp.btnSaveCancelApp
+      ];
+     await checkAllLocatorVisibility(locators, expect);
+
       await scheduleserviceapp.clickOnCancelButton();
       await scheduleserviceapp.selectAppCancellationReason(
         jsonData.addEditAppointments[index].rea_cancelled_reason
       );
+
+      await createPageLocatorJSON(locators, filePath, fileName);
+      matched = await compareJsons(
+        fileName,
+        null,
+        jsonData.bookAppointmentPage[index]
+      );
+      if (matched) {
+        console.log(
+        "\n Front end data matches data from excel sheet\n"
+        );
+      } else {
+        console.log(
+        "\n Front end data does not match!\n"
+        );
+      }
+
       await scheduleserviceapp.clickOnSaveCancelledAppButton();
       await expect(page.getByText("Patient appointment cancelled successfully")).toHaveText("Patient appointment cancelled successfully");
 

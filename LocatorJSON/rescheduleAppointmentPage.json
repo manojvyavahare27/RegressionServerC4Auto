@@ -1,0 +1,10 @@
+[
+  {
+    "appointmentReason": "Appointment Reason for Testing",
+    "sendAppointmentText": "Yes",
+    "patientType": "Regular",
+    "reasonForAppointmentDelay": "Appointment offered within 48 hours - declined by patient",
+    "triage": "1",
+    "notes": "AddTesting Notes"
+  }
+]

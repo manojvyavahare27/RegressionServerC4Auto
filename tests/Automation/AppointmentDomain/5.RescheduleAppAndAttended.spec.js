@@ -4,6 +4,18 @@ const convertExcelToJson = require("../../../config/global-setupOptimized");
 const { executeQuery } = require("../../../databaseWriteFile");
 import compareJsons from "../../../compareFileOrJson";
 
+import {
+  checkAllLocatorVisibility,
+  createPageLocatorJSON,
+  numberValidator,
+  mobileValidator,
+  nameValidator,
+  alphaNumericValidator,
+  emailValidator,
+  dateValidator,
+  timeValidator,
+} from "../../../UtilFiles/DynamicUtility";
+
 import ServiceBookApp from "../../../Pages/AppointmentDomain/ServiceBookApp";
 import LoginPage from "../../../Pages/BaseClasses/LoginPage";
 import Homepage from "../../../Pages/BaseClasses/Homepage";
@@ -91,6 +103,8 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         await homepage.clickOnAppointmentIcon()     
         await patientsearch.clickonBackButton()
         await homepage.clickOnAppointmentIcon()   
+        await homepage.clickOnDrawerHeader()
+        await homepage.clickOnAddappLink()
         await patientsearch.clickOnsettingbutton()
         await page.waitForTimeout(2000);
         await patientsearch.clickOncustomizableViewforPatientSearchOnAppointment()    
@@ -104,7 +118,32 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         //await homepage.clickOnPatientIcon()
         await homepage.clickonSidebarHomeIcon()
         await homepage.clickOnAppointmentIcon()     
+        await homepage.clickOnDrawerHeader()
+        await homepage.clickOnAddappLink()
         await patientsearch.clickOnSearchPatButton()
+
+        let locators = [
+          patientsearch.txtbox_MPINumber,
+          patientsearch.txtbox_Barcode,
+          patientsearch.txtbox_Card,
+          patientsearch.txtbox_GivenName,
+          patientsearch.txtbox_FamilyName,
+          patientsearch.dropdown_sex,
+          patientsearch.txtbox_BornDate,
+          patientsearch.txtbox_Postcode,
+          patientsearch.txtbox_MRNNumber,
+          patientsearch.txtbox_IdentificationId,
+          patientsearch.txtbox_NHSNo,
+          patientsearch.txtbox_HospitalRef,
+          patientsearch.txtbox_MobileNumber,
+          patientsearch.txtbox_PatNameInOtherLang,
+          patientsearch.dropdown_PatientSeenInLastDays,
+          patientsearch.checkbox_IncludeDeceasedPatient,
+          patientsearch.checkbox_IncludeServicePatient,
+          patientsearch.checkbox_Soundex
+        ];
+        await checkAllLocatorVisibility(locators, expect);
+
         await patientsearch.enterGivenName(jsonData.addPatient[index].pat_firstname)
         await patientsearch.enterFamilyName(jsonData.addPatient[index].pat_surname);
         await patientsearch.selectSex(jsonData.addPatient[index].pat_sex);
@@ -210,7 +249,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         patId +
         "' and rea_time = '" +
         jsonData.rescheduleAppointments[index].rea_time +
-        "' and rea_record_status = 'approved'";
+        "' and rea_record_status = 'approved' order by 1 desc limit 1";
       console.log(sqlQuery);
       sqlFilePath = "SQLResults/AppointmentDomain/rescheduleApp.json";
       results = await executeQuery(sqlQuery, sqlFilePath);
@@ -235,7 +274,15 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
     }
     else{         
 
-       
+      locators = [
+        servicebookapp.dropdownspecility,
+        servicebookapp.dropdownClinicType,
+        servicebookapp.dropdownClinicLocation,
+        servicebookapp.dropdownTeam,
+        servicebookapp.btnSearchHP
+      ];
+      await checkAllLocatorVisibility(locators, expect);
+
         await servicebookapp.SelectDate(jsonData.rescheduleAppointments[index].rea_date)
         await servicebookapp.selectDropdownSpecility(jsonData.rescheduleAppointments[index].rea_special)
         await servicebookapp.selectDropdownClinicType(jsonData.rescheduleAppointments[index].rea_clinic_type)
@@ -261,9 +308,21 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         //  await servicebookapp.selectAvailableSlots()     
         //  await servicebookapp.clickOnNextButton()    
         
-        
+        await page.waitForTimeout(3000)
         await servicebookapp.clickOnNextButton()
         
+        locators = [
+          servicebookapp.dropdownAppDetailsAppType,
+          servicebookapp.dropdownAppReason,
+          servicebookapp.dropdownAppDetailsTextEmail,
+          servicebookapp.dropdownAppDetailsPatientType,
+          servicebookapp.dropdownAppDeailsReasonForApp,
+          servicebookapp.txtboxTriage,
+          servicebookapp.txtboxNotes,
+          servicebookapp.btnSaveAndBookbTodaysDate
+        ];
+        await checkAllLocatorVisibility(locators, expect);
+
         await servicebookapp.selectAppDetailsAppointmentType(jsonData.rescheduleAppointments[index].reaType)
         // await servicebookapp.selectAppDetailsZone()
    
@@ -275,6 +334,25 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         await servicebookapp.enterTriage(jsonData.rescheduleAppointments[index].rea_triage.toString())
         await servicebookapp.enterNotes(jsonData.rescheduleAppointments[index].rea_notes)
         //await servicebookapp.clickOnNextButton()
+
+        const filePath = "LocatorJSON";
+        let fileName = "LocatorJSON/rescheduleAppointmentPage.json";
+        await createPageLocatorJSON(locators, filePath, fileName);
+        let matched = await compareJsons(
+          fileName,
+          null,
+          jsonData.rescheduleAppointmentPage[index]
+        );
+        if (matched) {
+          console.log(
+          "\n Front end data matches data from excel sheet\n"
+          );
+        } else {
+          console.log(
+          "\n Front end data does not match!\n"
+          );
+        }
+
         await servicebookapp.clickOnSaveAndBookbTodaysDateButton()
 
        
@@ -300,7 +378,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         patId +
         "' and rea_time = '" +
         jsonData.rescheduleAppointments[index].rea_time +
-        "' and rea_record_status = 'approved'";
+        "' and rea_record_status = 'approved' order by 1 desc limit 1";
       console.log(sqlQuery);
       sqlFilePath = "SQLResults/AppointmentDomain/rescheduleApp.json";
       results = await executeQuery(sqlQuery, sqlFilePath);
@@ -334,7 +412,7 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
                 
 
         //change Appoitntment Type
- 
+
         await scheduleserviceapp.ClickonAppTypeLink()
         await scheduleserviceapp.clickOnCloseAppTypePopup()
         await scheduleserviceapp.ClickonAppTypeLink()
@@ -379,16 +457,43 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
     //Change status to Reschedule Appointment
      
     await scheduleserviceapp.clickOnAppScheduleStatus()
+
+    locators = [
+      scheduleserviceapp.linkAppStautsSchedule,
+      scheduleserviceapp.btnCancel,
+      scheduleserviceapp.buttonRescheduleApp,
+      servicebookapp.txtboxNotes,
+      scheduleserviceapp.btnSaveCancelApp
+    ];
+    await checkAllLocatorVisibility(locators, expect);
+
     await scheduleserviceapp.clickonRescheduleAppButton()
     await scheduleserviceapp.selectDropdownReasonForRescheduling()
     await scheduleserviceapp.clickOnSaveReschedulingReason()
     await scheduleserviceapp.clickOnCancelReschedulingConfirmation()
     await scheduleserviceapp.clickOnSaveReschedulingReason()
+
+    await createPageLocatorJSON(locators, filePath, fileName);
+    matched = await compareJsons(
+      fileName,
+      null,
+      jsonData.rescheduleAppointmentPage[index]
+    );
+    if (matched) {
+      console.log(
+      "\n Front end data matches data from excel sheet\n"
+      );
+    } else {
+      console.log(
+      "\n Front end data does not match!\n"
+      );
+    }
+
     await scheduleserviceapp.clickOnPreceedReschedulingConfirmation()
 
    
     //Rescheduled New Appointment.
-    
+
         await servicebookapp.RescheduleSelectDate(jsonData.rescheduleAppointments[index].rea_date)
         await servicebookapp.selectDropdownSpecility(jsonData.rescheduleAppointments[index].rea_special)
         await servicebookapp.selectDropdownClinicType(jsonData.rescheduleAppointments[index].rea_clinic_type)
@@ -399,16 +504,42 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         await servicebookapp.clickOnShowCalendarbtn() 
         
         //await servicebookapp.clickOnMorningSlots(serviceappdetails.RescheduledAppSlot)
+
         await servicebookapp.clickOnAfterNoonSlots(jsonData.rescheduleAppointments[index].convertedEditedTime)
-        await page.waitForTimeout(3000)
+        await page.waitForTimeout(10000)
         await servicebookapp.clickOnNextButton()
         
-        const overbookConfirmation = await page.getByRole('heading', { name: 'Confirmation' }).isVisible()
-        if(overbookConfirmation) {
-           await page.getByTestId('Ok').click()
-        }
+        // const heading = page.locator('#Title_confirmation');
 
-        
+        // let appears = false;
+
+        // try {
+        //   appears = await heading.waitFor({ state: 'visible', timeout: 15000 })
+        //     .then(() => true);
+        // } catch (_) {
+        //   appears = false; // modal never appeared
+        // }
+
+        // if (appears) {
+        //   await page.getByTestId('Ok').click();
+        // }
+
+        await page.getByTestId('Ok').click();
+        // await page.waitForTimeout(3000)
+        // await servicebookapp.clickOnNextButton()
+
+        locators = [
+          servicebookapp.dropdownAppDetailsAppType,
+          servicebookapp.dropdownAppReason,
+          servicebookapp.dropdownAppDetailsTextEmail,
+          servicebookapp.dropdownAppDetailsPatientType,
+          servicebookapp.dropdownAppDeailsReasonForApp,
+          servicebookapp.txtboxTriage,
+          servicebookapp.txtboxNotes,
+          servicebookapp.btnSaveAndBookbTodaysDate
+        ];
+        await checkAllLocatorVisibility(locators, expect);
+
         await servicebookapp.selectAppDetailsAppointmentType(jsonData.rescheduleAppointments[index].reaType)    
         await servicebookapp.selectAppDetailsAppReason(jsonData.rescheduleAppointments[index].rea_review_reason)
         await servicebookapp.selectSendAppTextEmail()
@@ -416,6 +547,23 @@ test.describe("Database Comparison Reschedule Appointment and Attended", () => {
         await servicebookapp.selectReasonForAppdelay(jsonData.rescheduleAppointments[index].rea_reason_for_delay)
         await servicebookapp.enterTriage(jsonData.rescheduleAppointments[index].rea_triage.toString())
         await servicebookapp.enterNotes(jsonData.rescheduleAppointments[index].rea_notes)
+
+        await createPageLocatorJSON(locators, filePath, fileName);
+        matched = await compareJsons(
+          fileName,
+          null,
+          jsonData.rescheduleAppointmentPage[index]
+        );
+        if (matched) {
+          console.log(
+          "\n Front end data matches data from excel sheet\n"
+          );
+        } else {
+          console.log(
+          "\n Front end data does not match!\n"
+          );
+        }
+
         await servicebookapp.clickOnSaveAndBookbTodaysDateButton()
 
         //Communication Consent
