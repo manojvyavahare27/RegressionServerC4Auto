@@ -371,7 +371,7 @@ this.pregGravida= page.locator("xpath=//input[@id='gravida']")
     this.dropdownLaterality = page.locator("xpath=//input[@name='laterality']");
     this.txtDeviceSerialNumber = page.locator("xpath=//input[@name='serialNumber']");
     this.txtDeviceExpiryDate = page.locator("xpath=//input[@name='expiryDate']");
-    this.txtDeviceNotes = page.locator("xpath=//textarea[@name='notes']");
+    this.txtDeviceNotes = page.locator("xpath=//textarea[@id='Notes']");
     this.btnSaveDevice = page.locator("xpath=//button[@data-testid='extraDetailsSave']");
     this.extraDetailLevel2 = page.locator("xpath=//button[@data-testid='levelTwo']")
     this.extraDetailLevel = page.locator("xpath=//button[@data-testid='levelThree']")

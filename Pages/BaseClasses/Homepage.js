@@ -2,7 +2,7 @@ class Homepage{
     constructor(page)
     {
         this.page=page
-        this.iconPatient=page.locator("xpath=//div[@data-testid='Patients']")
+        this.iconPatient=page.locator("xpath=//div[@data-testid='moduleDrawerPatients']")
         this.sidebarPatientIcon=page.locator("xpath=//img[@alt='Patients Image Avatar']")
         this.iconHomePage=page.locator("xpath=//img[@alt='homeDashboard']")
         this.iconAppointment=page.locator("xpath=//div[@data-testid='Appointments']")
