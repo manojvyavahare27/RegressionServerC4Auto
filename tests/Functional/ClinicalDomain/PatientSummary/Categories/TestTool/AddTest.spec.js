@@ -6,6 +6,18 @@ const { test, expect } = require("@playwright/test");
 const { executeQuery } = require("../../../../../../databaseWriteFile"); // Update the path accordingly
 import compareJsons from "../../../../../../compareFileOrJson";
 
+import {
+  checkAllLocatorVisibility,
+  createPageLocatorJSON,
+  numberValidator,
+  mobileValidator,
+  nameValidator,
+  alphaNumericValidator,
+  emailValidator,
+  dateValidator,
+  timeValidator,
+} from "../../../../../../UtilFiles/DynamicUtility";
+
 import logger from "../../../../../../Pages/BaseClasses/logger";
 import LoginPage from "../../../../../../Pages/BaseClasses/LoginPage";
 import Homepage from "../../../../../../Pages/BaseClasses/Homepage";
@@ -85,6 +97,29 @@ test.describe("Test and Tool Category", () => {
             await patientsearch.selectBornDate(data.pat_dob);
             //await patientsearch.selectBornDate(formattedDate);
             await patientsearch.clickOnSearchButton();
+
+            let locators = [
+              patientsearch.txtbox_MPINumber,
+              patientsearch.txtbox_Barcode,
+              patientsearch.txtbox_Card,
+              patientsearch.txtbox_GivenName,
+              patientsearch.txtbox_FamilyName,
+              patientsearch.dropdown_sex,
+              patientsearch.txtbox_BornDate,
+              patientsearch.txtbox_Postcode,
+              patientsearch.txtbox_MRNNumber,
+              patientsearch.txtbox_IdentificationId,
+              patientsearch.txtbox_NHSNo,
+              patientsearch.txtbox_HospitalRef,
+              patientsearch.txtbox_MobileNumber,
+              patientsearch.txtbox_PatNameInOtherLang,
+              patientsearch.dropdown_PatientSeenInLastDays,
+              patientsearch.checkbox_IncludeDeceasedPatient,
+              patientsearch.checkbox_IncludeServicePatient,
+              patientsearch.checkbox_Soundex
+            ];
+            await checkAllLocatorVisibility(locators, expect);
+
             await patientsearch.clickOnSearchPatientLink();
             //await page.waitForTimeout(4000);
             //page.waitForSelector("xpath=//button[@data-testid='Confirm Existing Details']");
@@ -136,6 +171,19 @@ test.describe("Test and Tool Category", () => {
             // Add New Test Pressure Ulcer Test
             await SummaryPage.selectTestToolItem(jsonData.AddTest[index].pattes_tests_question_que_name);
             await SummaryPage.clickOnAddButton()
+
+            locators = [
+              TestTool.sensoryPerception,
+              TestTool.moisture,
+              TestTool.activityTest,
+              TestTool.mobility,
+              TestTool.nutrition,
+              TestTool.frictionAndShear,
+              TestTool.calculateButton,
+              TestTool.notes
+            ]; 
+            await checkAllLocatorVisibility(locators, expect);
+
             await TestTool.selectSensoryPerception(jsonData.AddTest[index].pattes_answer_0);
             await TestTool.selectMoisture(jsonData.AddTest[index].pattes_answer_1);
             await TestTool.selectActivityTest(jsonData.AddTest[index].pattes_answer_2);
@@ -144,6 +192,25 @@ test.describe("Test and Tool Category", () => {
             await TestTool.selectFrictionAndShear(jsonData.AddTest[index].pattes_answer_5);
             await TestTool.clickOnCalculateButton();
             await TestTool.enterNotes(jsonData.AddTest[index].pattes_notes);
+
+            const filePath = "LocatorJSON";
+            let fileName = "LocatorJSON/pressureUlcerTestPage.json";
+            await createPageLocatorJSON(locators, filePath, fileName);
+
+            let matched = await compareJsons(
+              fileName,
+              null,
+              jsonData.testAddPage[index]
+            );
+            if (matched) {
+              console.log(
+                "\n Front end data matches data from excel sheet\n"
+              );
+            } else {
+              console.log(
+                "\n Front end data does not match!\n"
+              );
+            }
             await TestTool.clickOnSaveTest();
             await TestTool.clickOnExtraDetailsView2();
 
@@ -223,6 +290,21 @@ test.describe("Test and Tool Category", () => {
 
             // Edit Test
             await TestTool.clickOnEditIcon();
+
+            locators = [
+              TestTool.reviewDate,
+              TestTool.lastReviewedDate,
+              TestTool.sensoryPerception,
+              TestTool.moisture,
+              TestTool.activityTest,
+              TestTool.mobility,
+              TestTool.nutrition,
+              TestTool.frictionAndShear,
+              TestTool.calculateButton,
+              TestTool.notes
+            ];
+            await checkAllLocatorVisibility(locators, expect);
+
             await TestTool.enterReviewDate(jsonData.EditTest[index].pattes_review_date);
             await TestTool.enterLastReviewedDate(jsonData.EditTest[index].pattes_last_reviewed);
             //await page.pause()
@@ -234,6 +316,24 @@ test.describe("Test and Tool Category", () => {
             await TestTool.selectFrictionAndShear(jsonData.EditTest[index].pattes_answer_5);
             await TestTool.clickOnCalculateButton();
             await TestTool.enterNotes(jsonData.EditTest[index].pattes_notes);
+
+            fileName = "LocatorJSON/pressureUlcerTestPage.json";
+            await createPageLocatorJSON(locators, filePath, fileName);
+
+            matched = await compareJsons(
+              fileName,
+              null,
+              jsonData.testEditPage[index]
+            );
+            if (matched) {
+              console.log(
+                "\n Front end data matches data from excel sheet\n"
+              );
+            } else {
+              console.log(
+                "\n Front end data does not match!\n"
+              );
+            }
             await TestTool.clickOnSaveTest();
             //assert device edited -Device record updated successfully
             //await expect.soft(page.getByText("Device record updated successfully")).toHaveText("Device record updated successfully");
@@ -331,6 +431,7 @@ test.describe("Test and Tool Category", () => {
             }
 
             await page.waitForTimeout(5000);
+            //await page.pause();
 
             // Delete Test
             await TestTool.clickOnExtraDetailsView2();
@@ -378,17 +479,44 @@ test.describe("Test and Tool Category", () => {
             // Add New Test Malnutrition universal screening Test
             await SummaryPage.selectTestToolItem(jsonData.AddTest[index].pattes_tests_question_que_name);
             await SummaryPage.clickOnAddButton()
+
+            locators = [
+              TestTool.bmiScore,
+              TestTool.unplannedWeightLoss,
+              TestTool.noNutritialIntake,
+              TestTool.calculateButton,
+              TestTool.notes
+            ];
+            await checkAllLocatorVisibility(locators, expect);
+
             await TestTool.selectBmiScore(jsonData.AddTest[index].pattes_answer_0);
             await TestTool.selectUnplannedWeightLoss(jsonData.AddTest[index].pattes_answer_1);
             await TestTool.selectNoNutritonalIntake(jsonData.AddTest[index].pattes_answer_2);
             await TestTool.clickOnCalculateButton();
             await TestTool.enterNotes(jsonData.AddTest[index].pattes_notes);
+
+            ////////////////////////// FRONT END COMPARISON OF ENTERED INFORMAION //////////////////////////
+
+            fileName = "LocatorJSON/malnutritionUniversalScreeningPage.json";
+            await createPageLocatorJSON(locators, filePath, fileName);
+
+            matched = await compareJsons(
+              fileName,
+              null,
+              jsonData.testAddPage[index]
+            );
+            if (matched) {
+              console.log(
+                "\n Front end data matches data from excel sheet\n"
+              );
+            } else {
+              console.log(
+                "\n Front end data does not match!\n"
+              );
+            }
             await TestTool.clickOnSaveTest();
             //await expect.soft(page.getByText("Device record added successfully")).toHaveText("Device record added successfully");
             await TestTool.clickOnExtraDetailsView2();
-
-            ////////////////////////// FRONT END COMPARISON OF ENTERED INFORMAION //////////////////////////      
-
 
             ///////// Database comparison- Patient Test Records - ADDING NEW TEST /////////
             sqlQuery = 
@@ -453,6 +581,18 @@ test.describe("Test and Tool Category", () => {
             
             // Edit Test
             await TestTool.clickOnEditIcon();
+
+            locators = [
+              TestTool.reviewDate,
+              TestTool.lastReviewedDate,
+              TestTool.bmiScore,
+              TestTool.unplannedWeightLoss,
+              TestTool.noNutritialIntake,
+              TestTool.calculateButton,
+              TestTool.notes
+            ];
+            await checkAllLocatorVisibility(locators, expect);
+
             await TestTool.enterReviewDate(jsonData.EditTest[index].pattes_review_date);
             await TestTool.enterLastReviewedDate(jsonData.EditTest[index].pattes_last_reviewed);
             await TestTool.selectBmiScore(jsonData.EditTest[index].pattes_answer_0);
@@ -460,6 +600,24 @@ test.describe("Test and Tool Category", () => {
             await TestTool.selectNoNutritonalIntake(jsonData.EditTest[index].pattes_answer_2);
             await TestTool.clickOnCalculateButton();
             await TestTool.enterNotes(jsonData.EditTest[index].pattes_notes);
+
+            fileName = "LocatorJSON/malnutritionUniversalScreeningPage.json";
+            await createPageLocatorJSON(locators, filePath, fileName);
+
+            matched = await compareJsons(
+              fileName,
+              null,
+              jsonData.testEditPage[index]
+            );
+            if (matched) {
+              console.log(
+                "\n Front end data matches data from excel sheet\n"
+              );
+            } else {
+              console.log(
+                "\n Front end data does not match!\n"
+              );
+            }
             await TestTool.clickOnSaveTest();
             //assert device edited -Device record updated successfully
             //await expect.soft(page.getByText("Device record updated successfully")).toHaveText("Device record updated successfully");
@@ -600,12 +758,42 @@ test.describe("Test and Tool Category", () => {
             // Add New Test Falls Risk Assessment Scale
             await SummaryPage.selectTestToolItem(jsonData.AddTest[index].pattes_tests_question_que_name);
             await SummaryPage.clickOnAddButton()
+
+            locators = [
+              TestTool.recentFalls,
+              TestTool.medications,
+              TestTool.psychological,
+              TestTool.cognitiveStatus,
+              TestTool.calculateButton,
+              TestTool.notes
+            ];
+            await checkAllLocatorVisibility(locators, expect);
+
             await TestTool.selectRecentFalls(jsonData.AddTest[index].pattes_answer_0);
             await TestTool.selectMedications(jsonData.AddTest[index].pattes_answer_1);
             await TestTool.selectPsycological(jsonData.AddTest[index].pattes_answer_2);
             await TestTool.selectCognitiveStatus(jsonData.AddTest[index].pattes_answer_3);
             await TestTool.clickOnCalculateButton();
             await TestTool.enterNotes(jsonData.AddTest[index].pattes_notes);
+
+            fileName = "LocatorJSON/fallsRiskAssessmentScalePage.json";
+            await createPageLocatorJSON(locators, filePath, fileName);
+
+            matched = await compareJsons(
+              fileName,
+              null,
+              jsonData.testAddPage[index]
+            );
+            if (matched) {
+              console.log(
+                "\n Front end data matches data from excel sheet\n"
+              );
+            } else {
+              console.log(
+                "\n Front end data does not match!\n"
+              );
+            }
+
             await TestTool.clickOnSaveTest();
             //await expect.soft(page.getByText("Device record added successfully")).toHaveText("Device record added successfully");
             await TestTool.clickOnExtraDetailsView2();
@@ -679,6 +867,19 @@ test.describe("Test and Tool Category", () => {
 
             // Edit Test Falls Risk Assessment Scale
             await TestTool.clickOnEditIcon();
+
+            locators = [
+              TestTool.reviewDate,
+              TestTool.lastReviewedDate,
+              TestTool.recentFalls,
+              TestTool.medications,
+              TestTool.psychological,
+              TestTool.cognitiveStatus,
+              TestTool.calculateButton,
+              TestTool.notes
+            ]; 
+            await checkAllLocatorVisibility(locators, expect);
+
             await TestTool.enterReviewDate(jsonData.EditTest[index].pattes_review_date);
             await TestTool.enterLastReviewedDate(jsonData.EditTest[index].pattes_last_reviewed);
             await TestTool.selectRecentFalls(jsonData.EditTest[index].pattes_answer_0);
@@ -687,6 +888,25 @@ test.describe("Test and Tool Category", () => {
             await TestTool.selectCognitiveStatus(jsonData.EditTest[index].pattes_answer_3);
             await TestTool.clickOnCalculateButton();
             await TestTool.enterNotes(jsonData.EditTest[index].pattes_notes);
+
+            fileName = "LocatorJSON/fallsRiskAssessmentScalePage.json";
+            await createPageLocatorJSON(locators, filePath, fileName);
+
+            matched = await compareJsons(
+              fileName,
+              null,
+              jsonData.testEditPage[index]
+            );
+            if (matched) {
+              console.log(
+                "\n Front end data matches data from excel sheet\n"
+              );
+            } else {
+              console.log(
+                "\n Front end data does not match!\n"
+              );
+            }
+
             await TestTool.clickOnSaveTest();
             //assert device edited -Device record updated successfully
             //await expect.soft(page.getByText("Device record updated successfully")).toHaveText("Device record updated successfully");
@@ -819,6 +1039,22 @@ test.describe("Test and Tool Category", () => {
             // Add New Test PHQ-9
             await SummaryPage.selectTestToolItem(jsonData.AddTest[index].pattes_tests_question_que_name);
             await SummaryPage.clickOnAddButton()
+
+            locators = [
+              TestTool.interestOrPleasure,
+              TestTool.downOrDepressed,
+              TestTool.troubleSleeping,
+              TestTool.tiredLittleEnergy,
+              TestTool.poorAppetite,
+              TestTool.feelingBadAboutYourself,
+              TestTool.troubleConcentrating,
+              page.getByRole('radio', { name: "Yes" }).first(),
+              page.getByRole('radio', { name: "Yes" }).nth(1),
+              TestTool.calculateButton,
+              TestTool.notes
+            ]; 
+            await checkAllLocatorVisibility(locators, expect);
+
             await TestTool.selectInterestOrPleasure(jsonData.AddTest[index].pattes_answer_0);
             await TestTool.selectDownOrDepressed(jsonData.AddTest[index].pattes_answer_1);
             await TestTool.selectTroubleSleeping(jsonData.AddTest[index].pattes_answer_2);
@@ -830,6 +1066,24 @@ test.describe("Test and Tool Category", () => {
             await TestTool.selectThoughtsOfDeath(jsonData.AddTest[index].pattes_answer_8);
             await TestTool.clickOnCalculateButton();
             await TestTool.enterNotes(jsonData.AddTest[index].pattes_notes);
+
+            fileName = "LocatorJSON/testPHQ9Page.json";
+            await createPageLocatorJSON(locators, filePath, fileName);
+
+            matched = await compareJsons(
+              fileName,
+              null,
+              jsonData.testAddPage[index]
+            );
+            if (matched) {
+              console.log(
+                "\n Front end data matches data from excel sheet\n"
+              );
+            } else {
+              console.log(
+                "\n Front end data does not match!\n"
+              );
+            }
             await TestTool.clickOnSaveTest();
             //await expect.soft(page.getByText("Device record added successfully")).toHaveText("Device record added successfully");
             await TestTool.clickOnExtraDetailsView2();
@@ -923,6 +1177,24 @@ test.describe("Test and Tool Category", () => {
 
             // Edit Test PHQ-9
             await TestTool.clickOnEditIcon();
+
+            locators = [
+              TestTool.reviewDate,
+              TestTool.lastReviewedDate,
+              TestTool.interestOrPleasure,
+              TestTool.downOrDepressed,
+              TestTool.troubleSleeping,
+              TestTool.tiredLittleEnergy,
+              TestTool.poorAppetite,
+              TestTool.feelingBadAboutYourself,
+              TestTool.troubleConcentrating,
+              page.getByRole('radio', { name: "No" }).first(),
+              page.getByRole('radio', { name: "No" }).nth(1),
+              TestTool.calculateButton,
+              TestTool.notes
+            ]; 
+            await checkAllLocatorVisibility(locators, expect);
+
             await TestTool.enterReviewDate(jsonData.EditTest[index].pattes_review_date);
             await TestTool.enterLastReviewedDate(jsonData.EditTest[index].pattes_last_reviewed);
             await TestTool.selectInterestOrPleasure(jsonData.EditTest[index].pattes_answer_0);
@@ -936,6 +1208,25 @@ test.describe("Test and Tool Category", () => {
             await TestTool.selectThoughtsOfDeath(jsonData.EditTest[index].pattes_answer_8);
             await TestTool.clickOnCalculateButton();
             await TestTool.enterNotes(jsonData.EditTest[index].pattes_notes);
+
+            fileName = "LocatorJSON/testPHQ9Page.json";
+            await createPageLocatorJSON(locators, filePath, fileName);
+
+            matched = await compareJsons(
+              fileName,
+              null,
+              jsonData.testEditPage[index]
+            );
+            if (matched) {
+              console.log(
+                "\n Front end data matches data from excel sheet\n"
+              );
+            } else {
+              console.log(
+                "\n Front end data does not match!\n"
+              );
+            }
+
             await TestTool.clickOnSaveTest();
             //assert device edited -Device record updated successfully
             //await expect.soft(page.getByText("Device record updated successfully")).toHaveText("Device record updated successfully");
