@@ -523,7 +523,13 @@ async function createPageLocatorJSON (locator, filePath, fileName) {
           // console.log(locatorIdArray[i] +" " + i)
           // console.log(valueArray[i] +" " + i)
         } else {
-          locatorIdArray[i]= await locator[i].getAttribute('name');
+          let val = await locator[i].getAttribute('name');
+          if (val == null ) {
+            locatorIdArray[i]= await locator[i].getAttribute('id');
+          }
+          else {
+            locatorIdArray[i]= val;
+          }
           valueArray[i] = await locator[i].inputValue();
           // console.log(locatorIdArray[i] +" " + i)
           // console.log(valueArray[i] +" " + i)

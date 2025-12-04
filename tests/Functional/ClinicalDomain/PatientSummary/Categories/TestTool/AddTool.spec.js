@@ -6,6 +6,18 @@ const { test, expect } = require("@playwright/test");
 const { executeQuery } = require("../../../../../../databaseWriteFile"); // Update the path accordingly
 import compareJsons from "../../../../../../compareFileOrJson";
 
+import {
+  checkAllLocatorVisibility,
+  createPageLocatorJSON,
+  numberValidator,
+  mobileValidator,
+  nameValidator,
+  alphaNumericValidator,
+  emailValidator,
+  dateValidator,
+  timeValidator,
+} from "../../../../../../UtilFiles/DynamicUtility";
+
 import logger from "../../../../../../Pages/BaseClasses/logger";
 import LoginPage from "../../../../../../Pages/BaseClasses/LoginPage";
 import Homepage from "../../../../../../Pages/BaseClasses/Homepage";
@@ -85,7 +97,31 @@ test.describe("Test and Tool Category", () => {
            // await patientsearch.selectSexAtBirth(data.pat_sex);
             await patientsearch.selectBornDate(data.pat_dob);
             //await patientsearch.selectBornDate(formattedDate);
+            await patientsearch.checkbox_IncludeServicePatient.click();
             await patientsearch.clickOnSearchButton();
+
+            let locators = [
+              patientsearch.txtbox_MPINumber,
+              patientsearch.txtbox_Barcode,
+              patientsearch.txtbox_Card,
+              patientsearch.txtbox_GivenName,
+              patientsearch.txtbox_FamilyName,
+              patientsearch.dropdown_sex,
+              patientsearch.txtbox_BornDate,
+              patientsearch.txtbox_Postcode,
+              patientsearch.txtbox_MRNNumber,
+              patientsearch.txtbox_IdentificationId,
+              patientsearch.txtbox_NHSNo,
+              patientsearch.txtbox_HospitalRef,
+              patientsearch.txtbox_MobileNumber,
+              patientsearch.txtbox_PatNameInOtherLang,
+              patientsearch.dropdown_PatientSeenInLastDays,
+              patientsearch.checkbox_IncludeDeceasedPatient,
+              patientsearch.checkbox_IncludeServicePatient,
+              patientsearch.checkbox_Soundex
+            ];
+            await checkAllLocatorVisibility(locators, expect);
+
             await patientsearch.clickOnSearchPatientLink();
             //await page.waitForTimeout(4000);
             //page.waitForSelector("xpath=//button[@data-testid='Confirm Existing Details']");
@@ -146,30 +182,87 @@ test.describe("Test and Tool Category", () => {
             await SummaryPage.selectTestToolItem(jsonData.AddTool[index].clinicItem);
             await SummaryPage.clickOnAddButton()
             await TestTool.clickOnAirConduction()
-            await TestTool.selectAirConductionTestingMethods(jsonData.AddTool[index].pattod_var_value_0);
-            await TestTool.selectAirConductionTransducerUsed(jsonData.AddTool[index].pattod_var_value_3);
+
+            locators = [
+              page.getByTestId('airConduction.testingMethods').getByRole('combobox', { name: 'Testing Methods' }),
+              page.getByTestId('airConduction.transducerUsed').getByRole('combobox', { name: 'Transducer Used' }),
+              page.getByTestId('airConduction.stimulusSignalType').getByRole('combobox', { name: 'Stimulus Signal Type' }),
+              page.getByRole('textbox', { name: 'airConduction.reliability' }),
+              page.getByRole('textbox', { name: 'airConduction.notes' })
+            ];
+            await checkAllLocatorVisibility(locators, expect);
+
+            await TestTool.selectAirConductionTestingMethods(jsonData.AddTool[index].pattod_var_value_0)
+            await TestTool.selectAirConductionTransducerUsed(jsonData.AddTool[index].pattod_var_value_3)
             await TestTool.selectAirConductionStimulusSignalType(jsonData.AddTool[index].pattod_var_value_1)
             await TestTool.enterAirConductionReliability(jsonData.AddTool[index].pattod_var_value_2)
             await TestTool.enterAirConductionNotes(jsonData.AddTool[index].patto_notes_0)
-            await TestTool.clickOnBoneConduction()
+            await TestTool.clickOnBoneConduction();
+
+            let locators2 = [
+              page.getByTestId('boneConduction.testingMethods').getByRole('combobox', { name: 'Testing Methods' }),
+              page.getByTestId('boneConduction.stimulusSignalType').getByRole('combobox', { name: 'Stimulus Signal Type' }),
+              page.getByRole('textbox', { name: 'boneConduction.reliability' }),
+              page.getByRole('textbox', { name: 'boneConduction.notes' })
+            ]; 
+            await checkAllLocatorVisibility(locators2, expect);
+
             await TestTool.selectBoneConductionTestingMethods(jsonData.AddTool[index].pattod_var_value_4)
             await TestTool.selectBoneConductionStimulusSignalType(jsonData.AddTool[index].pattod_var_value_5)
             await TestTool.enterBoneConductionReliability(jsonData.AddTool[index].pattod_var_value_6)
             await TestTool.enterBoneConductionNotes(jsonData.AddTool[index].patto_notes_1);
             await TestTool.clickOnUnaidedSoundField()
+
+            let locators3 = [
+              page.getByTestId('unaidedSoundField.testingMethods').getByRole('combobox', { name: 'Testing Methods' }),
+              page.getByTestId('unaidedSoundField.stimulusSignalType').getByRole('combobox', { name: 'Stimulus Signal Type' }),
+              page.getByRole('textbox', { name: 'unaidedSoundField.reliability' }),
+              page.getByRole('textbox', { name: 'unaidedSoundField.notes' })
+            ];
+            await checkAllLocatorVisibility(locators3, expect);
+
             await TestTool.selectUnaidedSoundFieldTestingMethods(jsonData.AddTool[index].pattod_var_value_7)
             await TestTool.selectUnaidedSoundFieldStimulusSignalType(jsonData.AddTool[index].pattod_var_value_8)
             await TestTool.enterUnaidedSoundFieldReliability(jsonData.AddTool[index].pattod_var_value_9)
             await TestTool.enterUnaidedSoundFieldNotes(jsonData.AddTool[index].patto_notes_2);
             await TestTool.clickOnAidedSoundField()
+
+            let locators4 = [
+              page.getByTestId('aidedSoundField.testingMethods').getByRole('combobox', { name: 'Testing Methods' }),
+              page.getByTestId('aidedSoundField.stimulusSignalType').getByRole('combobox', { name: 'Stimulus Signal Type' }),
+              page.getByRole('textbox', { name: 'aidedSoundField.reliability', exact: true }),
+              page.getByRole('textbox', { name: 'aidedSoundField.notes', exact: true  })
+            ];
+            await checkAllLocatorVisibility(locators4, expect);
+
             await TestTool.selectAidedSoundFieldTestingMethods(jsonData.AddTool[index].pattod_var_value_10)
             await TestTool.selectAidedSoundFieldStimulusSignalType(jsonData.AddTool[index].pattod_var_value_11)
             await TestTool.enterAidedSoundFieldReliability(jsonData.AddTool[index].pattod_var_value_12)
             await TestTool.enterAidedSoundFieldNotes(jsonData.AddTool[index].patto_notes_3);
+
+            let combinedArray = locators.concat(locators2, locators3, locators4);
+            const filePath = "LocatorJSON";
+            let fileName = "LocatorJSON/audiogramToolPage.json";
+            await createPageLocatorJSON(combinedArray, filePath, fileName);
+
+            let matched = await compareJsons(
+              fileName,
+              null,
+              jsonData.toolAddPage[index]
+            );
+            if (matched) {
+              console.log(
+                "\n Front end data matches data from excel sheet\n"
+              );
+            } else {
+              console.log(
+                "\n Front end data does not match!\n"
+              );
+            }
+
             await TestTool.clickOnSaveBtn();
             await page.waitForTimeout(2000);
             await TestTool.clickOnExtraDetailsView2();
-            //await page.pause()
 
             ////////////////////////// FRONT END COMPARISON OF ENTERED INFORMAION //////////////////////////      
             // var count = 0;
@@ -300,27 +393,68 @@ test.describe("Test and Tool Category", () => {
             //await TestTool.enterTestDate(jsonData.EditTool[index].pacr_clinic_date)
             //await TestTool.enterReviewDate(jsonData.EditTool[index].patto_review_date);
             //await TestTool.enterLastReviewed(jsonData.EditTool[index].patto_last_reviewed);
+            await page.waitForTimeout(2000)
             await TestTool.clickOnAirConduction()
+            locators = [
+              page.getByRole('textbox', { name: 'airConduction.reliability' }),
+              page.getByRole('textbox', { name: 'airConduction.notes' })
+            ];
+            await checkAllLocatorVisibility(locators, expect);
             //await TestTool.selectAirConductionTestingMethods(jsonData.EditTool[index].pattod_var_value_0);
             //await TestTool.selectAirConductionTransducerUsed(jsonData.EditTool[index].pattod_var_value_3);
             //await TestTool.selectAirConductionStimulusSignalType(jsonData.EditTool[index].pattod_var_value_1)
             await TestTool.enterAirConductionReliability(jsonData.EditTool[index].pattod_var_value_2)
             await TestTool.enterAirConductionNotes(jsonData.EditTool[index].patto_notes_0)
             await TestTool.clickOnBoneConduction()
+            locators2 = [
+              page.getByRole('textbox', { name: 'boneConduction.reliability' }),
+              page.getByRole('textbox', { name: 'boneConduction.notes' })
+            ]; 
+            await checkAllLocatorVisibility(locators2, expect);
             //await TestTool.selectBoneConductionTestingMethods(jsonData.EditTool[index].pattod_var_value_4)
             //await TestTool.selectBoneConductionStimulusSignalType(jsonData.EditTool[index].pattod_var_value_5)
             await TestTool.enterBoneConductionReliability(jsonData.EditTool[index].pattod_var_value_6)
             await TestTool.enterBoneConductionNotes(jsonData.EditTool[index].patto_notes_1);
             await TestTool.clickOnUnaidedSoundField()
+            locators3 = [
+              page.getByRole('textbox', { name: 'unaidedSoundField.reliability' }),
+              page.getByRole('textbox', { name: 'unaidedSoundField.notes' })
+            ];
+            await checkAllLocatorVisibility(locators3, expect);
             //await TestTool.selectUnaidedSoundFieldTestingMethods(jsonData.EditTool[index].pattod_var_value_7)
             //await TestTool.selectUnaidedSoundFieldStimulusSignalType(jsonData.EditTool[index].pattod_var_value_8)
             await TestTool.enterUnaidedSoundFieldReliability(jsonData.EditTool[index].pattod_var_value_9)
             await TestTool.enterUnaidedSoundFieldNotes(jsonData.EditTool[index].patto_notes_2);
             await TestTool.clickOnAidedSoundField()
+            locators4 = [
+              page.getByRole('textbox', { name: 'aidedSoundField.reliability', exact: true }),
+              page.getByRole('textbox', { name: 'aidedSoundField.notes', exact: true  })
+            ];
+            await checkAllLocatorVisibility(locators4, expect);
             //await TestTool.selectAidedSoundFieldTestingMethods(jsonData.EditTool[index].pattod_var_value_10)
             //await TestTool.selectAidedSoundFieldStimulusSignalType(jsonData.EditTool[index].pattod_var_value_11)
             await TestTool.enterAidedSoundFieldReliability(jsonData.EditTool[index].pattod_var_value_12)
             await TestTool.enterAidedSoundFieldNotes(jsonData.EditTool[index].patto_notes_3);
+
+            combinedArray = locators.concat(locators2, locators3, locators4);
+            fileName = "LocatorJSON/audiogramToolPage.json";
+            await createPageLocatorJSON(combinedArray, filePath, fileName);
+
+            matched = await compareJsons(
+              fileName,
+              null,
+              jsonData.toolEditPage[index]
+            );
+            if (matched) {
+              console.log(
+                "\n Front end data matches data from excel sheet\n"
+              );
+            } else {
+              console.log(
+                "\n Front end data does not match!\n"
+              );
+            }
+
             await TestTool.clickOnSaveBtn();
             await page.waitForTimeout(2000);
             await TestTool.clickOnExtraDetailsView2();
@@ -477,9 +611,33 @@ test.describe("Test and Tool Category", () => {
             await TestTool.clickOnEditIcon();
             await TestTool.clickOnDeleteDevice();
             await TestTool.clickOnOkPopup();
+
+            locators = [
+              TestTool.txtDeleteDeviceReason
+            ];
+            await checkAllLocatorVisibility(locators, expect);
+
             await TestTool.enterDeleteDeviceReason(jsonData.EditTool[index].pacr_delete_reason);
+
+            fileName = "LocatorJSON/audiogramToolPage.json";
+            await createPageLocatorJSON(locators, filePath, fileName);
+
+            matched = await compareJsons(
+              fileName,
+              null,
+              jsonData.toolEditPage[index]
+            );
+            if (matched) {
+              console.log(
+                "\n Front end data matches data from excel sheet\n"
+              );
+            } else {
+              console.log(
+                "\n Front end data does not match!\n"
+              );
+            }
+
             await TestTool.clickOnSaveDeleteReason();
-            //await page.pause()
 
             //assert device deleted - Device deleted successfully
             //await expect.soft(page.getByText("Device deleted successfully")).toHaveText("Device deleted successfully");
@@ -518,6 +676,23 @@ test.describe("Test and Tool Category", () => {
             // Add New Tool DAS 28 Examination Tool
             await SummaryPage.selectTestToolItem(jsonData.AddTool[index].clinicItem);
             await SummaryPage.clickOnAddButton()
+
+            locators = [
+              TestTool.divS1,
+              TestTool.divT2,
+              TestTool.divS3,
+              TestTool.divT4,
+              TestTool.divS5,
+              TestTool.divT1,
+              TestTool.healthState,
+              TestTool.esr,
+              TestTool.crp,
+              TestTool.calculateButton,
+              TestTool.txtDeviceNotes,
+              TestTool.saveDASToolButton
+            ];
+            await checkAllLocatorVisibility(locators, expect);
+
             await TestTool.clickOnSwollen1()
             await TestTool.clickOnTender2()
             await TestTool.clickOnSwollen3()
@@ -534,7 +709,27 @@ test.describe("Test and Tool Category", () => {
             await TestTool.enterCrp(jsonData.AddTool[index].pattod_var_value_2);
             await TestTool.clickOnCalculateButton();
             await TestTool.enterDeviceNotes(jsonData.AddTool[index].patto_notes);
+
+            fileName = "LocatorJSON/das28ExaminationPage.json";
+            await createPageLocatorJSON(locators, filePath, fileName);
+
+            matched = await compareJsons(
+              fileName,
+              null,
+              jsonData.dasToolAddPage[0]
+            );
+            if (matched) {
+              console.log(
+                "\n Front end data matches data from excel sheet\n"
+              );
+            } else {
+              console.log(
+                "\n Front end data does not match!\n"
+              );
+            }
+
             await TestTool.clickOnSaveTool();
+            // await page.pause();
             await TestTool.clickOnExtraDetailsView2();
             await page.waitForTimeout(2000);
 
@@ -606,8 +801,23 @@ test.describe("Test and Tool Category", () => {
             await TestTool.clickOnExtraDetailsView2();
 
             // Edit Tool
-            //await page.pause();
+            await page.waitForTimeout(3000);
             await TestTool.clickOnEditIcon();
+
+            locators = [
+              TestTool.reviewDate,
+              TestTool.lastReviewedTool,
+              TestTool.healthState,
+              TestTool.esr,
+              TestTool.crp,
+              TestTool.tenderJointCount,
+              TestTool.swollenJointCount,
+              TestTool.calculateButton,
+              TestTool.txtDeviceNotes,
+              TestTool.saveDASToolButton,
+            ];
+            await checkAllLocatorVisibility(locators, expect);
+
             await TestTool.enterReviewDate(jsonData.EditTool[index].patto_review_date);
             await TestTool.enterLastReviewed(jsonData.EditTool[index].patto_last_reviewed);
             await TestTool.enterHealthState(jsonData.EditTool[index].pattod_var_value_0);
@@ -617,7 +827,27 @@ test.describe("Test and Tool Category", () => {
             await TestTool.enterSwollen(jsonData.EditTool[index].pattod_var_value_4);
             await TestTool.clickOnCalculateButton();
             await TestTool.enterDeviceNotes(jsonData.EditTool[index].patto_notes);
+
+            fileName = "LocatorJSON/das28ExaminationPage.json";
+            await createPageLocatorJSON(locators, filePath, fileName);
+
+            matched = await compareJsons(
+              fileName,
+              null,
+              jsonData.dasToolEditPage[0]
+            );
+            if (matched) {
+              console.log(
+                "\n Front end data matches data from excel sheet\n"
+              );
+            } else {
+              console.log(
+                "\n Front end data does not match!\n"
+              );
+            }
+
             await TestTool.clickOnSaveTool();
+            // await page.pause()
             await page.waitForTimeout(1000);
             //assert device edited -Device record updated successfully
             //await expect.soft(page.getByText("Device record updated successfully")).toHaveText("Device record updated successfully");
@@ -718,7 +948,32 @@ test.describe("Test and Tool Category", () => {
             await TestTool.clickOnEditIcon();
             await TestTool.clickOnDeleteDevice();
             await TestTool.clickOnOkPopup();
+
+            locators = [
+              TestTool.txtDeleteDeviceReason
+            ];
+            await checkAllLocatorVisibility(locators, expect);
+
             await TestTool.enterDeleteDeviceReason(jsonData.EditTool[index].pacr_delete_reason);
+
+            fileName = "LocatorJSON/das28ExaminationPage.json";
+            await createPageLocatorJSON(locators, filePath, fileName);
+
+            matched = await compareJsons(
+              fileName,
+              null,
+              jsonData.dasToolEditPage[0]
+            );
+            if (matched) {
+              console.log(
+                "\n Front end data matches data from excel sheet\n"
+              );
+            } else {
+              console.log(
+                "\n Front end data does not match!\n"
+              );
+            }
+            
             await TestTool.clickOnSaveDeleteReason();
             //await page.pause()
 
@@ -759,6 +1014,17 @@ test.describe("Test and Tool Category", () => {
             // Add New Tool DAS 78 Examination Tool
             await SummaryPage.selectTestToolItem(jsonData.AddTool[index].clinicItem);
             await SummaryPage.clickOnAddButton()
+
+            locators = [
+              TestTool.circle3,
+              TestTool.circle8,
+              TestTool.circle80,
+              TestTool.circle87,
+              TestTool.txtDeviceNotes,
+              TestTool.saveDASToolButton
+            ];
+            await checkAllLocatorVisibility(locators, expect);
+
             await TestTool.clickOnCircle1()
             await TestTool.clickOnCircle2()
             await TestTool.clickOnCircle3()
@@ -770,6 +1036,27 @@ test.describe("Test and Tool Category", () => {
             await TestTool.enterMarkerNotes(jsonData.AddTool[index].pattom_notes);
             await TestTool.clickOnSaveNotes();
             await TestTool.enterDeviceNotes(jsonData.AddTool[index].patto_notes);
+
+            fileName = "LocatorJSON/das78ExaminationPage.json";
+            await createPageLocatorJSON(locators, filePath, fileName);
+
+            matched = await compareJsons(
+              fileName,
+              null,
+              jsonData.dasToolAddPage[1]
+            );
+            if (matched) {
+              console.log(
+                "\n Front end data matches data from excel sheet\n"
+              );
+            } else {
+              console.log(
+                "\n Front end data does not match!\n"
+              );
+            }
+
+            // await page.pause()
+
             await TestTool.clickOnSaveTool();
 
             ////////////////////////// FRONT END COMPARISON OF ENTERED INFORMAION //////////////////////////      
@@ -823,13 +1110,44 @@ test.describe("Test and Tool Category", () => {
             await TestTool.clickOnExtraDetailsView2();
 
             // Edit Tool
-            //await page.pause();
+            await page.waitForTimeout(3000);
             await TestTool.clickOnEditIcon();
+
+            locators = [
+              TestTool.reviewDate,
+              TestTool.lastReviewedTool,
+              TestTool.tenderJointCount78,
+              TestTool.swollenJointCount78,
+              TestTool.txtDeviceNotes,
+              TestTool.saveDASToolButton
+            ];
+            await checkAllLocatorVisibility(locators, expect);
+
             await TestTool.enterReviewDate(jsonData.EditTool[index].patto_review_date);
             await TestTool.enterLastReviewed(jsonData.EditTool[index].patto_last_reviewed);
             await TestTool.enterTender78(jsonData.EditTool[index].pattod_var_value_0);
             await TestTool.enterSwollen78(jsonData.EditTool[index].pattod_var_value_1);
             await TestTool.enterDeviceNotes(jsonData.EditTool[index].patto_notes);
+
+            fileName = "LocatorJSON/das78ExaminationPage.json";
+            await createPageLocatorJSON(locators, filePath, fileName);
+
+            matched = await compareJsons(
+              fileName,
+              null,
+              jsonData.dasToolEditPage[1]
+            );
+            if (matched) {
+              console.log(
+                "\n Front end data matches data from excel sheet\n"
+              );
+            } else {
+              console.log(
+                "\n Front end data does not match!\n"
+              );
+            }
+
+            // await page.pause()
             await TestTool.clickOnSaveTool();
             await page.waitForTimeout(1000);
             //assert device edited -Device record updated successfully
@@ -919,9 +1237,33 @@ test.describe("Test and Tool Category", () => {
             await TestTool.clickOnEditIcon();
             await TestTool.clickOnDeleteDevice();
             await TestTool.clickOnOkPopup();
+
+            locators = [
+              TestTool.txtDeleteDeviceReason
+            ];
+            await checkAllLocatorVisibility(locators, expect);
+
             await TestTool.enterDeleteDeviceReason(jsonData.EditTool[index].pacr_delete_reason);
+
+            fileName = "LocatorJSON/das78ExaminationPage.json";
+            await createPageLocatorJSON(locators, filePath, fileName);
+
+            matched = await compareJsons(
+              fileName,
+              null,
+              jsonData.dasToolEditPage[1]
+            );
+            if (matched) {
+              console.log(
+                "\n Front end data matches data from excel sheet\n"
+              );
+            } else {
+              console.log(
+                "\n Front end data does not match!\n"
+              );
+            }
+            
             await TestTool.clickOnSaveDeleteReason();
-            //await page.pause()
 
             //assert device deleted - Device deleted successfully
             //await expect.soft(page.getByText("Device deleted successfully")).toHaveText("Device deleted successfully");

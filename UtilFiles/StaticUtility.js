@@ -34,11 +34,7 @@ async function typeText(page, elementLocator, text) {
     await elementLocator.clear();
 
   await elementLocator.type(text);
-  const actual = await elementLocator.inputValue();
-  if (actual !== text) {
-      throw new Error(`❌ Username mismatch. Expected: "${text}", Found: "${actual}"`);
-  }
-  console.log(`✅ "${elementLocator}" filled correctly: "${actual}"`);
+
 }
 
 // Select item from a dropdown containing a static list

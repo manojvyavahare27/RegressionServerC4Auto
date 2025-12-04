@@ -1,72 +1,11 @@
 [
   {
-    "pattes_test_pacr_id": 186905,
-    "pattes_pat_id": 788397,
-    "pattes_tests_question_que_name": "PHQ-9",
-    "pattes_answer": null,
-    "pattes_notes": "Add PHQ-9 Test"
-  },
-  {
-    "pattes_test_pacr_id": 186905,
-    "pattes_pat_id": 788397,
-    "pattes_tests_question_que_name": "1. Little interest or pleasure in doing things?",
-    "pattes_answer": "Not at all",
-    "pattes_notes": "Add PHQ-9 Test"
-  },
-  {
-    "pattes_test_pacr_id": 186905,
-    "pattes_pat_id": 788397,
-    "pattes_tests_question_que_name": "2. Feeling down, depressed, or hopeless?",
-    "pattes_answer": "Several days",
-    "pattes_notes": "Add PHQ-9 Test"
-  },
-  {
-    "pattes_test_pacr_id": 186905,
-    "pattes_pat_id": 788397,
-    "pattes_tests_question_que_name": "3. Trouble falling or staying asleep, or sleeping too much?",
-    "pattes_answer": "More than half the days",
-    "pattes_notes": "Add PHQ-9 Test"
-  },
-  {
-    "pattes_test_pacr_id": 186905,
-    "pattes_pat_id": 788397,
-    "pattes_tests_question_que_name": "4. Feeling tired or having little energy?",
-    "pattes_answer": "Nearly every days",
-    "pattes_notes": "Add PHQ-9 Test"
-  },
-  {
-    "pattes_test_pacr_id": 186905,
-    "pattes_pat_id": 788397,
-    "pattes_tests_question_que_name": "5. Poor appetite or overeating?",
-    "pattes_answer": "Not at all",
-    "pattes_notes": "Add PHQ-9 Test"
-  },
-  {
-    "pattes_test_pacr_id": 186905,
-    "pattes_pat_id": 788397,
-    "pattes_tests_question_que_name": "6. Feeling bad about yourself - or that you are a failure or have let yourself or your family down?",
-    "pattes_answer": "Several days",
-    "pattes_notes": "Add PHQ-9 Test"
-  },
-  {
-    "pattes_test_pacr_id": 186905,
-    "pattes_pat_id": 788397,
-    "pattes_tests_question_que_name": "7. Trouble concentrating on things, such as reading the newspaper or watching television?",
-    "pattes_answer": "More than half the days",
-    "pattes_notes": "Add PHQ-9 Test"
-  },
-  {
-    "pattes_test_pacr_id": 186905,
-    "pattes_pat_id": 788397,
-    "pattes_tests_question_que_name": "8. Moving or speaking so slowly that other people could have noticed?",
-    "pattes_answer": "Yes",
-    "pattes_notes": "Add PHQ-9 Test"
-  },
-  {
-    "pattes_test_pacr_id": 186905,
-    "pattes_pat_id": 788397,
-    "pattes_tests_question_que_name": "9. Thoughts that you would be better off dead, or of hurting yourself in some way?",
-    "pattes_answer": "Yes",
-    "pattes_notes": "Add PHQ-9 Test"
+    "pattod_pacr_id": 187407,
+    "pattod_pat_id": 788397,
+    "pattod_var_name": "tender",
+    "pattod_var_value": "2",
+    "pacr_que_name": "DAS78",
+    "patto_notes": "DAS 78 New tool",
+    "pattom_notes": "Patient marker for DAS 78"
   }
 ]
