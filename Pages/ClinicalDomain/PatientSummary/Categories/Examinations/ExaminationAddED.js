@@ -4,13 +4,15 @@ class ExaminationAddED
     {
         this.page=page
         
-        this.svgexpandExamination=page.locator("xpath=//button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-14x3gsq']//*[name()='svg']")
+        this.svgexpandExamination=page.getByTestId('dataID').getByLabel('cellmaAccordionIcon')
+        //page.locator("xpath=//button[@class='MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium css-14x3gsq']//*[name()='svg']")
         this.dropdownSubCategory=page.locator("xpath=//input[@name='subCategory']")
         this.txtboxClinicDate=page.locator("xpath=//input[@name='clinicDate']")
         this.dropdownOutcome=page.locator("xpath=//input[@name='outcome']")
+        this.dropdownPriority=page.locator("xpath=//input[@name='priority']")
         this.dropdownSelectRecommendation=page.locator("xpath=//input[@name='selectRecommendation']")
-        this.textareaNotes=page.locator("xpath=//textarea[@aria-label='Notes']")
-        this.btnSave=page.locator("xpath=//button[@data-testid='Save']")
+        this.textareaNotes=page.locator("xpath=//textarea[@name='notes']")
+        this.btnSave=page.locator("xpath=//button[@data-testid='extraDetailsSave']")
 
         this.btnDeleteExamination=page.locator("xpath=//button[@data-testid='Delete']")
         this.btnCancelDeleteExamination=page.getByTestId('Cancel')
@@ -35,11 +37,11 @@ class ExaminationAddED
     {
         await this.svgexpandExamination.click()
     }
-    async selectSubCategory(pacr_category)
+    async selectSubCategory(pacr_subcategory)
     {
         await this.dropdownSubCategory.click()
        // await this.page.getByRole('option', { name: pacr_category }).click()
-       await this.page.getByRole('option', { name: 'Exm subsection' }).click()
+       await this.page.getByRole('option', { name: pacr_subcategory }).click()
     }
     async EnterClinicalDate()
     {
