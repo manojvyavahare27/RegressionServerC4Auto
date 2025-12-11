@@ -1,33 +1,6 @@
 [
   {
-    "pacr_id": 187681,
-    "pacr_sgr_id": 68459,
-    "pacr_pat_id": 790487,
-    "pacr_est_id": 4,
-    "pacr_ref_id": 13963,
-    "pacr_cli_id": 84,
-    "pacr_patast_id": null,
-    "pacr_patase_id": null,
-    "pacr_finbil_id": null,
-    "pacr_private": null,
-    "pacr_category": "Examination",
-    "pacr_que_code": "1249004",
-    "pacr_que_code_type": "snomed-ct",
-    "pacr_que_name": "Dry eye",
-    "pacr_status": null,
-    "pacr_risk": "moderate",
-    "pacr_record_status": "wrong",
-    "pacr_clinic_date": "09/12/2025",
-    "pacr_created": "09/12/2025",
-    "pacr_created_by": "manoj.automation",
-    "pacr_updated": "09/12/2025",
-    "pacr_updated_by": "manoj.automation",
-    "pacr_delete_reason": "Delete for testing",
-    "pacr_deleted": "09/12/2025",
-    "pacr_deleted_by": "manoj.automation",
-    "pacr_migrated": 0,
-    "pacr_imported": null,
-    "pacr_imported_method": null,
-    "pacr_archived": null
+    "pacr_que_name": "Knee Arthroplasty",
+    "pacr_delete_reason": "Delete for testing"
   }
 ]

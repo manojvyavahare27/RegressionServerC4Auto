@@ -11,6 +11,18 @@ const connectToDatabase = require("../../../../../../manoj").default;
 const { executeQuery } = require("../../../../../../databaseWriteFile"); // Update the path accordingly
 import compareJsons from "../../../../../../compareFileOrJson";
 
+import {
+  checkAllLocatorVisibility,
+  createPageLocatorJSON,
+  numberValidator,
+  mobileValidator,
+  nameValidator,
+  alphaNumericValidator,
+  emailValidator,
+  dateValidator,
+  timeValidator,
+} from "../../../../../../UtilFiles/DynamicUtility";
+
 import logger from "../../../../../../Pages/BaseClasses/logger";
 import LoginPage from "../../../../../../Pages/BaseClasses/LoginPage";
 import Homepage from "../../../../../../Pages/BaseClasses/Homepage";
@@ -86,6 +98,29 @@ test.describe("Procedure Category", () => {
       logger.info("Clicked on Patient Icon successfully");
       await patientsearch.clickOnSearchButton();
       logger.info("Clicked on Search button successfully");
+
+      let locators = [
+        patientsearch.txtbox_MPINumber,
+        patientsearch.txtbox_Barcode,
+        patientsearch.txtbox_Card,
+        patientsearch.txtbox_GivenName,
+        patientsearch.txtbox_FamilyName,
+        patientsearch.dropdown_sex,
+        patientsearch.txtbox_BornDate,
+        patientsearch.txtbox_Postcode,
+        patientsearch.txtbox_MRNNumber,
+        patientsearch.txtbox_IdentificationId,
+        patientsearch.txtbox_NHSNo,
+        patientsearch.txtbox_HospitalRef,
+        patientsearch.txtbox_MobileNumber,
+        patientsearch.txtbox_PatNameInOtherLang,
+        patientsearch.dropdown_PatientSeenInLastDays,
+        patientsearch.checkbox_IncludeDeceasedPatient,
+        patientsearch.checkbox_IncludeServicePatient,
+        patientsearch.checkbox_Soundex
+      ];
+      await checkAllLocatorVisibility(locators, expect);
+
       await patientsearch.enterGivenName(data.pat_firstname);
       logger.info("Given Name entered successfully");
       
@@ -174,13 +209,27 @@ test.describe("Procedure Category", () => {
       //   await page.waitForTimeout(1000)
       //   await ProceduresExtraDetails.clickOnSave();
                // Add New Procedures
-               await page.pause()
+
       await Procedures.selectandAddClinicalItem(jsonData.AddProcedure[index].pacr_que_name)
       await page.waitForTimeout(2000);      
       await page.getByLabel('cancelIcon').click();
       await Procedures.selectandAddClinicalItem(jsonData.AddProcedure[index].pacr_que_name)
      // await ProceduresExtraDetails.clickOnClincialItemCollapsable();
-      await page.waitForTimeout(1000);      
+      await page.waitForTimeout(1000);
+      
+      locators = [
+        ProceduresExtraDetails.dateOfProcedure,
+        ProceduresExtraDetails.procedureType,
+        ProceduresExtraDetails.procedureSite,
+        ProceduresExtraDetails.procedureLevel,
+        ProceduresExtraDetails.procedureStatus,
+        ProceduresExtraDetails.procedureOutcome,
+        ProceduresExtraDetails.procedureCheckBoxSetAsDefault,
+        ProceduresExtraDetails.procedureCheckboxPrivateRecord,
+        ProceduresExtraDetails.procedureTextareaNotes
+      ];
+      await checkAllLocatorVisibility(locators, expect);
+
       //await ProceduresExtraDetails.selectClinicalItemSubcategory(jsonData.AddProcedure[index].eli_text);      
       await ProceduresExtraDetails.enterDateOfProcedure(jsonData.AddProcedure[index].proc_procedure_date)
       await ProceduresExtraDetails.selectProcedureType(jsonData.AddProcedure[index].proc_type)
@@ -193,15 +242,31 @@ test.describe("Procedure Category", () => {
       
       await ProceduresExtraDetails.selectProcedureCheckboxSetAsDefault()      
       await ProceduresExtraDetails.selectProcedureCheckboxPrivateRecord()  
-                await page.pause()
-      await ProceduresExtraDetails.enterProcedureNotes(jsonData.AddProcedure[index].proc_notes) 
+      await ProceduresExtraDetails.enterProcedureNotes(jsonData.AddProcedure[index].proc_notes)
+
+      const filePath = "LocatorJSON";
+      let fileName = "LocatorJSON/addProcedurePage.json";
+      await createPageLocatorJSON(locators, filePath, fileName);
+
+      let matched = await compareJsons(
+        fileName,
+        null,
+        jsonData.addProcedurePage[index]
+      );
+      if (matched) {
+        console.log(
+          "\n Front end data matches data from excel sheet\n"
+        );
+      } else {
+        console.log(
+          "\n Front end data does not match!\n"
+        );
+      }
+
       await ProceduresExtraDetails.clickOnConditionExtraDetails();
-      //await page.pause()
-      //await page.getByLabel('saveChecklist').click()
-    //  await page.waitForTimeout(2000);     
-    //   await page.getByLabel('saveChecklist').click()     
-    //   await page.waitForTimeout(500);
-      
+
+      await page.getByLabel('saveChecklist').click()     
+      await page.waitForTimeout(500);
       await expect(page.getByText("Procedure record added successfully")).toHaveText("Procedure record added successfully");
      
      
@@ -228,11 +293,21 @@ test.describe("Procedure Category", () => {
     }
    
     await page.waitForTimeout(1500)
-    await page.pause()
      // await Procedures.clickOnItemEdit();
      await page.locator("xpath=//button[@aria-label='editIconButton']").click()
      // await ProceduresExtraDetails.clickOnClincialItemCollapsable();
       //await ProceduresExtraDetails.selectClinicalItemSubcategory(jsonData.AddProcedure[index].eli_text);      
+      
+       locators = [
+        ProceduresExtraDetails.dateOfProcedure,
+        ProceduresExtraDetails.procedureType,
+        ProceduresExtraDetails.procedureSite,
+        ProceduresExtraDetails.procedureLevel,
+        ProceduresExtraDetails.procedureStatus,
+        ProceduresExtraDetails.procedureOutcome
+      ];
+      await checkAllLocatorVisibility(locators, expect);
+      
       await ProceduresExtraDetails.enterDateOfProcedure(jsonData.AddProcedure[index].proc_procedure_date)
       await ProceduresExtraDetails.selectProcedureType(jsonData.AddProcedure[index].proc_type)
       await ProceduresExtraDetails.selectProcedureSite(jsonData.AddProcedure[index].proc_site)      
@@ -240,11 +315,27 @@ test.describe("Procedure Category", () => {
       await ProceduresExtraDetails.selectProcedureLevel(jsonData.AddProcedure[index].proc_procedure_level)
       await ProceduresExtraDetails.selectProcedureStatus(jsonData.AddProcedure[index].pacr_status)
       await ProceduresExtraDetails.selectProcedureOutcome(jsonData.AddProcedure[index].proc_outcome)
+
+      fileName = "LocatorJSON/editProcedurePage.json";
+      await createPageLocatorJSON(locators, filePath, fileName);
+
+      matched = await compareJsons(
+        fileName,
+        null,
+        jsonData.editProcedurePage[index]
+      );
+      if (matched) {
+        console.log(
+          "\n Front end data matches data from excel sheet\n"
+        );
+      } else {
+        console.log(
+          "\n Front end data does not match!\n"
+        );
+      }
+
       await ProceduresExtraDetails.clickOnConditionExtraDetails();      
-      // await page.waitForTimeout(1500);           
-      // await page.getByLabel('saveChecklist').click()    
-      //await page.getByRole('button', { name: 'Save' }).click()
-      //await page.waitForTimeout(1500);
+
 
        ////// Database comparison - Patient Clinical Records - UPDATE Procedures/////////
      sqlQuery =
@@ -277,6 +368,9 @@ test.describe("Procedure Category", () => {
      
      
       // await page.waitForTimeout(500);
+       
+      await page.getByLabel('saveChecklist').click()
+      await page.waitForTimeout(1500);
       await Procedures.clickOnItemHighlightNone();
       await page.waitForTimeout(500);
       await Procedures.selectLowRiskLevel();
@@ -315,7 +409,32 @@ test.describe("Procedure Category", () => {
       await ProceduresExtraDetails.clickOnCancelDelete();
       await ProceduresExtraDetails.clickOnDelete();
       await ProceduresExtraDetails.clickOnConfirmDelete();
+
+      locators = [
+        ProceduresExtraDetails.deleteReason
+      ];
+      await checkAllLocatorVisibility(locators, expect);
+
       await ProceduresExtraDetails.enterDeleteReason(jsonData.DeleteProcedure[index].pacr_delete_reason);
+
+      fileName = "LocatorJSON/editProcedurePage.json";
+      await createPageLocatorJSON(locators, filePath, fileName);
+
+      matched = await compareJsons(
+        fileName,
+        null,
+        jsonData.editProcedurePage[index]
+      );
+      if (matched) {
+        console.log(
+          "\n Front end data matches data from excel sheet\n"
+        );
+      } else {
+        console.log(
+          "\n Front end data does not match!\n"
+        );
+      }
+
       await ProceduresExtraDetails.clickOnSaveDeleteReason();
       await page.waitForTimeout(1000)
      // await page.pause();
